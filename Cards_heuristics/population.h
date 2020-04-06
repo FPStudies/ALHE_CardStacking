@@ -21,6 +21,7 @@ class Population
 
 public:
 	Population();
+	Population(const Individual& individual);
 	~Population();
 	Population(const Population& other);
 	Population(Population&& other) noexcept;
