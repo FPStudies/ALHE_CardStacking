@@ -1,0 +1,11 @@
+print('..Building App')
+
+env = Environment(
+    CC = 'g++',
+    CCFLAGS = '-O2 -Wall',
+    SCONS_CXX_STANDARD='c++11',
+    CPPPATH = '.'
+)
+
+env.Program('cards', Glob('*.cpp'))
+#env.Program('cards', [Glob('*.cpp'), Glob('*.h')])

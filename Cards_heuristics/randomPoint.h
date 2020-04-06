@@ -3,6 +3,7 @@
 
 #include <utility>
 #include <ctime>
+#include <stdlib.h>
 
 class RandomPoint
 {

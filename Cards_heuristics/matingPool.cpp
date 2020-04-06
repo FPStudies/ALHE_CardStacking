@@ -3,6 +3,8 @@
 
 #include "matingPool.h"
 
+const unsigned int numberOfGenes=10;
+
 MatingPool::MatingPool()
 	: population_(), 
 	populationSize(0), 
@@ -25,8 +27,8 @@ MatingPool::~MatingPool()
 MatingPool::MatingPool(MatingPool&& other) noexcept
 	:population_(std::move(other.population_)),
 	populationSize(std::move(other.populationSize)),
-	numberOfCrossovers_(std::move(other.numberOfCrossovers_)),
 	populationSizeAfterTournament(std::move(other.populationSizeAfterTournament)),
+	numberOfCrossovers_(std::move(other.numberOfCrossovers_)),
 	mutationProb(std::move(other.mutationProb)),
 	maxProbValue(std::move(other.maxProbValue)),
 	groupAVal(std::move(other.groupAVal)),
@@ -41,8 +43,8 @@ MatingPool& MatingPool::operator=(MatingPool&& other) noexcept
 {
 	population_ = std::move(other.population_);
 	populationSize = std::move(other.populationSize);
-	numberOfCrossovers_ = std::move(other.numberOfCrossovers_);
 	populationSizeAfterTournament = std::move(other.populationSizeAfterTournament);
+	numberOfCrossovers_ = std::move(other.numberOfCrossovers_);
 	mutationProb = std::move(other.mutationProb);
 	maxProbValue = std::move(other.maxProbValue);
 	groupAVal = std::move(other.groupAVal);
@@ -209,7 +211,7 @@ double MatingPool::raitingFunction(const int& rating)
 Population MatingPool::tournament(const Population& oldGeneration, const unsigned int& sizeOfNewPop)
 {
 	Population newPop;
-	int selected = 0;
+	unsigned int selected = 0;
 
 	auto it = oldGeneration.population.begin();
 

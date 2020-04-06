@@ -8,8 +8,10 @@
 
 class MatingPool
 {
+public:
 	enum class CrossoverType;
 
+private:
 	Population population_;
 	/*
 	Population afterTournament;
