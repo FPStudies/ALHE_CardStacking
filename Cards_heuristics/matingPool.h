@@ -36,7 +36,7 @@ class MatingPool
 	*/
 	std::shared_ptr<Population::Individual> best;
 
-
+	std::shared_ptr<Population::Individual> kingOfPopulation;
 
 
 	/*
@@ -52,7 +52,11 @@ class MatingPool
 
 	Population selectFromTwoGenerations(const Population& oldGeneration, const Population& newGeneration);
 
+	std::shared_ptr<Population::Individual> findBestPointer();
 
+	std::shared_ptr<Population::Individual> findBestPointerCopy();
+
+	std::shared_ptr<Population::Individual> findWorstPointer();
 
 	/*
 	Choosing from selectedPopulation.

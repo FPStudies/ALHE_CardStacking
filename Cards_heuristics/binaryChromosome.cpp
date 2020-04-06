@@ -4,7 +4,7 @@
 #include "binaryChromosome.h"
 
 BinaryChromosome::BinaryChromosome(const unsigned int& size, bool randVal)
-	:chromosome(), randClass(size), rating(0)
+	:chromosome(), randClass(size), rating(INT_MAX)
 {
 	if (randVal) {
 		chromosome.resize(size);
@@ -125,7 +125,7 @@ void BinaryChromosome::evaluate(const int& groupAIdeal, const int& groupBIdeal)
 	rating = bindTwoGroupRating(sumGroupA, sumGroupB, groupAIdeal, groupBIdeal);
 }
 
-int BinaryChromosome::getRating()
+int BinaryChromosome::getRating() const
 {
 	return rating;
 }
@@ -143,7 +143,7 @@ void BinaryChromosome::setRandValues()
 	}
 }
 
-std::pair<int, int> BinaryChromosome::getSum()
+std::pair<int, int> BinaryChromosome::getSum() const
 {
 	int sumA = 0, sumB = 0, i = 1;
 	for (auto it = chromosome.cbegin(); it != chromosome.cend(); ++it, ++i) {
@@ -159,8 +159,23 @@ std::ostream& operator<< (std::ostream& os, const BinaryChromosome& chrom) {
 		else if (*it == BinaryChromosome::Symbol::groupB) os << "B";
 		else if (*it == BinaryChromosome::Symbol::undefined) os << "U";
 	}
+	os << ": " << chrom.getSum().first << " " << chrom.getSum().second;
 
 	return os;
+}
+
+bool operator==(const BinaryChromosome& one, const BinaryChromosome& two)
+{
+	if (one.chromosome.size() != two.chromosome.size()) return false;
+	for (auto itOne = one.chromosome.cbegin(), itTwo = two.chromosome.cbegin(); itOne != one.chromosome.cend(); ++itOne, ++itTwo) {
+		if (*itOne != *itTwo) return false;
+	}
+	return true;
+}
+
+bool operator!=(const BinaryChromosome& one, const BinaryChromosome& two)
+{
+	return !(one == two);
 }
 
 void BinaryChromosome::singlePointCrossing(BinaryChromosome& other)
@@ -207,8 +222,10 @@ void BinaryChromosome::uniformCrossing(BinaryChromosome& other)
 		throw std::runtime_error("Chromosomes must have the same size or have at least two genes.");
 #endif
 	Symbol tmp;
+	auto itThis = chromosome.begin();
+	auto itOther = other.chromosome.begin();
 
-	for (auto itThis = chromosome.begin(), itOther = other.chromosome.end(); itThis != chromosome.end(); ++itThis, ++itOther) {
+	for (; itThis != chromosome.end() || itOther != other.chromosome.end(); ++itThis, ++itOther) {
 		if (rand() % 2 == 0) {
 			tmp = *itOther;
 			*itOther = *itThis;

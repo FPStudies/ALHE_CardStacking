@@ -32,7 +32,7 @@ Population& Population::operator=(const Population& other)
 
 Population& Population::operator+=(const Population& other)
 {
-	this->population.insert(this->population.end(), other.population.begin(), other.population.end());
+	this->population.insert(this->population.begin(), other.population.begin(), other.population.end());
 	return *this;
 }
 

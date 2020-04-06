@@ -62,15 +62,17 @@ public:
 	/*
 	The fewer the better.
 	*/
-	int getRating();
+	int getRating() const;
 
 	unsigned int size() const;
 
 	void setRandValues();
 
-	std::pair<int, int> getSum();
+	std::pair<int, int> getSum() const;
 
 	friend std::ostream& operator<< (std::ostream& os, const BinaryChromosome& chrom);
+	friend bool operator==(const BinaryChromosome& one, const BinaryChromosome& two);
+	friend bool operator!=(const BinaryChromosome& one, const BinaryChromosome& two);
 
 
 	void singlePointCrossing(BinaryChromosome& other);
