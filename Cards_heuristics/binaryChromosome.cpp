@@ -123,7 +123,6 @@ void BinaryChromosome::evaluate(const int& groupAIdeal, const int& groupBIdeal)
 	}
 
 	rating = bindTwoGroupRating(sumGroupA, sumGroupB, groupAIdeal, groupBIdeal);
-	if (rating == 0) std::cout << "\nRATING " << sumGroupA  << " " << sumGroupB << "\n";
 }
 
 int BinaryChromosome::getRating() const

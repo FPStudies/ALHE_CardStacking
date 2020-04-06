@@ -3,7 +3,7 @@
 
 #include "matingPool.h"
 
-const unsigned int numberOfGenes=10;
+const unsigned int MatingPool::numberOfGenes = 10;
 
 MatingPool::MatingPool()
 	: population_(), 
@@ -163,6 +163,17 @@ Population::Individual MatingPool::findBest()
 	}
 
 	return std::move(ret);
+}
+
+bool MatingPool::isBestFound()
+{
+	return foundOptimal;
+}
+
+Population::Individual MatingPool::returnBest()
+{
+	if (foundOptimal) return *best;
+	return Population::Individual(2, false);
 }
 
 

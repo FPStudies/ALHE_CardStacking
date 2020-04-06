@@ -31,7 +31,7 @@ private:
 	bool duringSimulation;
 	bool foundOptimal;
 
-	const static unsigned int numberOfGenes = 10;
+	const static unsigned int numberOfGenes;
 
 	/*
 	If there is someone with optimal solution.
@@ -91,6 +91,9 @@ public:
 	void runOneGeneration(CrossoverType type, const unsigned int& numberOfPointCross = 1);
 
 	Population::Individual findBest();
+
+	bool isBestFound();
+	Population::Individual returnBest();
 
 	enum class CrossoverType {
 		multiplePoint,

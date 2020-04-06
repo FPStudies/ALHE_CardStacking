@@ -6,7 +6,6 @@
 #include <cmath>
 #include <list>
 #include <memory>
-#include <bits/stdc++.h>
 
 #include "randomPoint.h"
 
