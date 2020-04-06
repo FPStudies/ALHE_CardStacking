@@ -8,6 +8,8 @@ using namespace std;
 int main(int argc, char**argv) {
 	cout << "Hello" << endl;
 
+	unsigned int groupA = 13, groupB = 42;
+
 	MatingPool generation;
 	RandomPoint::newSeed();
 
@@ -15,8 +17,8 @@ int main(int argc, char**argv) {
 	Error
 	the return value is always the same.
 	*/
-	generation.setGroupAValue(40);
-	generation.setGroupBValue(15);
+	generation.setGroupAValue(groupA);
+	generation.setGroupBValue(groupB);
 	generation.setMutationProbability(10, 1000);
 	generation.setPopulationSize(50);
 	generation.setPopulationSizeAfterTounament(20);
@@ -39,11 +41,18 @@ int main(int argc, char**argv) {
 
 
 	for (int i = 0; i < 20; ++i) {
-		generation.runOneGeneration(MatingPool::CrossoverType::singlePoint);
+		generation.runOneGeneration(MatingPool::CrossoverType::singlePoint); // tu wywala
 	}
-
+/*
 	cout << "Done V2" << endl;
 	temp = generation.findBest();
 	cout << temp.getSum().first << " " << temp.getSum().second << " " << temp <<  endl;
 	//cout << generation << endl;
+
+
+	cout << "\nHeuristic\n";
+	BinaryChromosome chromosome(10, false);
+	chromosome.startHeuristic(groupA, groupB);
+	cout << chromosome << "  value: " << chromosome.getSum().first << " // " << chromosome.getSum().second << "\n";
+	*/
 }

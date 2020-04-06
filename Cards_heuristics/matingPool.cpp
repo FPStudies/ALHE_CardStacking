@@ -70,6 +70,7 @@ void MatingPool::setMutationProbability(const unsigned int& random, const unsign
 
 void MatingPool::setNumberOfCrossovers(const unsigned int& value)
 {
+	if (duringSimulation) return;
 	numberOfCrossovers_ = value;
 }
 
@@ -111,8 +112,9 @@ void MatingPool::createFirstPopulation()
 
 void MatingPool::runOneGeneration(CrossoverType type, const unsigned int& numberOfPointCross)
 {
+	if (foundOptimal || !populationCreated) return;
 	duringSimulation = true;
-	Population toCrossover = std::move(tournament(population_, populationSizeAfterTournament));
+	Population toCrossover = std::move(tournament(population_, populationSizeAfterTournament)); // tu wywala
 	if (foundOptimal) return;
 	
 	Population afterCrossover = std::move(crossover(toCrossover, type, numberOfPointCross));
@@ -125,6 +127,12 @@ void MatingPool::runOneGeneration(CrossoverType type, const unsigned int& number
 
 Population::Individual MatingPool::findBest()
 {
+	if (foundOptimal) {
+		std::cout << "found Best\n";
+		return *best;
+	}
+	if (!populationCreated) return Population::Individual(2, false);
+	
 	int min = INT_MAX;
 	Population::Individual ret(4, false);
 
@@ -194,7 +202,7 @@ Population MatingPool::tournament(const Population& oldGeneration, const unsigne
 	while (selected != sizeOfNewPop) {
 		
 		if (it == oldGeneration.population.end()) it = oldGeneration.population.begin();
-		int rating = (*it)->getRating();
+		int rating = (*it)->getRating(); // tutaj wywala
 		if (rating == 0) {
 			best = *it;
 			foundOptimal = true;

@@ -217,5 +217,26 @@ void BinaryChromosome::uniformCrossing(BinaryChromosome& other)
 	}
 }
 
+void BinaryChromosome::startHeuristic(const int& groupAIdeal, const int& groupBIdeal)
+{
+	auto it = --chromosome.end();
+	int grA = groupAIdeal;
+	int grB = groupBIdeal;
+	unsigned int cards = 10;
+
+	for (int i = chromosome.size() - 1; i >= 0; --i, --it, --cards) {
+		if (grA >= grB) {
+			*it = Symbol::groupA;
+			grA -= cards;
+		}
+		else {
+			*it = Symbol::groupB;
+			grB -= cards;
+		}
+
+		if (it == chromosome.begin()) break;
+	}
+}
+
 
 #endif

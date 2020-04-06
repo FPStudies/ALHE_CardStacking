@@ -77,6 +77,9 @@ public:
 	void multiplePointCrossing(BinaryChromosome& other, const unsigned int& numberOfPoints);
 	void uniformCrossing(BinaryChromosome& other);
 
+
+	void startHeuristic(const int& groupAIdeal, const int& groupBIdeal);
+
 };
 
 
