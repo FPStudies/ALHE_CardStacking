@@ -119,7 +119,10 @@ void MatingPool::runOneGeneration(CrossoverType type, const unsigned int& number
 	std::shared_ptr<Population::Individual> copiedBest = pointerToBest->copy();
 
 	Population toCrossover = std::move(tournament(population_, populationSizeAfterTournament)); // tu wywala
-	if (foundOptimal) return;
+	if (foundOptimal) {
+		population_ = std::move(toCrossover);
+		return;
+	}
 	
 	Population afterCrossover = std::move(crossover(toCrossover, type, numberOfPointCross));
 
@@ -127,11 +130,13 @@ void MatingPool::runOneGeneration(CrossoverType type, const unsigned int& number
 	populationEvaluation(afterCrossover, groupAVal, groupBVal);
 
 	population_ = std::move(selectFromTwoGenerations(population_, afterCrossover));
+	if (foundOptimal) {
+		return;
+	}
 
 	std::shared_ptr<Population::Individual> newPointerToBest = findBestPointer();
 	if (newPointerToBest != pointerToBest || *copiedBest != *newPointerToBest) {
 		std::shared_ptr<Population::Individual> worst = findWorstPointer();
-		//std::cout << "TEST\n" << *pointerToBest << "\n" << *copiedBest << "\n" << worst <<"\n\n";
 		*worst = *copiedBest;
 	}
 
@@ -204,9 +209,6 @@ double MatingPool::raitingFunction(const int& rating)
 Population MatingPool::tournament(const Population& oldGeneration, const unsigned int& sizeOfNewPop)
 {
 	Population newPop;
-	int raitingSum = 0;
-	int max = 0;
-	std::vector<int> sum;
 	int selected = 0;
 
 	auto it = oldGeneration.population.begin();
@@ -215,7 +217,7 @@ Population MatingPool::tournament(const Population& oldGeneration, const unsigne
 		
 		if (it == oldGeneration.population.end()) it = oldGeneration.population.begin();
 		int rating = (*it)->getRating(); // tutaj wywala
-		if (rating == 0) {
+		if (rating == 0) { // must be, because raitingFunction(0) is infinite
 			best = *it;
 			foundOptimal = true;
 			return Population();
@@ -278,7 +280,7 @@ std::shared_ptr<Population::Individual> MatingPool::findBestPointer()
 	if (!populationCreated) return nullptr;
 
 	int min = INT_MAX;
-	std::shared_ptr<Population::Individual> ret;
+	std::shared_ptr<Population::Individual> ret = nullptr;
 
 	for (auto it = population_.population.begin(); it != population_.population.end(); ++it) {
 		if ((*it)->getRating() < min) {
@@ -300,7 +302,7 @@ std::shared_ptr<Population::Individual> MatingPool::findWorstPointer()
 	if (!populationCreated) return nullptr;
 
 	int max = INT_MIN;
-	std::shared_ptr<Population::Individual> ret;
+	std::shared_ptr<Population::Individual> ret = nullptr;
 
 	for (auto it = population_.population.begin(); it != population_.population.end(); ++it) {
 		if ((*it)->getRating() > max) {

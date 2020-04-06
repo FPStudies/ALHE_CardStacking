@@ -41,6 +41,7 @@ class MatingPool
 
 	/*
 	Choosing Individuals that will be used in crossover.
+	Can return without valid POpulation if the best one was found.
 	*/
 	Population tournament(const Population& oldGeneration, const unsigned int& sizeOfNewPop);
 
