@@ -24,12 +24,16 @@
     <ClCompile Include="matingPool.cpp" />
     <ClCompile Include="population.cpp" />
     <ClCompile Include="randomPoint.cpp" />
+    <ClCompile Include="testInterface.cpp" />
+    <ClCompile Include="tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binaryChromosome.h" />
     <ClInclude Include="matingPool.h" />
     <ClInclude Include="population.h" />
     <ClInclude Include="randomPoint.h" />
+    <ClInclude Include="testInterface.h" />
+    <ClInclude Include="tests.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -13,31 +13,30 @@ class Population
 	using Individual = BinaryChromosome;
 	using Container = std::vector<std::shared_ptr<Individual>>;
 
-
-private:
-
 	Container population;
-	RandomPoint mutationProb;
-	RandomPoint randomChromosome; // 1 / Container.size(); to choose individual
+	/*unsigned int mutationProb;
+	unsigned int maxMutationValue;
+	unsigned int numberOfGenes;*/
+	
 
 public:
 	Population();
 	~Population();
 	Population(const Population& other);
-	Population(Population&& other);
-	Population& operator=(Population&& other);
+	Population(Population&& other) noexcept;
+	Population& operator=(Population&& other) noexcept;
+	Population& operator=(const Population& other);
+	Population& operator+=(const Population& other);
 
-	void runMutationInPopulation();
+	void runMutationInPopulation(const unsigned int& mutationProb, const unsigned int& maxMutationValue);
 
-	/*
-	Creates a new individual
-	*/
-	Population::Individual singlePointCrossing(Population::Individual& other);
-	Population::Individual multiplePointCrossing(Population::Individual& other);
-	Population::Individual uniformCrossing(Population::Individual& other);
+	void setPopulationSize(const unsigned int& size);
 
-	void setMutationProb(const unsigned int& popSize);
-	void setPopulationSize();
+	void generatePopulation(const unsigned int& numberOfGenes);
+
+	void evaluate(const int& groupAIdeal, const int& groupBIdeal);
+
+	friend std::ostream& operator<< (std::ostream& os, const Population& pop);
 };
 
 

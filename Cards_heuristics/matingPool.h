@@ -2,59 +2,96 @@
 #define MATING_POOL_H
 
 #include <memory>
+#include <algorithm>
 
 #include "population.h"
 
 class MatingPool
 {
-	Population::Container population;
+	enum class CrossoverType;
+
+	Population population_;
 	/*
-	Population::Container afterTournament;
-	Population::Container individualsToCrossover;
-	Population::Container afterCrossover;
-	Population::Container newResidents;*/
+	Population afterTournament;
+	Population individualsToCrossover;
+	Population afterCrossover;
+	Population newResidents;*/
 
 	unsigned int populationSize;
-	unsigned int poolSize;
-	RandomPoint mutationProb;
+	unsigned int populationSizeAfterTournament;
+	unsigned int numberOfCrossovers_;
+	unsigned int mutationProb;
+	unsigned int maxProbValue;
+	int groupAVal;
+	int groupBVal;
 
 	bool populationCreated;
 	bool duringSimulation;
+	bool foundOptimal;
+
+	const static unsigned int numberOfGenes = 10;
+
+	/*
+	If there is someone with optimal solution.
+	*/
+	std::shared_ptr<Population::Individual> best;
+
+
+
 
 	/*
 	Choosing Individuals that will be used in crossover.
 	*/
-	Population::Container tournament(Population::Container& oldGeneration);
+	Population tournament(const Population& oldGeneration, const unsigned int& sizeOfNewPop);
 
-	Population::Container crossover(Population::Container& selectedPopulation);
+	Population crossover(const Population& selectedPopulation, CrossoverType type, const unsigned int& numberOfPointCross);
 
-	void mutation(Population::Container& population);
+	void mutation(Population& population);
 
-	void populationEvaluation(Population::Container& population);
+	void populationEvaluation(Population& population, const int& groupAIdeal, const int& groupBIdeal);
 
-	Population::Container selectFromTwoGenerations(Population::Container& oldGeneration, Population::Container& newGeneration);
+	Population selectFromTwoGenerations(const Population& oldGeneration, const Population& newGeneration);
 
 
 
 	/*
-	Choosing from individualsToCrossover
+	Choosing from selectedPopulation.
+	It is important that this return copy of individual.
 	*/
-	std::pair<Population::Individual, Population::Individual> chooseTwoToCrossover() const;
+	std::pair<std::shared_ptr<Population::Individual>, std::shared_ptr<Population::Individual>> chooseTwoToCrossover(const Population& selectedPopulation);
+
+	double raitingFunction(const int& rating);
 
 public:
-	MatingPool(unsigned int matingPoolSize);
+	MatingPool();
 	~MatingPool();
 	MatingPool(const MatingPool& other) = delete;
-	MatingPool(MatingPool&& other);
-	MatingPool& operator=(MatingPool&& other);
+	MatingPool(MatingPool&& other) noexcept;
+	MatingPool& operator=(MatingPool&& other) noexcept;
 
 	void createFirstPopulation();
 
 	void setPopulationSize(const unsigned int& popSize);
-	void setMutationProbability(const RandomPoint& random);
-	void setMatingPoolSize(const unsigned int& matPoolSize);
+	void setMutationProbability(const unsigned int& random, const unsigned int& max);
+	void setNumberOfCrossovers(const unsigned int& value);
+	void setPopulationSizeAfterTounament(const int& value);
 
-	Population::Container runOneGeneration();
+	void setGroupAValue(const int& value);
+	void setGroupBValue(const int& value);
+
+	bool isDataValid();
+
+	void runOneGeneration(CrossoverType type, const unsigned int& numberOfPointCross = 1);
+
+	Population::Individual findBest();
+
+	enum class CrossoverType {
+		multiplePoint,
+		uniform,
+		singlePoint
+	};
+
+	friend std::ostream& operator<< (std::ostream& os, const MatingPool& pool);
 };
 
 

@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
+#include <list>
 
 #include "randomPoint.h"
 
@@ -13,48 +15,67 @@ class BinaryChromosome
 
 	Container chromosome;
 	RandomPoint randClass;
+	int rating;
 
-public:
+	int bindTwoGroupRating(const int& groupA, const int& groupB, const int& groupAIdeal, const int& groupBIdeal);
+
 	enum class Symbol {
 		groupA,
-		groupB
+		groupB,
+		undefined
 	};
+public:
 
-	BinaryChromosome(const unsigned int& size);
+	BinaryChromosome(const unsigned int& size, bool randVal = true);
 	~BinaryChromosome();
 	BinaryChromosome(const BinaryChromosome& other);
-	BinaryChromosome(BinaryChromosome&& other);
-	BinaryChromosome& operator=(BinaryChromosome&& other);
+	BinaryChromosome(BinaryChromosome&& other) noexcept;
+	BinaryChromosome& operator=(BinaryChromosome&& other) noexcept;
+	BinaryChromosome& operator=(const BinaryChromosome& other);
 
 
 	/*
-	Copy given chromosome segment to this chromosome.
+	Copy given chromosome segments to this chromosome.
 	*/
 	void copy(const unsigned int& startPosOther, const unsigned int& endPosOther, const BinaryChromosome& from, const unsigned int& startPosThis, const unsigned int& endPosThis);
 	void copy(const unsigned int& startPosOther, const unsigned int& endPosOther, const BinaryChromosome& from);
 
+	std::unique_ptr<BinaryChromosome> copy();
+
+	/*
+	Swap given chromosome segments to this chromosome.
+	*/
+	void swap(const unsigned int& startPosOther, const unsigned int& endPosOther, BinaryChromosome& from, const unsigned int& startPosThis, const unsigned int& endPosThis);
+	void swap(const unsigned int& startPosOther, const unsigned int& endPosOther, BinaryChromosome& from);
+
 	/*
 	All of the genes in chromosome have this probability to mutate.
 	*/
-	void mutation(RandomPoint& probability);
+	void mutation(const unsigned int& probability, const unsigned int& maxProbVal);
 
 	/*
 	Calculate how good this chromosome is.
+	May be changed in other kind of task.
 	*/
-	void evaluate();
+	void evaluate(const int& groupAIdeal, const int& groupBIdeal);
 
+	/*
+	The fewer the better.
+	*/
 	int getRating();
 
 	unsigned int size() const;
 
-	friend std::ostream& operator<< (std::ostream& os, const BinaryChromosome& chrom) {
-		for (BinaryChromosome::Container::const_iterator it = chrom.chromosome.cbegin(); it != chrom.chromosome.cend(); ++it) {
-			if (*it == Symbol::groupA) os << "A";
-			else if (*it == Symbol::groupB) os << "B";
-		}
+	void setRandValues();
 
-		return os;
-	}
+	std::pair<int, int> getSum();
+
+	friend std::ostream& operator<< (std::ostream& os, const BinaryChromosome& chrom);
+
+
+	void singlePointCrossing(BinaryChromosome& other);
+	void multiplePointCrossing(BinaryChromosome& other, const unsigned int& numberOfPoints);
+	void uniformCrossing(BinaryChromosome& other);
 
 };
 
