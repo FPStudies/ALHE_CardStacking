@@ -45,7 +45,7 @@ private:
 	Choosing Individuals that will be used in crossover.
 	Can return without valid POpulation if the best one was found.
 	*/
-	Population tournament(const Population& oldGeneration, const unsigned int& sizeOfNewPop);
+	Population rouletteWheel(const Population& oldGeneration, const unsigned int& sizeOfNewPop);
 
 	Population crossover(const Population& selectedPopulation, CrossoverType type, const unsigned int& numberOfPointCross);
 

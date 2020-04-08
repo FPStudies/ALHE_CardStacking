@@ -120,7 +120,7 @@ void MatingPool::runOneGeneration(CrossoverType type, const unsigned int& number
 	std::shared_ptr<Population::Individual> pointerToBest = findBestPointer();
 	std::shared_ptr<Population::Individual> copiedBest = pointerToBest->copy();
 
-	Population toCrossover = std::move(tournament(population_, populationSizeAfterTournament)); // tu wywala
+	Population toCrossover = std::move(rouletteWheel(population_, populationSizeAfterTournament)); // tu wywala
 	if (foundOptimal) {
 		population_ = std::move(toCrossover);
 		return;
@@ -219,7 +219,7 @@ double MatingPool::raitingFunction(const int& rating)
 	return std::exp2(1 * RAND_MAX / rating);
 }
 
-Population MatingPool::tournament(const Population& oldGeneration, const unsigned int& sizeOfNewPop)
+Population MatingPool::rouletteWheel(const Population& oldGeneration, const unsigned int& sizeOfNewPop)
 {
 	Population newPop;
 	unsigned int selected = 0;
@@ -251,17 +251,17 @@ Population MatingPool::selectFromTwoGenerations(const Population& oldGeneration,
 	Population tmp = oldGeneration;
 	tmp += newGeneration;
 
-	return std::move(tournament(tmp, populationSize));
+	return std::move(rouletteWheel(tmp, populationSize));
 }
 
 std::pair<std::shared_ptr<Population::Individual>, std::shared_ptr<Population::Individual>> MatingPool::chooseTwoToCrossover(const Population& selectedPopulation)
 {
-	bool notFound = true;
+	//bool notFound = true;
 	int random = rand() % selectedPopulation.population.size();
-	auto it = selectedPopulation.population.begin() + random;
+	//auto it = selectedPopulation.population.begin() + random;
 	std::shared_ptr<Population::Individual> one = nullptr, two = nullptr;
 
-	while (notFound) {
+	/*while (notFound) {
 		if (it == selectedPopulation.population.end()) it = selectedPopulation.population.begin();
 
 		int rating = (*it)->getRating();
@@ -280,8 +280,15 @@ std::pair<std::shared_ptr<Population::Individual>, std::shared_ptr<Population::I
 		}
 
 		++it;
-	}
+	}*/
 	
+	auto it1 = selectedPopulation.population.begin() + (random % selectedPopulation.population.size());
+	auto it2 = selectedPopulation.population.begin() + (random % selectedPopulation.population.size());
+	if(it1 == it2) ++it2;
+
+	one = (*it1)->copy();
+	two = (*it2)->copy();
+
 	return std::pair<std::shared_ptr<Population::Individual>, std::shared_ptr<Population::Individual>>(one, two);
 }
 

@@ -6,6 +6,7 @@
 #include <cmath>
 #include <list>
 #include <memory>
+#include <limits.h>
 
 #include "randomPoint.h"
 

@@ -50,7 +50,6 @@ void BinaryChromosome::copy(const unsigned int& startPosOther, const unsigned in
 	auto otherIterBegin = from.chromosome.begin() + startPosOther;
 
 	auto thisIterEnd = chromosome.begin() + endPosThis;
-	auto otherIterEnd = from.chromosome.begin() + endPosOther;
 
 	for (; thisIterBegin != thisIterEnd; ++thisIterBegin, ++otherIterBegin) {
 		*thisIterBegin = *otherIterBegin;
@@ -77,7 +76,6 @@ void BinaryChromosome::swap(const unsigned int& startPosOther, const unsigned in
 	auto otherIterBegin = from.chromosome.begin() + startPosOther;
 
 	auto thisIterEnd = chromosome.begin() + endPosThis;
-	auto otherIterEnd = from.chromosome.begin() + endPosOther;
 
 	Symbol tmp;
 
