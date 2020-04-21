@@ -46,6 +46,7 @@ BinaryChromosome::~BinaryChromosome()
 	#ifdef COUNT_METHOD_CALL
 	++destructor;
 	#endif
+}
 
 BinaryChromosome::BinaryChromosome(const BinaryChromosome& other)
 	:chromosome(other.chromosome), randClass(other.randClass), rating(other.rating)
