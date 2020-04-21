@@ -1,0 +1,7 @@
+
+
+Import('env')
+
+cppFiles = Glob('*.cpp')
+
+env.StaticLibrary('evaluation', Glob('*.cpp'))

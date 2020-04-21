@@ -1,0 +1,11 @@
+
+
+*.o
+.vs/
+*.code-workspace
+cards
+.vscode/
+Debug/
+.sconsign.dblite
+*.a
+*.lib
