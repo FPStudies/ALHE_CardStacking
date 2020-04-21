@@ -6,6 +6,6 @@
 cards
 .vscode/
 Debug/
-.sconsign.dblite
+*.dblite
 *.a
 *.lib

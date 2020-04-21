@@ -28,10 +28,10 @@ class BinaryChromosome
 	};
 
 	#ifdef COUNT_METHOD_CALL
-	static unsigned int constructor;
-	static unsigned int destructor;
-	static unsigned int constructor_copy;
-	static unsigned int constructor_rewriting;
+	static unsigned int constructor_call;
+	static unsigned int destructor_call;
+	static unsigned int constructor_copy_call;
+	static unsigned int constructor_rewriting_call;
 
 	static unsigned int method_swap_call;
 	static unsigned int method_copy_call;
@@ -108,10 +108,10 @@ public:
 
 
 	#ifdef COUNT_METHOD_CALL
-	static unsigned int get_constructor();
-	static unsigned int get_destructor();
-	static unsigned int get_constructor_copy();
-	static unsigned int get_constructor_rewriting();
+	static unsigned int get_constructor_call();
+	static unsigned int get_destructor_call();
+	static unsigned int get_constructor_copy_call();
+	static unsigned int get_constructor_rewriting_call();
 
 	static unsigned int get_method_swap_call();
 	static unsigned int get_method_copy_call();

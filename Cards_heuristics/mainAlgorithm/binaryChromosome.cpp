@@ -5,10 +5,10 @@
 
 
 #ifdef COUNT_METHOD_CALL
-	unsigned int BinaryChromosome::constructor = 0;
-	unsigned int BinaryChromosome::destructor = 0;
-	unsigned int BinaryChromosome::constructor_copy = 0;
-	unsigned int BinaryChromosome::constructor_rewriting = 0;
+	unsigned int BinaryChromosome::constructor_call = 0;
+	unsigned int BinaryChromosome::destructor_call = 0;
+	unsigned int BinaryChromosome::constructor_copy_call = 0;
+	unsigned int BinaryChromosome::constructor_rewriting_call = 0;
 
 	unsigned int BinaryChromosome::method_swap_call = 0;
 	unsigned int BinaryChromosome::method_copy_call = 0;
@@ -31,7 +31,7 @@ BinaryChromosome::BinaryChromosome(const unsigned int& size, bool randVal)
 	:chromosome(), randClass(size), rating(INT_MAX)
 {
 	#ifdef COUNT_METHOD_CALL
-	++constructor;
+	++constructor_call;
 	#endif
 	
 	if (randVal) {
@@ -44,7 +44,7 @@ BinaryChromosome::BinaryChromosome(const unsigned int& size, bool randVal)
 BinaryChromosome::~BinaryChromosome()
 {
 	#ifdef COUNT_METHOD_CALL
-	++destructor;
+	++destructor_call;
 	#endif
 }
 
@@ -52,7 +52,7 @@ BinaryChromosome::BinaryChromosome(const BinaryChromosome& other)
 	:chromosome(other.chromosome), randClass(other.randClass), rating(other.rating)
 {
 	#ifdef COUNT_METHOD_CALL
-	++constructor_copy;
+	++constructor_copy_call;
 	#endif
 }
 
@@ -71,7 +71,7 @@ BinaryChromosome& BinaryChromosome::operator=(BinaryChromosome&& other) noexcept
 BinaryChromosome& BinaryChromosome::operator=(const BinaryChromosome& other)
 {
 	#ifdef COUNT_METHOD_CALL
-	++constructor_rewriting;
+	++constructor_rewriting_call;
 	#endif
 	
 	chromosome = other.chromosome;
@@ -340,10 +340,10 @@ void BinaryChromosome::startHeuristic(const int& groupAIdeal, const int& groupBI
 
 
 #ifdef COUNT_METHOD_CALL
-	static unsigned int BinaryChromosome::get_constructor() { return constructor; }
-	static unsigned int BinaryChromosome::get_destructor() { return destructor; }
-	static unsigned int BinaryChromosome::get_constructor_copy() { return constructor_copy; }
-	static unsigned int BinaryChromosome::get_constructor_rewriting() { return constructor_rewriting; }
+	static unsigned int BinaryChromosome::get_constructor_call() { return constructor_call; }
+	static unsigned int BinaryChromosome::get_destructor_call() { return destructor_call; }
+	static unsigned int BinaryChromosome::get_constructor_copy_call() { return constructor_copy_call; }
+	static unsigned int BinaryChromosome::get_constructor_rewriting_call() { return constructor_rewriting_call; }
 
 	static unsigned int BinaryChromosome::get_method_swap_call() { return method_swap_call; }
 	static unsigned int BinaryChromosome::get_method_copy_call() { return method_copy_call; }
