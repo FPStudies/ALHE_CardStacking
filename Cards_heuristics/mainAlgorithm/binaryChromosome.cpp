@@ -358,6 +358,27 @@ void BinaryChromosome::startHeuristic(const int& groupAIdeal, const int& groupBI
 	static unsigned int BinaryChromosome::get_method_Crossing_call() { return method_Crossing_call; }
 	static unsigned int BinaryChromosome::get_method_uniformCrossing_call() { return method_uniformCrossing_call; }
 	static unsigned int BinaryChromosome::get_method_startHeuristic_call() { return method_startHeuristic_call; }
+
+	static void BinaryChromosome::method_couter_call_clear(){
+		constructor_call = 0;
+		destructor_call = 0;
+		constructor_copy_call = 0;
+		constructor_rewriting_call = 0;
+
+		method_swap_call = 0;
+		method_copy_call = 0;
+		method_mutation_call = 0;
+		method_evaluate_call = 0;
+		method_setRandValues_call = 0;
+		method_getSum_call = 0;
+		method_comparison_call = 0;
+		method_Crossing_call = 0;
+		method_singlePointCrossing_call = 0;
+		method_multiplePointCrossing_call = 0;
+		method_Crossing_call = 0;
+		method_uniformCrossing_call = 0;
+		method_startHeuristic_call = 0;
+	}
 #endif
 
 

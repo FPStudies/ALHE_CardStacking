@@ -61,6 +61,9 @@ public:
 	static unsigned int get_method_runMutationInPopulation_call();
 	static unsigned int get_method_generatePopulation_call();
 	static unsigned int get_method_evaluate_call();
+
+
+	static void method_couter_call_clear();
 	#endif
 
 };

@@ -98,6 +98,27 @@ bool CommandDivider::runCommand(const std::string& command, bool clearBuf){
     return false;
 }
 
+bool CommandDivider::loadCommandsFromFile(const std::string path){
+
+    std::ifstream file(path);
+    char com[127];
+
+    while(!file.eof()){
+        file.getline(com, 127);
+        std::string command(com);
+
+        remove_if(command.begin(), command.end(), isspace);
+
+        if(command.empty() == 0) continue;
+
+        if(runCommand(command)) return true;
+    }
+
+    file.close();
+
+    return false;
+}
+
 
 bool CommandDivider::addInterpreter(const CommandInterpreter& inter){
     for(auto& it : interpreters){

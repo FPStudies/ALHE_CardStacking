@@ -126,6 +126,9 @@ public:
 	static unsigned int get_method_Crossing_call();
 	static unsigned int get_method_uniformCrossing_call();
 	static unsigned int get_method_startHeuristic_call();
+
+
+	static void method_couter_call_clear();
 	#endif	
 
 };

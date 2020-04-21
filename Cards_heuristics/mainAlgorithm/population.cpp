@@ -132,6 +132,20 @@ std::ostream& operator<<(std::ostream& os, const Population& pop)
 	static unsigned int Population::get_method_runMutationInPopulation_call() { return method_runMutationInPopulation_call; }
 	static unsigned int Population::get_method_generatePopulation_call() { return method_generatePopulation_call; }
 	static unsigned int Population::get_method_evaluate_call() { return method_evaluate_call; }
+
+
+	static void Population::method_couter_call_clear(){
+		constructor_call = 0;
+		destructor_call = 0;
+		constructor_copy_call = 0;
+		constructor_rewriting_call = 0;
+
+		method_operatorAdd_call = 0;
+
+		method_runMutationInPopulation_call = 0;
+		method_generatePopulation_call = 0;
+		method_evaluate_call = 0;
+	}
 #endif
 
 

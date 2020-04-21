@@ -5,6 +5,8 @@
 #include <vector>
 #include <memory>
 #include <typeinfo>
+#include <fstream>
+#include <algorithm>
 
 #include "commandInterpreter.h"
 
@@ -32,6 +34,7 @@ public:
     CommandDivider(const CommandDivider& other) = delete;
 
     bool runCommand(const std::string& command, bool clearBuf = true);
+    bool loadCommandsFromFile(const std::string path);
 
     /**
      * @brief Adds a command interpreter that is used when keyword matches.
