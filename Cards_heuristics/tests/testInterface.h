@@ -3,17 +3,18 @@
 
 
 #include <iostream>
-#include <memory>
+#include <limits>
 
 class TestInterface
 {
 public:
-	TestInterface();
-	~TestInterface();
+	TestInterface() {};
+	~TestInterface() {};
 	TestInterface(const TestInterface& other) = delete;
 
 	virtual void runTest(const std::string& path) = 0;
-	virtual std::unique_ptr<TestInterface> copy() = 0;
+	virtual TestInterface* clone() const = 0;
+	virtual bool isDataValid() const = 0;
 };
 
 

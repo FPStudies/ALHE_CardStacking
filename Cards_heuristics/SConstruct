@@ -2,7 +2,8 @@ print('..Building App')
 
 pathToFiles = [
     'userInterface',
-    'mainAlgorithm'
+    'mainAlgorithm',
+    'tests'
 ]
 
 
@@ -16,11 +17,13 @@ env = Environment(
 
 SConscript('userInterface/SConscript', exports = 'env', duplicate = 0)
 SConscript('mainAlgorithm/SConscript', exports = 'env', duplicate = 0)
+SConscript('tests/SConscript', exports = 'env', duplicate = 0)
 
 env.Append(
     LIBS = [
         'userInterface',
-        'evaluation'
+        'evaluation',
+        'tests'
     ],
 
     LIBPATH = pathToFiles

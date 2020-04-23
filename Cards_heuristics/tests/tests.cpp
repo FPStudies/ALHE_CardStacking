@@ -12,7 +12,7 @@ void Tests::runTests(const std::string& path)
 
 void Tests::addTest(TestInterface& test)
 {
-	tests.push_back(std::move(test.copy()));
+	//tests.push_back(std::make_unique<TestInterface>(test.clone()));
 }
 
 

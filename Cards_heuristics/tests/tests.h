@@ -6,7 +6,7 @@
 #include <chrono>
 #include <vector>
 
-#include "matingPool.h"
+#include "../mainAlgorithm/matingPool.h"
 #include "testInterface.h"
 
 

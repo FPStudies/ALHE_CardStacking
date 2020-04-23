@@ -7,13 +7,16 @@
 #include <typeinfo>
 #include <fstream>
 #include <algorithm>
+#include <sstream>
+#include <string>
 
 #include "commandInterpreter.h"
 
 class CommandDivider{
     struct DividedWord{
         std::string extractedKeyword;
-        std::vector<std::string> restOfPhrases;
+        std::vector<std::string> commands;
+        std::vector<std::vector<std::string>> commandsArg;
         std::unique_ptr<CommandInterpreter> interpreter;
 
         DividedWord(const DividedWord& other) = delete;
@@ -25,7 +28,7 @@ class CommandDivider{
 
     std::vector<std::unique_ptr<DividedWord>> interpreters;
 
-    bool divideByKeyWords(const std::string& command);
+    bool divideByKeyWords(std::stringstream& command);
     void clear();
 
 public:
@@ -34,7 +37,7 @@ public:
     CommandDivider(const CommandDivider& other) = delete;
 
     bool runCommand(const std::string& command, bool clearBuf = true);
-    bool loadCommandsFromFile(const std::string path);
+    bool loadCommandsFromFile(const std::string path, bool clearBuf = true);
 
     /**
      * @brief Adds a command interpreter that is used when keyword matches.

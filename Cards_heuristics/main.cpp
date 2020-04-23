@@ -2,6 +2,8 @@
 #include <iostream>
 #include "matingPool.h"
 #include "randomPoint.h"
+#include "tests/testNormal.h"
+#include "userInterface/commandDivider.h"
 
 using namespace std;
 
@@ -13,11 +15,27 @@ int main(int argc, char**argv) {
 	MatingPool generation;
 	RandomPoint::newSeed();
 
+	TestNormal tmp(100);
+	CommandDivider commands;
+
+	/*tmp.setCrossoverPoints(3);
+	tmp.setCrossoverType("multiplePoint");
+	tmp.setGroupAValue(groupA);
+	tmp.setGroupBValue(groupB);
+	tmp.setMutationProbability(10, 1000);
+	tmp.setNumberOfCrossovers(10);
+	tmp.setOutputFile("output/test.txt");
+	tmp.setPopulationSize(20);
+	tmp.setPopulationSizeAfterTounament(10);*/
+
+	commands.addInterpreter(tmp);
+	//commands.loadCommandsFromFile("scripts/test.txt");
+
 	/*
 	Error
 	the return value is always the same.
 	*/
-	generation.setGroupAValue(groupA);
+	/*generation.setGroupAValue(groupA);
 	generation.setGroupBValue(groupB);
 	generation.setMutationProbability(10, 1000);
 	generation.setPopulationSize(20);
@@ -54,6 +72,6 @@ int main(int argc, char**argv) {
 	cout << "\nHeuristic\n";
 	BinaryChromosome chromosome(10, false);
 	chromosome.startHeuristic(groupA, groupB);
-	cout << chromosome << "\n";
+	cout << chromosome << "\n";*/
 	
 }
