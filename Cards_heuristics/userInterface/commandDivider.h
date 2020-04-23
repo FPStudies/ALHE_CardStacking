@@ -29,6 +29,8 @@ class CommandDivider{
     std::vector<std::unique_ptr<DividedWord>> interpreters;
 
     bool divideByKeyWords(std::stringstream& command);
+    void getLine(std::stringstream& extractFrom, std::string& extractTo) const;
+    void clearWhitespace(std::stringstream& extractFrom) const;
     void clear();
 
 public:

@@ -1,0 +1,6 @@
+
+
+   
+   
+testNormal -A 13 -B 42 -mrand 10 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOut.txt
+

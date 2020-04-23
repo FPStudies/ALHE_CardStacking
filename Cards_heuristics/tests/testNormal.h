@@ -34,17 +34,17 @@ class TestNormal: public TestInterface, public CommandInterpreter{
 
 public:
 	TestNormal(const unsigned int& maxNumberOfIterations);
-	~TestNormal();
+	virtual ~TestNormal();
 	TestNormal(const TestNormal& other);
 
-	void runTest(const std::string& path);
-	TestNormal* clone() const;
-	bool isDataValid() const;
+	virtual void runTest(const std::string& path) override;
+	virtual TestNormal* clone() const override;
+	virtual bool isDataValid() const override;
 
-	bool runCommand(const std::string& keyword, const std::vector<std::string>& flags, const std::vector<std::vector<std::string>>& dataToFlags); // TODO
-	bool isKeyword(const std::string& word) const;
-	bool isCommand(const std::string& command) const;
-	bool expectedStringAfterCommand(const std::string& command, const std::string& string) const;
+	virtual bool runCommand(const std::string& keyword, const std::vector<std::string>& flags, const std::vector<std::vector<std::string>>& dataToFlags) override; // TODO
+	virtual bool isKeyword(const std::string& word) const override; 
+	virtual bool isCommand(const std::string& command) const override;
+	virtual bool expectedStringAfterCommand(const std::string& command, const std::string& string) const override;
 
 
 	void setPopulationSize(const unsigned int& popSize);

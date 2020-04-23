@@ -7,7 +7,7 @@ class CommandInterpreter{
 
 public:
     CommandInterpreter() {};
-    ~CommandInterpreter() {};
+    virtual ~CommandInterpreter() {};
     CommandInterpreter(const CommandInterpreter& other) = delete;
 
     /**

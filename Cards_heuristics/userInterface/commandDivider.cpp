@@ -34,6 +34,19 @@ CommandDivider::CommandDivider()
 CommandDivider::~CommandDivider()
 {}
 
+void CommandDivider::clearWhitespace(std::stringstream& stream) const {
+    int getChar;
+    while(!stream.eof() && ((getChar = stream.get()) == ' ' || getChar == '\n')) {}
+    if(!stream.eof()) stream.unget();
+}
+
+void CommandDivider::getLine(std::stringstream& extractFrom, std::string& extractTo) const{
+    int getChar;
+    clearWhitespace(extractFrom);
+    std::getline(extractFrom, extractTo);
+    while(!extractFrom.eof() && (getChar = extractFrom.get()) != '\n') {}
+}
+
 bool CommandDivider::divideByKeyWords(std::stringstream& command){
     //unsigned int begin = 0, end = 0;
     //auto lastInter = interpreters.begin();
@@ -42,17 +55,21 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
     std::vector<std::unique_ptr<DividedWord>>::iterator iterLast;
     std::stringstream &ss = command;
     std::string word, tmp;
+    int getChar;
 
     while(!ss.eof()){   // get all commands
-        std::getline(ss, tmp);
+        getLine(ss, tmp);
+        if(ss.eof()) return false;
+
         std::stringstream sCommand(tmp);
-        sCommand >> std::skipws;
 
         bool isKeyword = false;
         bool isFlag = false;
+        bool contLoop = false;
 
         while(!sCommand.eof()){ // get one command at a time
-            sCommand >> word;
+            if(!(sCommand >> word)) return true;
+
             if(word[0] == '-' && !isKeyword) return true;
 
             if(word[0] == '-'){ // if flags
@@ -80,8 +97,14 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
                     isKeyword = true;
                     (*it)->extractedKeyword = word;
                     iterLast = it;
-                    continue;
+                    contLoop = true;
+                    break;
                 }
+            }
+
+            if(contLoop){
+                contLoop = false;
+                continue;
             }
 
             return true;
@@ -153,7 +176,7 @@ bool CommandDivider::runCommand(const std::string& command, bool clearBuf){
     std::stringstream stream(command);
 
     if(divideByKeyWords(stream)) return true; // here validate string
-    
+
     for(auto& it : interpreters){
         if(it->interpreter->runCommand(it->extractedKeyword, it->commands, it->commandsArg)) return true;
     }
@@ -191,7 +214,7 @@ bool CommandDivider::addInterpreter(const CommandInterpreter& inter){
         if(typeid(*it) == typeid(inter)) return true;
     }
 
-    interpreters.push_back(std::move(std::make_unique<DividedWord>(inter)));
+    interpreters.push_back(std::make_unique<DividedWord>(inter));
     return false;
 }
 

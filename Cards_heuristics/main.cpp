@@ -28,14 +28,14 @@ int main(int argc, char**argv) {
 	tmp.setPopulationSize(20);
 	tmp.setPopulationSizeAfterTounament(10);*/
 
-	commands.addInterpreter(tmp);
-	//commands.loadCommandsFromFile("scripts/test.txt");
+	//commands.addInterpreter(tmp);
+	//if(commands.loadCommandsFromFile("scripts/test.txt")) std::cout << "Operation failed";
 
 	/*
 	Error
 	the return value is always the same.
 	*/
-	/*generation.setGroupAValue(groupA);
+	generation.setGroupAValue(groupA);
 	generation.setGroupBValue(groupB);
 	generation.setMutationProbability(10, 1000);
 	generation.setPopulationSize(20);
@@ -52,7 +52,7 @@ int main(int argc, char**argv) {
 		generation.runOneGeneration(MatingPool::CrossoverType::uniform);
 	}
 	
-	cout << "Done" << endl;
+	/*cout << "Done" << endl;
 	auto temp = generation.findBest();
 	cout << temp << endl;
 	//cout << generation << endl;

@@ -91,7 +91,9 @@ TestNormal* TestNormal::clone() const
 bool TestNormal::isDataValid() const {
 	if(groupAValue == INT_MAX || groupBValue == INT_MAX || mutationRand == UINT_MAX || mutationMax == UINT_MAX || !isCrossTypeSet || \
 	crossoverNumber == UINT_MAX || populationSize == UINT_MAX || populationSizeAfterTournament == UINT_MAX || crossoverPoints == UINT_MAX)
+	{
 		return false;
+	}
 
 	return true;
 }
@@ -113,14 +115,15 @@ void TestNormal::setCrossoverType(MatingPool::CrossoverType type) {crossType = t
 
 
 bool TestNormal::isKeyword(const std::string& word) const {
-	for(unsigned int i = 0; i < sizeof(keyword[0]) / sizeof(keyword[0][0]); ++i){
+
+	for(unsigned int i = 0; i < sizeof(keyword) / sizeof(keyword[0]); ++i){
 		if(keyword[i] == word) return true;
 	}
 	return false;
 }
 
 bool TestNormal::isCommand(const std::string& com) const {
-	for(unsigned int i = 0; i < sizeof(command[0]) / sizeof(command[0][0]); ++i){
+	for(unsigned int i = 0; i < sizeof(command) / sizeof(command[0]); ++i){
 		if(command[i] == com) return true;
 	}
 
@@ -134,7 +137,7 @@ bool TestNormal::expectedStringAfterCommand(const std::string& com, const std::s
 	int valInt;
 	unsigned int valUInt;
 
-	for(; pos < sizeof(command[0]) / sizeof(command[0][0]); ++pos){
+	for(; pos < sizeof(command) / sizeof(command[0]); ++pos){
 		if(command[pos] == com) break;
 	}
 
@@ -152,7 +155,7 @@ bool TestNormal::expectedStringAfterCommand(const std::string& com, const std::s
 		ss >> std::skipws;
 		if(!ss.eof()) return false;
 
-		for(unsigned int k = 0; k < sizeof(crossoverMode[0]) / sizeof(crossoverMode[0][0]); ++k){
+		for(unsigned int k = 0; k < sizeof(crossoverMode) / sizeof(crossoverMode[0]); ++k){
 			if(crossoverMode[k] == tmp) return true;
 		}
 		return false;
@@ -169,7 +172,7 @@ bool TestNormal::runCommand(const std::string& keyword, const std::vector<std::s
 	if(flags.size() != dataToFlags.size()) return true;
 	
 	for(auto& fl : flags){
-		for(unsigned int i = 0; i < sizeof(command[0]) / sizeof(command[0][0]); ++i){
+		for(unsigned int i = 0; i < sizeof(command) / sizeof(command[0]); ++i){
 			if(command[i] == fl){
 				for(unsigned int p = 0; p < dataToFlags[i].size(); ++p){
 					std::stringstream ss(dataToFlags[i][p]);
@@ -203,17 +206,17 @@ bool TestNormal::runCommand(const std::string& keyword, const std::vector<std::s
 							break;
 						case 8:
 							std::stringstream(str) >> crossMode;
-							for(unsigned int k = 0; k < sizeof(crossoverMode[0]) / sizeof(crossoverMode[0][0]); ++k){
+							for(unsigned int k = 0; k < sizeof(crossoverMode) / sizeof(crossoverMode[0]); ++k){
 								if(crossoverMode[k] == crossMode) {
 									switch (k){
 										case 0:
-											crossType = MatingPool::CrossoverType::singlePoint;
+											setCrossoverType(MatingPool::CrossoverType::singlePoint);
 											break;
 										case 1:
-											crossType = MatingPool::CrossoverType::multiplePoint;
+											setCrossoverType(MatingPool::CrossoverType::multiplePoint);
 											break;
 										case 2:
-											crossType = MatingPool::CrossoverType::uniform;
+											setCrossoverType(MatingPool::CrossoverType::uniform);
 											break;
 										default:
 											return true;

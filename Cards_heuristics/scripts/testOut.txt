@@ -1,0 +1,7 @@
+
+
+
+********* Started normal test
+The best pair is:
+	UU: 0 0
+********* Ended normal test
