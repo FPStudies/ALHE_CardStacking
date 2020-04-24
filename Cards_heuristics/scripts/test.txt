@@ -1,3 +1,3 @@
 testNormal -A 13 -B 42 -mrand 10 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOut.txt
-
-testNormal -A 13 -B 42 -mrand 10 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOut2.txt
+testNormal -A 25 -B 16 -mrand 10 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOut2.txt
+testTime -A 10 -B 16 -mrand 10 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTime.txt

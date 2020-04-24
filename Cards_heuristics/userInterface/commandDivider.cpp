@@ -76,7 +76,6 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
     while(!ss.eof()){   // get all commands
         std::string word, tmp;
         getLine(ss, tmp);
-        if(ss.eof()) return false;
 
         std::stringstream sCommand(tmp);
 
@@ -127,7 +126,6 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
 
             return true;
         }
-        std::cout << "AA" << std::endl;
     }
 
     

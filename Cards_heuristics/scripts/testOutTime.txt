@@ -1,0 +1,8 @@
+
+
+
+********* Started time test
+The best pair is:
+	ABAABAABBB: 21 34
+Test last:	4332857
+********* Ended time test
