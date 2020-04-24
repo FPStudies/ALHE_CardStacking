@@ -284,7 +284,12 @@ std::pair<std::shared_ptr<Population::Individual>, std::shared_ptr<Population::I
 	
 	auto it1 = selectedPopulation.population.begin() + (random % selectedPopulation.population.size());
 	auto it2 = selectedPopulation.population.begin() + (random % selectedPopulation.population.size());
-	if(it1 == it2) ++it2;
+	if (it1 == it2)
+	{
+		++it2;
+		if (it2 == selectedPopulation.population.end()) it2 = selectedPopulation.population.begin();
+	}
+
 
 	one = (*it1)->copy();
 	two = (*it2)->copy();

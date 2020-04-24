@@ -13,48 +13,78 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\mainAlgorithm">
+      <UniqueIdentifier>{c9a223d9-ed59-4e05-9f81-a060f64f023d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mainAlgorithm">
+      <UniqueIdentifier>{f46e1bd3-9540-4235-85a7-1624da8f833b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tests">
+      <UniqueIdentifier>{a1adfffd-143c-4e1d-b0ff-58df4efb4476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{0dcb6c8a-6776-49bc-9bb6-0cebd6839064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\userInterface">
+      <UniqueIdentifier>{6772bb61-d02c-49dd-9c65-0564a7aa9b9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\userInterface">
+      <UniqueIdentifier>{e1810a57-2b12-49bd-b0db-9e4314d1dad1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="binaryChromosome.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="mainAlgorithm\binaryChromosome.cpp">
+      <Filter>Source Files\mainAlgorithm</Filter>
     </ClCompile>
-    <ClCompile Include="randomPoint.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="mainAlgorithm\matingPool.cpp">
+      <Filter>Source Files\mainAlgorithm</Filter>
     </ClCompile>
-    <ClCompile Include="population.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="mainAlgorithm\population.cpp">
+      <Filter>Source Files\mainAlgorithm</Filter>
     </ClCompile>
-    <ClCompile Include="matingPool.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\testInterface.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="mainAlgorithm\randomPoint.cpp">
+      <Filter>Source Files\mainAlgorithm</Filter>
     </ClCompile>
     <ClCompile Include="tests\tests.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\testNormal.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="userInterface\commandDivider.cpp">
+      <Filter>Source Files\userInterface</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="binaryChromosome.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="mainAlgorithm\binaryChromosome.h">
+      <Filter>Header Files\mainAlgorithm</Filter>
     </ClInclude>
-    <ClInclude Include="randomPoint.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="mainAlgorithm\matingPool.h">
+      <Filter>Header Files\mainAlgorithm</Filter>
     </ClInclude>
-    <ClInclude Include="population.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="mainAlgorithm\population.h">
+      <Filter>Header Files\mainAlgorithm</Filter>
     </ClInclude>
-    <ClInclude Include="matingPool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tests\testInterface.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="mainAlgorithm\randomPoint.h">
+      <Filter>Header Files\mainAlgorithm</Filter>
     </ClInclude>
     <ClInclude Include="tests\tests.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\testInterface.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\testNormal.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="userInterface\commandDivider.h">
+      <Filter>Header Files\userInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="userInterface\commandInterpreter.h">
+      <Filter>Header Files\userInterface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

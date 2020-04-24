@@ -1,7 +1,7 @@
 
 #include <iostream>
-#include "matingPool.h"
-#include "randomPoint.h"
+#include "mainAlgorithm/matingPool.h"
+#include "mainAlgorithm/randomPoint.h"
 #include "tests/testNormal.h"
 #include "userInterface/commandDivider.h"
 
