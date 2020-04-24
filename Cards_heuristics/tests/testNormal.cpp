@@ -71,6 +71,8 @@ void TestNormal::runTest(const std::string& path)
 
 	if(!isDataValid()) *out << "Data is not set properly\n";
 
+	pool.createFirstPopulation();
+
 	for (unsigned int i = 0; i < maxNumberOfIterations_ && !pool.isBestFound(); ++i) {
 		pool.runOneGeneration(crossType, crossoverPoints);
 		if(pool.isBestFound()) break;

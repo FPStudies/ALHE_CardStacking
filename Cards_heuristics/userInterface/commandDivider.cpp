@@ -44,7 +44,6 @@ void CommandDivider::getLine(std::stringstream& extractFrom, std::string& extrac
     int getChar;
     clearWhitespace(extractFrom);
     std::getline(extractFrom, extractTo);
-    while(!extractFrom.eof() && (getChar = extractFrom.get()) != '\n') {}
 }
 
 bool CommandDivider::divideByKeyWords(std::stringstream& command){
@@ -54,10 +53,10 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
     //bool isOption = false;
     std::vector<std::unique_ptr<DividedWord>>::iterator iterLast;
     std::stringstream &ss = command;
-    std::string word, tmp;
-    int getChar;
+    //int getChar;
 
     while(!ss.eof()){   // get all commands
+        std::string word, tmp;
         getLine(ss, tmp);
         if(ss.eof()) return false;
 
@@ -109,6 +108,7 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
 
             return true;
         }
+        std::cout << "AA" << std::endl;
     }
 
     

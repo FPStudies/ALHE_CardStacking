@@ -3,5 +3,5 @@
 
 ********* Started normal test
 The best pair is:
-	UU: 0 0
+	BBBABBBBAB: 13 42
 ********* Ended normal test
