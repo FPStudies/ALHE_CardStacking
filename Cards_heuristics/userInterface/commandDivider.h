@@ -13,20 +13,30 @@
 #include "commandInterpreter.h"
 
 class CommandDivider{
-    struct DividedWord{
-        std::string extractedKeyword;
-        std::vector<std::string> commands;
-        std::vector<std::vector<std::string>> commandsArg;
+    struct InterpreterEntity{
+        struct Data{
+            std::string extractedKeyword;
+            std::vector<std::string> commands;
+            std::vector<std::vector<std::string>> commandsArg;
+
+            Data();
+            ~Data();
+            Data(const Data& other) = delete;
+            Data(Data&& other);
+            Data& operator=(Data&& other);
+        };
+
+        std::vector<Data> dataToInterpret;
         std::unique_ptr<CommandInterpreter> interpreter;
 
-        DividedWord(const DividedWord& other) = delete;
-        DividedWord(const CommandInterpreter& inter);
-        ~DividedWord();
-        DividedWord(DividedWord&& other);
-        DividedWord& operator=(DividedWord&& other);
+        InterpreterEntity(const InterpreterEntity& other) = delete;
+        InterpreterEntity(const CommandInterpreter& inter);
+        ~InterpreterEntity();
+        InterpreterEntity(InterpreterEntity&& other);
+        InterpreterEntity& operator=(InterpreterEntity&& other);
     };
 
-    std::vector<std::unique_ptr<DividedWord>> interpreters;
+    std::vector<std::unique_ptr<InterpreterEntity>> interpreters;
 
     bool divideByKeyWords(std::stringstream& command);
     void getLine(std::stringstream& extractFrom, std::string& extractTo) const;

@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char**argv) {
 	cout << "Hello" << endl;
 
-	unsigned int groupA = 13, groupB = 42;
+	//unsigned int groupA = 13, groupB = 42;
 
 	MatingPool generation;
 	RandomPoint::newSeed();
