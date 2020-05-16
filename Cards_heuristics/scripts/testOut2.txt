@@ -1,7 +1,0 @@
-
-
-
-********* Started normal test
-The best pair is:
-	ABABBABABA: 28 27
-********* Ended normal test

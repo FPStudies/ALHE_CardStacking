@@ -31,6 +31,9 @@
     <Filter Include="Source Files\userInterface">
       <UniqueIdentifier>{e1810a57-2b12-49bd-b0db-9e4314d1dad1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{34b7536c-5b01-457f-bedc-3831dc78611b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,6 +59,12 @@
     </ClCompile>
     <ClCompile Include="userInterface\commandDivider.cpp">
       <Filter>Source Files\userInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\testCardsHeuristic.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\testTime.cpp">
+      <Filter>Source Files\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,5 +95,16 @@
     <ClInclude Include="userInterface\commandInterpreter.h">
       <Filter>Header Files\userInterface</Filter>
     </ClInclude>
+    <ClInclude Include="tests\testCardsHeuristic.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\testTime.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="scripts\test.txt">
+      <Filter>Scripts</Filter>
+    </Text>
   </ItemGroup>
 </Project>

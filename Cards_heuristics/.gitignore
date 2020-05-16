@@ -8,4 +8,5 @@ Debug/
 *.a
 *.lib
 x64/
-scripts/testOut*
+*.sconsign.dblite
+*/testOut*
