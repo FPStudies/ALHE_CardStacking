@@ -9,7 +9,7 @@ pathToFiles = [
 
 env = Environment(
     CC = 'g++',
-    CCFLAGS = '-Wall',
+    CCFLAGS = '-Wall -g',
     SCONS_CXX_STANDARD='c++11',
     CPPPATH = pathToFiles
     

@@ -3,6 +3,7 @@
 #include "mainAlgorithm/matingPool.h"
 #include "mainAlgorithm/randomPoint.h"
 #include "tests/testNormal.h"
+#include "tests/testTime.h"
 #include "userInterface/commandDivider.h"
 
 using namespace std;
@@ -10,12 +11,14 @@ using namespace std;
 int main(int argc, char**argv) {
 	cout << "Hello" << endl;
 
-	unsigned int groupA = 13, groupB = 42;
+	//unsigned int groupA = 13, groupB = 42;
 
 	MatingPool generation;
 	RandomPoint::newSeed();
 
-	TestNormal tmp(100);
+	TestNormal normal(100);
+	TestTime time(100);
+
 	CommandDivider commands;
 
 	/*tmp.setCrossoverPoints(3);
@@ -28,14 +31,15 @@ int main(int argc, char**argv) {
 	tmp.setPopulationSize(20);
 	tmp.setPopulationSizeAfterTounament(10);*/
 
-	//commands.addInterpreter(tmp);
-	//if(commands.loadCommandsFromFile("scripts/test.txt")) std::cout << "Operation failed";
+	commands.addInterpreter(normal);
+	commands.addInterpreter(time);
+	if(commands.loadCommandsFromFile("scripts/test.txt")) std::cout << "Operation failed";
 
 	/*
 	Error
 	the return value is always the same.
 	*/
-	generation.setGroupAValue(groupA);
+	/*generation.setGroupAValue(groupA);
 	generation.setGroupBValue(groupB);
 	generation.setMutationProbability(10, 1000);
 	generation.setPopulationSize(20);
@@ -52,7 +56,7 @@ int main(int argc, char**argv) {
 		generation.runOneGeneration(MatingPool::CrossoverType::uniform);
 	}
 	
-	/*cout << "Done" << endl;
+	cout << "Done" << endl;
 	auto temp = generation.findBest();
 	cout << temp << endl;
 	//cout << generation << endl;

@@ -3,5 +3,5 @@
 
 ********* Started normal test
 The best pair is:
-	BABABBABBB: 13 42
+	ABABBABABA: 28 27
 ********* Ended normal test
