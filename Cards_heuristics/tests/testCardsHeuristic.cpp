@@ -203,8 +203,9 @@ bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vecto
 		}
 	}
 
-	//runTest(pathToOutputFile);
-	runTestSilent(pathToOutputFile);
+	runTest(pathToOutputFile);
+	//runTestSilent(pathToOutputFile);
+	//runTestHeuristicSilent(pathToOutputFile);
 
 	return false;
 }

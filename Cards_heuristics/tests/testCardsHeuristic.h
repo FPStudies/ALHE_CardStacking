@@ -39,6 +39,9 @@ public:
 
     virtual void runTest(const std::string& path) = 0;
 	virtual int runTestSilent(const std::string& path) = 0;
+	virtual void runTestHeuristic(const std::string& path) = 0;
+	virtual int runTestHeuristicSilent(const std::string& path) = 0;
+
 	virtual TestCardsHeuristic* clone() const = 0;
 	virtual bool isDataValid() const override;
 

@@ -28,7 +28,7 @@ void TestTime::runTest(const std::string& path){
 		out = &file;
 	}
 
-	*out << "\n\n\n********* Started time test" << std::endl;
+	*out << "\n\n\n********* Started genetic time test" << std::endl;
 	
 	MatingPool pool;
 	setPoolValues(pool);
@@ -83,6 +83,70 @@ int TestTime::runTestSilent(const std::string& path) {
 		if (pool.isBestFound()) break;
 	}
 	auto endTime = std::chrono::steady_clock::now();
+	auto timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(endTime - startTime).count();
+	*out << timeDuration << "\n";
+
+	if (fileOpened) file.close();
+
+	return static_cast<int>(timeDuration);
+}
+
+void TestTime::runTestHeuristic(const std::string& path) {
+	std::ofstream file;
+	std::ostream* out;
+	bool fileOpened = false;
+
+	file.open(path, std::ios::app);
+	if (!file) out = &std::cout;
+	else {
+		fileOpened = true;
+		out = &file;
+	}
+
+	*out << "\n\n\n********* Started heuristic time test" << std::endl;
+
+	MatingPool pool;
+	setPoolValues(pool);
+
+	if (!isDataValid()) *out << "Data is not set properly\n";
+
+	auto startTime = std::chrono::steady_clock::now();
+
+	auto result = pool.runHeuristic();
+
+	auto endTime = std::chrono::steady_clock::now();
+
+	*out << "Found pair is:\n\t" << result << "\n";
+	*out << "Test last:\t" << std::chrono::duration_cast<std::chrono::nanoseconds>(endTime - startTime).count() << "\n";
+
+	*out << "********* Ended time test" << std::endl;
+
+	if (fileOpened) file.close();
+}
+
+int TestTime::runTestHeuristicSilent(const std::string& path) {
+	std::ofstream file;
+	std::ostream* out;
+	bool fileOpened = false;
+
+	file.open(path, std::ios::app);
+	if (!file) out = &std::cout;
+	else {
+		fileOpened = true;
+		out = &file;
+	}
+
+	MatingPool pool;
+	setPoolValues(pool);
+
+	if (!isDataValid()) *out << "Data is not set properly\n";
+
+	auto startTime = std::chrono::steady_clock::now();
+
+	auto result = pool.runHeuristic();
+
+	auto endTime = std::chrono::steady_clock::now();
+
 	auto timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(endTime - startTime).count();
 	*out << timeDuration << "\n";
 

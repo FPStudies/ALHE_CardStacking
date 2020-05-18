@@ -90,6 +90,8 @@ public:
 
 	void runOneGeneration(CrossoverType type, const unsigned int& numberOfPointCross = 1);
 
+	BinaryChromosome runHeuristic();
+
 	Population::Individual findBest();
 
 	bool isBestFound();

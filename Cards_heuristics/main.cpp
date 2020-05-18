@@ -39,7 +39,7 @@ int main(int argc, char**argv) {
 
 	commands.addInterpreter(normal);
 	commands.addInterpreter(time);
-	if(commands.loadCommandsFromFile("scripts/testTime.txt")) std::cout << "Operation failed";
+	if(commands.loadCommandsFromFile("scripts/test.txt")) std::cout << "Operation failed";
 
 	/*
 	Error

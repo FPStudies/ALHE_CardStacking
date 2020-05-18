@@ -342,5 +342,12 @@ std::ostream& operator<<(std::ostream& os, const MatingPool& pool)
 	return os;
 }
 
+BinaryChromosome MatingPool::runHeuristic()
+{
+	BinaryChromosome chrom(numberOfGenes, false);
+	chrom.startHeuristic(groupAVal, groupBVal);
+	chrom.evaluate(groupAVal, groupBVal);
+	return chrom;
+}
 
 #endif

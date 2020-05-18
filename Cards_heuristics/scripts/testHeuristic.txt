@@ -1,0 +1,121 @@
+testTime -A 55 -B 0 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 1 -B 54 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 53 -B 2 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 3 -B 52 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 51 -B 4 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 5 -B 50 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 49 -B 6 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 7 -B 48 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 47 -B 8 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 9 -B 46 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 45 -B 10 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 11 -B 44 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 43 -B 12 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 13 -B 42 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 41 -B 14 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 15 -B 40 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 39 -B 16 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 17 -B 38 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 37 -B 18 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 19 -B 36 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 35 -B 20 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 21 -B 34 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 33 -B 22 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 23 -B 32 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 31 -B 24 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 25 -B 30 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 26 -B 29 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 28 -B 27 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 28 -B 27 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 26 -B 29 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 30 -B 25 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 24 -B 31 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 32 -B 23 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 22 -B 33 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 34 -B 21 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 20 -B 35 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 36 -B 19 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 18 -B 37 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 38 -B 17 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 16 -B 39 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 40 -B 15 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 14 -B 41 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 42 -B 13 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 12 -B 43 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 44 -B 11 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 10 -B 45 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 46 -B 9 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 8 -B 47 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 48 -B 7 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 6 -B 49 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 50 -B 5 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 4 -B 51 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 52 -B 3 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 2 -B 53 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+testTime -A 54 -B 1 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicAchievable.txt
+
+testTime -A 55 -B 1 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 14 -B 42 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 37 -B 19 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 25 -B 29 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 7 -B 47 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 7 -B 50 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 42 -B 15 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 9 -B 48 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 23 -B 30 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 37 -B 16 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 45 -B 13 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 3 -B 55 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 37 -B 21 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 23 -B 29 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 14 -B 38 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 30 -B 29 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 9 -B 50 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 44 -B 15 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 37 -B 14 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 20 -B 31 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 10 -B 50 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 45 -B 15 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 37 -B 23 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 16 -B 34 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 20 -B 30 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 11 -B 50 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 45 -B 16 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 38 -B 23 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 17 -B 32 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 17 -B 32 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 12 -B 50 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 45 -B 17 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 39 -B 23 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 8 -B 40 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 15 -B 33 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 12 -B 51 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 46 -B 17 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 39 -B 24 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 8 -B 39 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 13 -B 34 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 13 -B 51 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 47 -B 17 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 40 -B 24 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 9 -B 37 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 12 -B 34 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 13 -B 52 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 47 -B 18 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 40 -B 25 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 9 -B 36 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 30 -B 15 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+
+testTime -A 14 -B 52 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 47 -B 19 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 41 -B 25 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 9 -B 35 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt
+testTime -A 14 -B 30 -mrand 20 -mmax 1000 -cnumb 10 -popsize 20 -popsizetourn 10 -crosspoints 3 -crosstype singlePoint -path scripts/testOutTimeHeuristicUnAchievable.txt

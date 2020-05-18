@@ -84,6 +84,66 @@ int TestNormal::runTestSilent(const std::string& path)
 	return result.getRating();
 }
 
+void TestNormal::runTestHeuristic(const std::string& path)
+{
+	std::ofstream file;
+	std::ostream* out;
+	bool fileOpened = false;
+
+	file.open(path, std::ios::app);
+	if (!file) out = &std::cout;
+	else {
+		fileOpened = true;
+		out = &file;
+	}
+
+	*out << "\n\n\n********* Started heuristic normal test" << std::endl;
+
+	MatingPool pool;
+	setPoolValues(pool);
+
+	if (!isDataValid()) *out << "Data is not set properly\n";
+
+	pool.createFirstPopulation();
+
+	auto result = pool.runHeuristic();
+
+	*out << "Found pair is:\n\t" << result << ": " << result.getRating() << "\n";
+
+	*out << "********* Ended normal test" << std::endl;
+
+	if (fileOpened) file.close();
+}
+
+int TestNormal::runTestHeuristicSilent(const std::string& path)
+{
+	std::ofstream file;
+	std::ostream* out;
+	bool fileOpened = false;
+
+	file.open(path, std::ios::app);
+	if (!file) out = &std::cout;
+	else {
+		fileOpened = true;
+		out = &file;
+	}
+
+	MatingPool pool;
+	setPoolValues(pool);
+
+	if (!isDataValid()) *out << "Data is not set properly\n";
+
+	pool.createFirstPopulation();
+
+	auto result = pool.runHeuristic();
+
+	*out << result << ": " << result.getRating() << "\n";
+
+	if (fileOpened) file.close();
+
+	return result.getRating();
+}
+
 TestNormal* TestNormal::clone() const
 {
 	return new TestNormal(*this);
