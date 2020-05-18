@@ -1,3 +1,6 @@
+/**	@file main.cpp
+*	@brief Plik g³ównej funkcji programu.
+*/
 
 #include <iostream>
 #include "mainAlgorithm/matingPool.h"
@@ -8,6 +11,9 @@
 
 using namespace std;
 
+/** G³ówna funkcja programu.
+*	Wczytuje polecenie, uruchamia algorytm i zwraca wynik.
+*/
 int main(int argc, char**argv) {
 	cout << "Hello" << endl;
 
@@ -16,8 +22,8 @@ int main(int argc, char**argv) {
 	MatingPool generation;
 	RandomPoint::newSeed();
 
-	TestNormal normal(100);
-	TestTime time(100);
+	TestNormal normal(200);
+	TestTime time(200);
 
 	CommandDivider commands;
 
@@ -33,7 +39,7 @@ int main(int argc, char**argv) {
 
 	commands.addInterpreter(normal);
 	commands.addInterpreter(time);
-	if(commands.loadCommandsFromFile("scripts/test.txt")) std::cout << "Operation failed";
+	if(commands.loadCommandsFromFile("scripts/testTime.txt")) std::cout << "Operation failed";
 
 	/*
 	Error

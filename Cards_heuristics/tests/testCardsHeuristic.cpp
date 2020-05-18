@@ -3,8 +3,25 @@
 
 #include "testCardsHeuristic.h"
 
+/** Dostêpne komendy (flagi):
+*	A - docelowa wartoœæ dla stosu A
+*	B - docelowa wartoœæ dla stosu B
+*	mrand - prawdopodobieñstwo mutacji
+*	mmax - 
+*	cnumb - 
+*	popsize - wielkoœæ populacji
+*	popsizetourn - wielkoœæ turnieji
+*	crosspoints - iloœæ punktów przeciêcia dla krzy¿owania wielopunktowego
+*	crosstype - typ krzy¿owania
+*	path - œcie¿ka dla pliku wynikowego
+*/
 const char* TestCardsHeuristic::command[10] = {"A", "B", "mrand", "mmax", "cnumb", "popsize", "popsizetourn", "crosspoints", "crosstype", "path"};
 
+/** Dostêpne tryby krzy¿owania:
+*	singlePoint - jednopunktowe
+*	multiplePoint - wielopunktowe
+*	uniform - 
+*/
 const char* TestCardsHeuristic::crossoverMode[3] = {"singlePoint", "multiplePoint", "uniform"};
 
 void TestCardsHeuristic::setPoolValues(MatingPool& pool)
@@ -186,7 +203,8 @@ bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vecto
 		}
 	}
 
-	runTest(pathToOutputFile);
+	//runTest(pathToOutputFile);
+	runTestSilent(pathToOutputFile);
 
 	return false;
 }

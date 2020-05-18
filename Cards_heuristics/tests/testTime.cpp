@@ -21,7 +21,7 @@ void TestTime::runTest(const std::string& path){
 	std::ostream* out;
 	bool fileOpened = false;
 
-	file.open(path);
+	file.open(path, std::ios::app);
 	if(!file) out = &std::cout;
 	else{
 		fileOpened = true;
@@ -53,6 +53,42 @@ void TestTime::runTest(const std::string& path){
 	*out << "********* Ended time test" << std::endl;
 
 	if(fileOpened) file.close();
+}
+
+int TestTime::runTestSilent(const std::string& path) {
+	std::ofstream file;
+	std::ostream* out;
+	bool fileOpened = false;
+
+	file.open(path, std::ios::app);
+	if (!file) out = &std::cout;
+	else {
+		fileOpened = true;
+		out = &file;
+	}
+
+	MatingPool pool;
+	setPoolValues(pool);
+
+	if (!isDataValid()) *out << "Data is not set properly\n";
+
+	auto startTime = std::chrono::steady_clock::now();
+
+	pool.createFirstPopulation();
+
+	for (unsigned int i = 0; i < maxNumberOfIterations_ && !pool.isBestFound(); ++i) {
+
+		pool.runOneGeneration(crossType, crossoverPoints);
+
+		if (pool.isBestFound()) break;
+	}
+	auto endTime = std::chrono::steady_clock::now();
+	auto timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(endTime - startTime).count();
+	*out << timeDuration << "\n";
+
+	if (fileOpened) file.close();
+
+	return static_cast<int>(timeDuration);
 }
 
 TestTime* TestTime::clone() const

@@ -38,6 +38,7 @@ public:
 	TestCardsHeuristic(const TestCardsHeuristic& other);
 
     virtual void runTest(const std::string& path) = 0;
+	virtual int runTestSilent(const std::string& path) = 0;
 	virtual TestCardsHeuristic* clone() const = 0;
 	virtual bool isDataValid() const override;
 

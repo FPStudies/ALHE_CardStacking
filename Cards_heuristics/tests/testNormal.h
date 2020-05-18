@@ -17,6 +17,7 @@ public:
 	TestNormal(const TestNormal& other);
 
 	virtual void runTest(const std::string& path) override;
+	virtual int runTestSilent(const std::string& path) override;
 	virtual TestNormal* clone() const override;
 
 	virtual bool isKeyword(const std::string& word) const override; 

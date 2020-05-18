@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Card Stacking: Dokumentacja klasy TestInterface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Card Stacking
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="class_test_interface-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy TestInterface<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Diagram dziedziczenia dla TestInterface</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_test_interface.png" usemap="#TestInterface_map" alt=""/>
+  <map id="TestInterface_map" name="TestInterface_map">
+<area href="class_test_cards_heuristic.html" alt="TestCardsHeuristic" shape="rect" coords="129,56,248,80"/>
+<area href="class_test_auto.html" alt="TestAuto" shape="rect" coords="0,112,119,136"/>
+<area href="class_test_normal.html" alt="TestNormal" shape="rect" coords="129,112,248,136"/>
+<area href="class_test_time.html" alt="TestTime" shape="rect" coords="258,112,377,136"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a7b7d1ea5db61afc23bd004834122babf"><td class="memItemLeft" align="right" valign="top"><a id="a7b7d1ea5db61afc23bd004834122babf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TestInterface</b> (const <a class="el" href="class_test_interface.html">TestInterface</a> &amp;other)=delete</td></tr>
+<tr class="separator:a7b7d1ea5db61afc23bd004834122babf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed7074d38fda4c11a56e5c8030f443f"><td class="memItemLeft" align="right" valign="top"><a id="abed7074d38fda4c11a56e5c8030f443f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>runTest</b> (const std::string &amp;path)=0</td></tr>
+<tr class="separator:abed7074d38fda4c11a56e5c8030f443f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1ec3fb5c3be7c5296d5ae261bd2d28"><td class="memItemLeft" align="right" valign="top"><a id="afe1ec3fb5c3be7c5296d5ae261bd2d28"></a>
+virtual <a class="el" href="class_test_interface.html">TestInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const =0</td></tr>
+<tr class="separator:afe1ec3fb5c3be7c5296d5ae261bd2d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d5e371360ca71c437ff3972c349d65"><td class="memItemLeft" align="right" valign="top"><a id="ae7d5e371360ca71c437ff3972c349d65"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDataValid</b> () const =0</td></tr>
+<tr class="separator:ae7d5e371360ca71c437ff3972c349d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>tests/<a class="el" href="test_interface_8h_source.html">testInterface.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

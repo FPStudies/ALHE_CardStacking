@@ -103,7 +103,9 @@ public:
 	void multiplePointCrossing(BinaryChromosome& other, const unsigned int& numberOfPoints);
 	void uniformCrossing(BinaryChromosome& other);
 
-
+	/** Rozwi¹zanie zach³anne
+	*	Ustawia stan chromosomu na rozwi¹zanie g³ównego problemu osi¹gniête algorytmem zach³annym dla zadanych wartoœci docelowych.
+	*/
 	void startHeuristic(const int& groupAIdeal, const int& groupBIdeal);
 
 
