@@ -33,7 +33,8 @@ int main(int argc, char**argv) {
 
 	commands.addInterpreter(normal);
 	commands.addInterpreter(time);
-	if(commands.loadCommandsFromFile(argv[2])) std::cout << "Operation failed";
+	if(commands.loadCommandsFromFile(argv[1])) std::cout << "Operation failed";
 
+	cout<<"Done.\n";
 	return 0;
 }

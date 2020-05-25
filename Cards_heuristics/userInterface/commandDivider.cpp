@@ -151,7 +151,7 @@ bool CommandDivider::runCommand(const std::string& command, bool clearBuf){
 }
 
 bool CommandDivider::loadCommandsFromFile(const std::string path, bool clearBuf){
-
+    
     std::ifstream file;
     std::stringstream fileBuf;
     std::string com;
