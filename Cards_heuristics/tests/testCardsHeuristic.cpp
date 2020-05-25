@@ -46,7 +46,8 @@ TestCardsHeuristic::TestCardsHeuristic(const unsigned int& maxNumberOfIterations
 	populationSize(10),
 	populationSizeAfterSelection(10),
 	crossoverPoints(3),
-	crossType(MatingPool::CrossoverType::uniform)
+	crossType(MatingPool::CrossoverType::uniform),
+	pathToOutputFile("out.txt")
 {}
 
 TestCardsHeuristic::~TestCardsHeuristic()
@@ -62,7 +63,8 @@ TestCardsHeuristic::TestCardsHeuristic(const TestCardsHeuristic& other)
 	populationSize(other.populationSize),
 	populationSizeAfterSelection(other.populationSizeAfterSelection),
 	crossoverPoints(other.crossoverPoints),
-	crossType(other.crossType)
+	crossType(other.crossType),
+	pathToOutputFile(other.pathToOutputFile)
 {}
 
 bool TestCardsHeuristic::isDataValid() const {
