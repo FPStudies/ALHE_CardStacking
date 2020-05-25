@@ -65,13 +65,8 @@ void CommandDivider::getLine(std::stringstream& extractFrom, std::string& extrac
 }
 
 bool CommandDivider::divideByKeyWords(std::stringstream& command){
-    //unsigned int begin = 0, end = 0;
-    //auto lastInter = interpreters.begin();
-    //bool commandMayBeValid = false;
-    //bool isOption = false;
     std::vector<std::unique_ptr<InterpreterEntity>>::iterator iterLast;
     std::stringstream &ss = command;
-    //int getChar;
 
     while(!ss.eof()){   // get all commands
         std::string word, tmp;
@@ -128,55 +123,6 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
         }
     }
 
-    
-    
-    /*for(unsigned int i = 0; i < command.size(); ++i){
-        if(isOption) return true;   // there was '-' and after that space
-        else if(command[i] == '-') { // options
-            if(!commandMayBeValid) return true;
-            isOption = true;
-        }
-        else if(command[i] == ' '){ // end of options or some word
-
-        }
-        else {  // if there wasn`t space or '-', so there is some word
-            ++end;
-            isOption = false;
-        }
-
-
-        if(command[i] == '-') { // options
-            if(!commandMayBeValid) return true;
-            isOption = true;
-        }
-        else if(command[i] == ' '){
-            if(begin != end){
-                std::string word = command.substr(begin, end - begin);
-                if(isOption){
-                    if(!(*iterLast)->interpreter->isCommand(word)) return true;
-                    (*iterLast)->commands.push_back(word);
-                }
-                else{   // if it is not an option but command name
-                    for(auto it = interpreters.begin(); it != interpreters.end(); ++it){
-                        if((*it)->interpreter->isKeyword(word)){
-                            commandMayBeValid = true;
-                            lastInter = it;
-                            (*it)->extractedKeyword = word;
-                            iterLast = it;
-                        }
-                        else return true; // do not found that phrase
-                    }
-                }
-            }
-
-            begin = i;
-            end = i;
-        }
-        else {
-            ++end;
-            isOption = false;
-        }
-    }*/
     return false;
 }
 

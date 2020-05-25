@@ -258,31 +258,8 @@ Population MatingPool::selectFromTwoGenerations(const Population& oldGeneration,
 
 std::pair<std::shared_ptr<Population::Individual>, std::shared_ptr<Population::Individual>> MatingPool::chooseTwoToCrossover(const Population& selectedPopulation)
 {
-	//bool notFound = true;
 	int random = rand() % selectedPopulation.population.size();
-	//auto it = selectedPopulation.population.begin() + random;
 	std::shared_ptr<Population::Individual> one = nullptr, two = nullptr;
-
-	/*while (notFound) {
-		if (it == selectedPopulation.population.end()) it = selectedPopulation.population.begin();
-
-		int rating = (*it)->getRating();
-		if (rating == 0) {
-			best = *it;
-			foundOptimal = true;
-			return std::pair<std::shared_ptr<Population::Individual>, std::shared_ptr<Population::Individual>>();
-		}
-
-		if (raitingFunction(rating) >= rand()) {
-			if(one == nullptr) one = (*it)->copy();
-			else {
-				two = (*it)->copy();
-				notFound = false;
-			}
-		}
-
-		++it;
-	}*/
 	
 	auto it1 = selectedPopulation.population.begin() + (random % selectedPopulation.population.size());
 	auto it2 = selectedPopulation.population.begin() + (random % selectedPopulation.population.size());

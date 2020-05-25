@@ -99,46 +99,6 @@ bool TestCardsHeuristic::isCommand(const std::string& com) const {
 	return false;
 }
 
-/*
-bool TestCardsHeuristic::expectedStringAfterCommand(const std::string& com, const std::string& string) const {
-	unsigned int pos = 0;
-	std::stringstream ss(string);
-	std::string valuatedString, tmp;
-	int valInt;
-	unsigned int valUInt;
-
-	for(; pos < sizeof(command) / sizeof(command[0]); ++pos){
-		if(command[pos] == com) break;
-	}
-
-	ss >> valuatedString;
-
-	if(pos < 2 && std::stringstream(valuatedString) >> valInt){
-		ss >> std::skipws;
-		if(!ss.eof()) return false;
-	}
-	else if(pos >= 2 && pos < 8 && std::stringstream(valuatedString) >> valUInt){
-		ss >> std::skipws;
-		if(!ss.eof()) return false;
-	}
-	else if(pos == 8 && std::stringstream(valuatedString) >> tmp){
-		ss >> std::skipws;
-		if(!ss.eof()) return false;
-
-		for(unsigned int k = 0; k < sizeof(crossoverMode) / sizeof(crossoverMode[0]); ++k){
-			if(crossoverMode[k] == tmp) return true;
-		}
-		return false;
-	}
-	else if(pos == 9 && std::stringstream(valuatedString) >> tmp){
-		ss >> std::skipws;
-		if(!ss.eof()) return false;
-	}
-
-	return true;
-}
-*/
-
 bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vector<std::string>& flags, const std::vector<std::vector<std::string>>& dataToFlags) {
 	if(flags.size() != dataToFlags.size()) return true;
 	

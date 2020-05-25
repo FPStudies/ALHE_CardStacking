@@ -30,11 +30,6 @@ private:
 	 * 
 	 */
 	Population population_;
-	/*
-	Population afterTournament;
-	Population individualsToCrossover;
-	Population afterCrossover;
-	Population newResidents;*/
 
 	/**
 	 * @brief Wielkość populacji
@@ -108,8 +103,6 @@ private:
 	 * 
 	 */
 	std::shared_ptr<Population::Individual> best;
-
-	//std::shared_ptr<Population::Individual> kingOfPopulation;
 
 	/**
 	 * @brief Selekcja kołem ruletki

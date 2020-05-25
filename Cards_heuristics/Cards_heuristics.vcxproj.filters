@@ -51,9 +51,6 @@
     <ClCompile Include="mainAlgorithm\randomPoint.cpp">
       <Filter>Source Files\mainAlgorithm</Filter>
     </ClCompile>
-    <ClCompile Include="tests\tests.cpp">
-      <Filter>Source Files\tests</Filter>
-    </ClCompile>
     <ClCompile Include="tests\testNormal.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
@@ -79,9 +76,6 @@
     </ClInclude>
     <ClInclude Include="mainAlgorithm\randomPoint.h">
       <Filter>Header Files\mainAlgorithm</Filter>
-    </ClInclude>
-    <ClInclude Include="tests\tests.h">
-      <Filter>Header Files\tests</Filter>
     </ClInclude>
     <ClInclude Include="tests\testInterface.h">
       <Filter>Header Files\tests</Filter>

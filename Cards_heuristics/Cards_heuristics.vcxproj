@@ -26,7 +26,6 @@
     <ClCompile Include="mainAlgorithm\randomPoint.cpp" />
     <ClCompile Include="tests\testCardsHeuristic.cpp" />
     <ClCompile Include="tests\testNormal.cpp" />
-    <ClCompile Include="tests\tests.cpp" />
     <ClCompile Include="tests\testTime.cpp" />
     <ClCompile Include="userInterface\commandDivider.cpp" />
   </ItemGroup>
@@ -38,7 +37,6 @@
     <ClInclude Include="tests\testCardsHeuristic.h" />
     <ClInclude Include="tests\testInterface.h" />
     <ClInclude Include="tests\testNormal.h" />
-    <ClInclude Include="tests\tests.h" />
     <ClInclude Include="tests\testTime.h" />
     <ClInclude Include="userInterface\commandDivider.h" />
     <ClInclude Include="userInterface\commandInterpreter.h" />

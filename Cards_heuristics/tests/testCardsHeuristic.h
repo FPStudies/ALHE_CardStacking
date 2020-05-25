@@ -207,8 +207,6 @@ public:
 	 */
 	virtual bool isCommand(const std::string& command) const override;
 
-	//virtual bool expectedStringAfterCommand(const std::string& command, const std::string& string) const override;
-
 	/**
 	 * @brief Ustaw wartość Population Size
 	 * 

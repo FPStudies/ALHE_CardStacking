@@ -10,3 +10,4 @@ Debug/
 x64/
 *.sconsign.dblite
 */testOut*
+~$*
