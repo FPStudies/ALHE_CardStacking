@@ -77,7 +77,7 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
         bool isKeyword = false;
         bool isFlag = false;
         bool contLoop = false;
-
+        
         while(!sCommand.eof()){ // get one command at a time
             if(!(sCommand >> word)) return true;
 
@@ -164,11 +164,9 @@ bool CommandDivider::loadCommandsFromFile(const std::string path, bool clearBuf)
     fileBuf >> std::skipws;
 
     com = fileBuf.str();
-
     if(runCommand(com, clearBuf)) return true;
 
     file.close();
-
     return false;
 }
 

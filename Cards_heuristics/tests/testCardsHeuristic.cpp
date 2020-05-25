@@ -38,16 +38,15 @@ void TestCardsHeuristic::setPoolValues(MatingPool& pool)
 
 TestCardsHeuristic::TestCardsHeuristic(const unsigned int& maxNumberOfIterations)
 	:maxNumberOfIterations_(maxNumberOfIterations),
-	groupAValue(INT_MAX),
-	groupBValue(INT_MAX),
-	mutationRand(UINT_MAX), 
-	mutationMax(UINT_MAX),
-	crossoverNumber(UINT_MAX),
-	populationSize(UINT_MAX),
-	populationSizeAfterSelection(UINT_MAX),
-	crossoverPoints(UINT_MAX),
-	crossType(MatingPool::CrossoverType::uniform),
-	isCrossTypeSet(false)
+	groupAValue(-1),
+	groupBValue(-1),
+	mutationRand(70), 
+	mutationMax(1000),
+	crossoverNumber(10),
+	populationSize(10),
+	populationSizeAfterSelection(10),
+	crossoverPoints(3),
+	crossType(MatingPool::CrossoverType::uniform)
 {}
 
 TestCardsHeuristic::~TestCardsHeuristic()
@@ -63,13 +62,11 @@ TestCardsHeuristic::TestCardsHeuristic(const TestCardsHeuristic& other)
 	populationSize(other.populationSize),
 	populationSizeAfterSelection(other.populationSizeAfterSelection),
 	crossoverPoints(other.crossoverPoints),
-	crossType(other.crossType),
-	isCrossTypeSet(other.isCrossTypeSet)
+	crossType(other.crossType)
 {}
 
 bool TestCardsHeuristic::isDataValid() const {
-	if(groupAValue == INT_MAX || groupBValue == INT_MAX || mutationRand == UINT_MAX || mutationMax == UINT_MAX || !isCrossTypeSet || \
-	crossoverNumber == UINT_MAX || populationSize == UINT_MAX || populationSizeAfterSelection == UINT_MAX || crossoverPoints == UINT_MAX)
+	if(groupAValue < 0 || groupBValue < 0 || mutationRand > mutationMax || populationSize < 1 || populationSizeAfterSelection < 1 || crossoverPoints < 1)
 	{
 		return false;
 	}
@@ -88,7 +85,7 @@ void TestCardsHeuristic::setGroupBValue(const int& value) {groupBValue = value; 
 void TestCardsHeuristic::setOutputFile(const std::string& path) {pathToOutputFile = path; }
 
 void TestCardsHeuristic::setCrossoverPoints(const unsigned int& value) {crossoverPoints = value; }
-void TestCardsHeuristic::setCrossoverType(MatingPool::CrossoverType type) {crossType = type; isCrossTypeSet = true; }
+void TestCardsHeuristic::setCrossoverType(MatingPool::CrossoverType type) {crossType = type;}
 
 
 bool TestCardsHeuristic::isCommand(const std::string& com) const {
@@ -101,15 +98,16 @@ bool TestCardsHeuristic::isCommand(const std::string& com) const {
 
 bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vector<std::string>& flags, const std::vector<std::vector<std::string>>& dataToFlags) {
 	if(flags.size() != dataToFlags.size()) return true;
+	auto dtfl = dataToFlags.begin();
 	
 	for(auto& fl : flags){
 		for(unsigned int i = 0; i < sizeof(command) / sizeof(command[0]); ++i){
 			if(command[i] == fl){
-				for(unsigned int p = 0; p < dataToFlags[i].size(); ++p){
-					std::stringstream ss(dataToFlags[i][p]);
+				for(unsigned int p = 0; p < (*dtfl).size(); ++p){
+					std::stringstream ss((*dtfl)[p]);
 					std::string str, crossMode;
 					ss >> str;
-			
+					
 					switch (i){
 						case 0:
 							std::stringstream(str) >> groupAValue;
@@ -162,6 +160,7 @@ bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vecto
 							return true;
 					}
 				}
+				++dtfl;
 			}
 		}
 	}

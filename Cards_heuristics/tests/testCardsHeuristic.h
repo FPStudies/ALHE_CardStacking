@@ -82,12 +82,6 @@ protected:
 	MatingPool::CrossoverType crossType;
 
 	/**
-	 * @brief Czy ustawiono typ krzyżowania
-	 * 
-	 */
-	bool isCrossTypeSet;
-
-	/**
 	 * @brief Ścieżka do pliku z wynikami testów
 	 * 
 	 */
