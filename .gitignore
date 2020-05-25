@@ -1,0 +1,11 @@
+*.o
+.vs/
+*.code-workspace
+cards
+.vscode/
+Debug/
+*.dblite
+*.a
+*.lib
+x64/
+scripts/testOut*

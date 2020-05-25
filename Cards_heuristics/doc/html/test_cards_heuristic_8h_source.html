@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Card Stacking: Plik źródłowy tests/testCardsHeuristic.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Card Stacking
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">testCardsHeuristic.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="test_cards_heuristic_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef TEST_CARDS_HEURISTIC_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define TEST_CARDS_HEURISTIC_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="test_interface_8h.html">testInterface.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../mainAlgorithm/matingPool.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../userInterface/commandInterpreter.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_cards_heuristic.html">TestCardsHeuristic</a>: <span class="keyword">public</span> <a class="code" href="class_test_interface.html">TestInterface</a>, <span class="keyword">public</span> <a class="code" href="class_command_interpreter.html">CommandInterpreter</a>{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a9b67daa33a54ae99762962c2be80ee8c">   28</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#a9b67daa33a54ae99762962c2be80ee8c">maxNumberOfIterations_</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#afa0ba0ff59f97aa0e4ef85521c3d25f2">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#afa0ba0ff59f97aa0e4ef85521c3d25f2">groupAValue</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a8c8cb91d7cd0f2de24ae3426a738422e">   40</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#a8c8cb91d7cd0f2de24ae3426a738422e">groupBValue</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#af6e0aa26b9297bb8a37caa4127732d8e">   46</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#af6e0aa26b9297bb8a37caa4127732d8e">mutationRand</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a8eb29e39d9e38375afe4df24a034c945">   52</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#a8eb29e39d9e38375afe4df24a034c945">mutationMax</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#ab30558bd1b946dff9823085e5a39f036">   58</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#ab30558bd1b946dff9823085e5a39f036">crossoverNumber</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a0327925e8a446ee53c4155f5e2208743">   64</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#a0327925e8a446ee53c4155f5e2208743">populationSize</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#ae1060c1a30dc1ea16e8debd61b86f60d">   70</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#ae1060c1a30dc1ea16e8debd61b86f60d">populationSizeAfterSelection</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a546a81fac06f56254221ff339b7f5291">   76</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#a546a81fac06f56254221ff339b7f5291">crossoverPoints</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#afd36d76aba48c4a7aeb3e5328df3aa97">   82</a></span>&#160;    MatingPool::CrossoverType <a class="code" href="class_test_cards_heuristic.html#afd36d76aba48c4a7aeb3e5328df3aa97">crossType</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a4644fbd66e963b08211cf7d8973401f6">   88</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_test_cards_heuristic.html#a4644fbd66e963b08211cf7d8973401f6">isCrossTypeSet</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a2dcf379f3651dced0a7c61f8e998cf6b">   94</a></span>&#160;    std::string <a class="code" href="class_test_cards_heuristic.html#a2dcf379f3651dced0a7c61f8e998cf6b">pathToOutputFile</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#abfc90957dafa9921aff36f93ef57df40">setPoolValues</a>(<a class="code" href="class_mating_pool.html">MatingPool</a>&amp; pool);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a0927cc4ec3b00f967cd948400c8e796a">  103</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="class_test_cards_heuristic.html#a0927cc4ec3b00f967cd948400c8e796a">command</a>[10];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a6020d4cae480b4dce5540afb710cfb29">  105</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="class_test_cards_heuristic.html#a6020d4cae480b4dce5540afb710cfb29">crossoverMode</a>[3];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="class_test_cards_heuristic.html#a1439d6b7da11f5c8dda8a83e84c05beb">TestCardsHeuristic</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; maxNumberOfIterations);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_cards_heuristic.html#ab55c940d558e72b8bee7cb67dd0c6f61">~TestCardsHeuristic</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="class_test_cards_heuristic.html#a1439d6b7da11f5c8dda8a83e84c05beb">TestCardsHeuristic</a>(<span class="keyword">const</span> <a class="code" href="class_test_cards_heuristic.html">TestCardsHeuristic</a>&amp; other);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a6f3ec3e8fd030aaa4291a4431d179967">  134</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#a6f3ec3e8fd030aaa4291a4431d179967">runTest</a>(<span class="keyword">const</span> std::string&amp; keyword, <span class="keyword">const</span> std::string&amp; path) = 0;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a411105c63dee6ac218e0b68ce71decf6">  141</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a411105c63dee6ac218e0b68ce71decf6">runTestBasic</a>(<span class="keyword">const</span> std::string&amp; path) = 0;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a6cb5e57a6260b0a9234d9ecac4907a24">  149</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#a6cb5e57a6260b0a9234d9ecac4907a24">runTestSilent</a>(<span class="keyword">const</span> std::string&amp; path) = 0;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#a23dde7cdd4e940762251bfeec118ed63">  156</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a23dde7cdd4e940762251bfeec118ed63">runTestHeuristic</a>(<span class="keyword">const</span> std::string&amp; path) = 0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#afcb476c657919e3b6ddd69c18903d6e7">  164</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_cards_heuristic.html#afcb476c657919e3b6ddd69c18903d6e7">runTestHeuristicSilent</a>(<span class="keyword">const</span> std::string&amp; path) = 0;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#ac783c585406bfd1d482d825d74872cb2">  171</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_cards_heuristic.html">TestCardsHeuristic</a>* <a class="code" href="class_test_cards_heuristic.html#ac783c585406bfd1d482d825d74872cb2">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_cards_heuristic.html#a610af181d43ab4dbefb00cb5f058ffef">isDataValid</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_cards_heuristic.html#a45eaacfce352a7aa4456bbbcc9d3dd29">runCommand</a>(<span class="keyword">const</span> std::string&amp; keyword, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; flags, <span class="keyword">const</span> std::vector&lt;std::vector&lt;std::string&gt;&gt;&amp; dataToFlags) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="class_test_cards_heuristic.html#ac087fc4720466f339c3bf26a584a8632">  199</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_cards_heuristic.html#ac087fc4720466f339c3bf26a584a8632">isKeyword</a>(<span class="keyword">const</span> std::string&amp; word) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_cards_heuristic.html#a6eb87ac22be0a152b012a184bfbc7e1e">isCommand</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="class_test_cards_heuristic.html#a0927cc4ec3b00f967cd948400c8e796a">command</a>) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a555355aaea04e1d02d15b832ff56d8d1">setPopulationSize</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; popSize);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a15ffc40f838e2a4e69138d528a3b611a">setMutationProbability</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; random, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; max);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a089ca97ce7ae76de1427b194e73f90fd">setNumberOfCrossovers</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a8665a3c920fc5530c56aec2f3feb0129">setPopulationSizeAfterSelection</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#ac6a99e5c4cb1aef9679900f6cab9e12a">setGroupAValue</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#aef77e43e34c4e664492ed0cca87d7837">setGroupBValue</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a713d2c8487a6b2dfdea271b777a18739">setOutputFile</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#a0a090517720176fb5247a61b7ba7ca40">setCrossoverPoints</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_cards_heuristic.html#ac5f3c6c2ad050dc14734be96e74ea069">setCrossoverType</a>(MatingPool::CrossoverType type);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;};</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_test_cards_heuristic_html_af6e0aa26b9297bb8a37caa4127732d8e"><div class="ttname"><a href="class_test_cards_heuristic.html#af6e0aa26b9297bb8a37caa4127732d8e">TestCardsHeuristic::mutationRand</a></div><div class="ttdeci">unsigned int mutationRand</div><div class="ttdoc">Licznik prawdopodobieństwa mutacji.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:46</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a6f3ec3e8fd030aaa4291a4431d179967"><div class="ttname"><a href="class_test_cards_heuristic.html#a6f3ec3e8fd030aaa4291a4431d179967">TestCardsHeuristic::runTest</a></div><div class="ttdeci">virtual int runTest(const std::string &amp;keyword, const std::string &amp;path)=0</div><div class="ttdoc">Uruchom odpowiedni test metody genetycznej.</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a411105c63dee6ac218e0b68ce71decf6"><div class="ttname"><a href="class_test_cards_heuristic.html#a411105c63dee6ac218e0b68ce71decf6">TestCardsHeuristic::runTestBasic</a></div><div class="ttdeci">virtual void runTestBasic(const std::string &amp;path)=0</div><div class="ttdoc">Uruchom test metody genetycznej.</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a9b67daa33a54ae99762962c2be80ee8c"><div class="ttname"><a href="class_test_cards_heuristic.html#a9b67daa33a54ae99762962c2be80ee8c">TestCardsHeuristic::maxNumberOfIterations_</a></div><div class="ttdeci">unsigned int maxNumberOfIterations_</div><div class="ttdoc">Maksymalna ilość wygenerowanych pokoleń</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:28</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a0327925e8a446ee53c4155f5e2208743"><div class="ttname"><a href="class_test_cards_heuristic.html#a0327925e8a446ee53c4155f5e2208743">TestCardsHeuristic::populationSize</a></div><div class="ttdeci">unsigned int populationSize</div><div class="ttdoc">Wielkość populacji.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:64</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a15ffc40f838e2a4e69138d528a3b611a"><div class="ttname"><a href="class_test_cards_heuristic.html#a15ffc40f838e2a4e69138d528a3b611a">TestCardsHeuristic::setMutationProbability</a></div><div class="ttdeci">void setMutationProbability(const unsigned int &amp;random, const unsigned int &amp;max)</div><div class="ttdoc">Ustaw wartość Mutation Probability.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:81</div></div>
+<div class="ttc" id="aclass_mating_pool_html"><div class="ttname"><a href="class_mating_pool.html">MatingPool</a></div><div class="ttdoc">Klasa puli rozrodczej.</div><div class="ttdef"><b>Definition:</b> matingPool.h:19</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a0a090517720176fb5247a61b7ba7ca40"><div class="ttname"><a href="class_test_cards_heuristic.html#a0a090517720176fb5247a61b7ba7ca40">TestCardsHeuristic::setCrossoverPoints</a></div><div class="ttdeci">void setCrossoverPoints(const unsigned int &amp;value)</div><div class="ttdoc">Ustaw wartość Crossover Points.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:90</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a2dcf379f3651dced0a7c61f8e998cf6b"><div class="ttname"><a href="class_test_cards_heuristic.html#a2dcf379f3651dced0a7c61f8e998cf6b">TestCardsHeuristic::pathToOutputFile</a></div><div class="ttdeci">std::string pathToOutputFile</div><div class="ttdoc">Ścieżka do pliku z wynikami testów.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:94</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a1439d6b7da11f5c8dda8a83e84c05beb"><div class="ttname"><a href="class_test_cards_heuristic.html#a1439d6b7da11f5c8dda8a83e84c05beb">TestCardsHeuristic::TestCardsHeuristic</a></div><div class="ttdeci">TestCardsHeuristic(const unsigned int &amp;maxNumberOfIterations)</div><div class="ttdoc">Stwórz nowy obiekt Test Cards Heuristic.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:39</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_ac783c585406bfd1d482d825d74872cb2"><div class="ttname"><a href="class_test_cards_heuristic.html#ac783c585406bfd1d482d825d74872cb2">TestCardsHeuristic::clone</a></div><div class="ttdeci">virtual TestCardsHeuristic * clone() const =0</div><div class="ttdoc">Kopiowanie obiektu klasy TestCardsHeuristic.</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_aef77e43e34c4e664492ed0cca87d7837"><div class="ttname"><a href="class_test_cards_heuristic.html#aef77e43e34c4e664492ed0cca87d7837">TestCardsHeuristic::setGroupBValue</a></div><div class="ttdeci">void setGroupBValue(const int &amp;value)</div><div class="ttdoc">Ustaw wartość Group B Value.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:86</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a45eaacfce352a7aa4456bbbcc9d3dd29"><div class="ttname"><a href="class_test_cards_heuristic.html#a45eaacfce352a7aa4456bbbcc9d3dd29">TestCardsHeuristic::runCommand</a></div><div class="ttdeci">virtual bool runCommand(const std::string &amp;keyword, const std::vector&lt; std::string &gt; &amp;flags, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;dataToFlags) override</div><div class="ttdoc">Wykonaj podaną komendę programu.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:102</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a6020d4cae480b4dce5540afb710cfb29"><div class="ttname"><a href="class_test_cards_heuristic.html#a6020d4cae480b4dce5540afb710cfb29">TestCardsHeuristic::crossoverMode</a></div><div class="ttdeci">static const char * crossoverMode[3]</div><div class="ttdoc">Dostępne tryby krzyżowania: singlePoint - jednopunktowe multiplePoint - wielopunktowe uniform - równo...</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:105</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_ae1060c1a30dc1ea16e8debd61b86f60d"><div class="ttname"><a href="class_test_cards_heuristic.html#ae1060c1a30dc1ea16e8debd61b86f60d">TestCardsHeuristic::populationSizeAfterSelection</a></div><div class="ttdeci">unsigned int populationSizeAfterSelection</div><div class="ttdoc">Wielkość populacji po selekcji.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:70</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a546a81fac06f56254221ff339b7f5291"><div class="ttname"><a href="class_test_cards_heuristic.html#a546a81fac06f56254221ff339b7f5291">TestCardsHeuristic::crossoverPoints</a></div><div class="ttdeci">unsigned int crossoverPoints</div><div class="ttdoc">Ilość punktów krzyżowania wielopunktowego.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:76</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a23dde7cdd4e940762251bfeec118ed63"><div class="ttname"><a href="class_test_cards_heuristic.html#a23dde7cdd4e940762251bfeec118ed63">TestCardsHeuristic::runTestHeuristic</a></div><div class="ttdeci">virtual void runTestHeuristic(const std::string &amp;path)=0</div><div class="ttdoc">Uruchom test metody zachłannej.</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_ac5f3c6c2ad050dc14734be96e74ea069"><div class="ttname"><a href="class_test_cards_heuristic.html#ac5f3c6c2ad050dc14734be96e74ea069">TestCardsHeuristic::setCrossoverType</a></div><div class="ttdeci">void setCrossoverType(MatingPool::CrossoverType type)</div><div class="ttdoc">Ustaw wartość Crossover Type.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:91</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a8c8cb91d7cd0f2de24ae3426a738422e"><div class="ttname"><a href="class_test_cards_heuristic.html#a8c8cb91d7cd0f2de24ae3426a738422e">TestCardsHeuristic::groupBValue</a></div><div class="ttdeci">int groupBValue</div><div class="ttdoc">Docelowa wartość dla drugiego stosu.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:40</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a0927cc4ec3b00f967cd948400c8e796a"><div class="ttname"><a href="class_test_cards_heuristic.html#a0927cc4ec3b00f967cd948400c8e796a">TestCardsHeuristic::command</a></div><div class="ttdeci">static const char * command[10]</div><div class="ttdoc">Dostępne komendy (flagi): A - docelowa wartość dla stosu A B - docelowa wartość dla stosu B mrand - l...</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:103</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a713d2c8487a6b2dfdea271b777a18739"><div class="ttname"><a href="class_test_cards_heuristic.html#a713d2c8487a6b2dfdea271b777a18739">TestCardsHeuristic::setOutputFile</a></div><div class="ttdeci">void setOutputFile(const std::string &amp;path)</div><div class="ttdoc">Ustaw wartość Output File.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:88</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_afa0ba0ff59f97aa0e4ef85521c3d25f2"><div class="ttname"><a href="class_test_cards_heuristic.html#afa0ba0ff59f97aa0e4ef85521c3d25f2">TestCardsHeuristic::groupAValue</a></div><div class="ttdeci">int groupAValue</div><div class="ttdoc">Docelowa wartość dla pierwszego stosu.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:34</div></div>
+<div class="ttc" id="atest_interface_8h_html"><div class="ttname"><a href="test_interface_8h.html">testInterface.h</a></div><div class="ttdoc">Plik klasy interfejsu testów.</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a6cb5e57a6260b0a9234d9ecac4907a24"><div class="ttname"><a href="class_test_cards_heuristic.html#a6cb5e57a6260b0a9234d9ecac4907a24">TestCardsHeuristic::runTestSilent</a></div><div class="ttdeci">virtual int runTestSilent(const std::string &amp;path)=0</div><div class="ttdoc">Uruchom test metody genetycznej z minimalnym wypisem do strumienia.</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a089ca97ce7ae76de1427b194e73f90fd"><div class="ttname"><a href="class_test_cards_heuristic.html#a089ca97ce7ae76de1427b194e73f90fd">TestCardsHeuristic::setNumberOfCrossovers</a></div><div class="ttdeci">void setNumberOfCrossovers(const unsigned int &amp;value)</div><div class="ttdoc">Ustaw wartość Number Of Crossovers.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:82</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_afcb476c657919e3b6ddd69c18903d6e7"><div class="ttname"><a href="class_test_cards_heuristic.html#afcb476c657919e3b6ddd69c18903d6e7">TestCardsHeuristic::runTestHeuristicSilent</a></div><div class="ttdeci">virtual int runTestHeuristicSilent(const std::string &amp;path)=0</div><div class="ttdoc">Uruchom test metody zachłannej minimalnym wypisem do strumienia.</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a610af181d43ab4dbefb00cb5f058ffef"><div class="ttname"><a href="class_test_cards_heuristic.html#a610af181d43ab4dbefb00cb5f058ffef">TestCardsHeuristic::isDataValid</a></div><div class="ttdeci">virtual bool isDataValid() const override</div><div class="ttdoc">Sprawdzenie czy parametry algorytmu są prawidłowe.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:70</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a6eb87ac22be0a152b012a184bfbc7e1e"><div class="ttname"><a href="class_test_cards_heuristic.html#a6eb87ac22be0a152b012a184bfbc7e1e">TestCardsHeuristic::isCommand</a></div><div class="ttdeci">virtual bool isCommand(const std::string &amp;command) const override</div><div class="ttdoc">Sprawdź czy string jest flagą</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:94</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html"><div class="ttname"><a href="class_test_cards_heuristic.html">TestCardsHeuristic</a></div><div class="ttdoc">Bazowa klasa testowania.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:22</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_afd36d76aba48c4a7aeb3e5328df3aa97"><div class="ttname"><a href="class_test_cards_heuristic.html#afd36d76aba48c4a7aeb3e5328df3aa97">TestCardsHeuristic::crossType</a></div><div class="ttdeci">MatingPool::CrossoverType crossType</div><div class="ttdoc">Typ krzyżowania.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:82</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_ab55c940d558e72b8bee7cb67dd0c6f61"><div class="ttname"><a href="class_test_cards_heuristic.html#ab55c940d558e72b8bee7cb67dd0c6f61">TestCardsHeuristic::~TestCardsHeuristic</a></div><div class="ttdeci">virtual ~TestCardsHeuristic()</div><div class="ttdoc">Usuń obiekt Test Cards Heuristic.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:53</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_ab30558bd1b946dff9823085e5a39f036"><div class="ttname"><a href="class_test_cards_heuristic.html#ab30558bd1b946dff9823085e5a39f036">TestCardsHeuristic::crossoverNumber</a></div><div class="ttdeci">unsigned int crossoverNumber</div><div class="ttdoc">Ilość osobników krzyżowanych w każdym pokoleniu.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:58</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a8665a3c920fc5530c56aec2f3feb0129"><div class="ttname"><a href="class_test_cards_heuristic.html#a8665a3c920fc5530c56aec2f3feb0129">TestCardsHeuristic::setPopulationSizeAfterSelection</a></div><div class="ttdeci">void setPopulationSizeAfterSelection(const int &amp;value)</div><div class="ttdoc">Ustaw wartość Population Size After Selection.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:83</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a8eb29e39d9e38375afe4df24a034c945"><div class="ttname"><a href="class_test_cards_heuristic.html#a8eb29e39d9e38375afe4df24a034c945">TestCardsHeuristic::mutationMax</a></div><div class="ttdeci">unsigned int mutationMax</div><div class="ttdoc">Mianownik prawdopodobieństwa mutacji.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:52</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_ac6a99e5c4cb1aef9679900f6cab9e12a"><div class="ttname"><a href="class_test_cards_heuristic.html#ac6a99e5c4cb1aef9679900f6cab9e12a">TestCardsHeuristic::setGroupAValue</a></div><div class="ttdeci">void setGroupAValue(const int &amp;value)</div><div class="ttdoc">Ustaw wartość Group A Value.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:85</div></div>
+<div class="ttc" id="aclass_command_interpreter_html"><div class="ttname"><a href="class_command_interpreter.html">CommandInterpreter</a></div><div class="ttdoc">Klasa interpretatora poleceń. Wykorzystywana do rozpoznawania słów kluczowych z wczytanego polecenia ...</div><div class="ttdef"><b>Definition:</b> commandInterpreter.h:17</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a4644fbd66e963b08211cf7d8973401f6"><div class="ttname"><a href="class_test_cards_heuristic.html#a4644fbd66e963b08211cf7d8973401f6">TestCardsHeuristic::isCrossTypeSet</a></div><div class="ttdeci">bool isCrossTypeSet</div><div class="ttdoc">Czy ustawiono typ krzyżowania.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:88</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_abfc90957dafa9921aff36f93ef57df40"><div class="ttname"><a href="class_test_cards_heuristic.html#abfc90957dafa9921aff36f93ef57df40">TestCardsHeuristic::setPoolValues</a></div><div class="ttdeci">void setPoolValues(MatingPool &amp;pool)</div><div class="ttdoc">Ustaw wartości puli rozrodczej.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:29</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_a555355aaea04e1d02d15b832ff56d8d1"><div class="ttname"><a href="class_test_cards_heuristic.html#a555355aaea04e1d02d15b832ff56d8d1">TestCardsHeuristic::setPopulationSize</a></div><div class="ttdeci">void setPopulationSize(const unsigned int &amp;popSize)</div><div class="ttdoc">Ustaw wartość Population Size.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.cpp:80</div></div>
+<div class="ttc" id="aclass_test_interface_html"><div class="ttname"><a href="class_test_interface.html">TestInterface</a></div><div class="ttdoc">Klasa interfejsu testów.</div><div class="ttdef"><b>Definition:</b> testInterface.h:19</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html_ac087fc4720466f339c3bf26a584a8632"><div class="ttname"><a href="class_test_cards_heuristic.html#ac087fc4720466f339c3bf26a584a8632">TestCardsHeuristic::isKeyword</a></div><div class="ttdeci">virtual bool isKeyword(const std::string &amp;word) const =0</div><div class="ttdoc">Sprawdź czy string jest trybem działania programu.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -3,23 +3,42 @@
 
 #include "commandDivider.h"
 
-CommandDivider::DividedWord::DividedWord(const CommandInterpreter& inter)
-    :extractedKeyword(), commands(), interpreter(inter.clone())
+CommandDivider::InterpreterEntity::Data::Data()
+    :extractedKeyword(), commands(), commandsArg()
 {}
 
-CommandDivider::DividedWord::~DividedWord()
+CommandDivider::InterpreterEntity::Data::~Data()
 {}
 
-CommandDivider::DividedWord::DividedWord(DividedWord&& other)
+CommandDivider::InterpreterEntity::Data::Data(Data&& other)
     :extractedKeyword(std::move(other.extractedKeyword)), 
     commands(std::move(other.commands)), 
+    commandsArg(std::move(other.commandsArg))
+{}
+
+CommandDivider::InterpreterEntity::Data& CommandDivider::InterpreterEntity::Data::operator=(Data&& other){
+    extractedKeyword = std::move(other.extractedKeyword);
+    commands = std::move(other.commands);
+    commandsArg = std::move(other.commandsArg);
+
+    return *this;
+}
+
+CommandDivider::InterpreterEntity::InterpreterEntity(const CommandInterpreter& inter)
+    :dataToInterpret(), interpreter(inter.clone())
+{}
+
+CommandDivider::InterpreterEntity::~InterpreterEntity()
+{}
+
+CommandDivider::InterpreterEntity::InterpreterEntity(InterpreterEntity&& other)
+    :dataToInterpret(std::move(other.dataToInterpret)),
     interpreter(std::move(other.interpreter))
 {}
 
 
-CommandDivider::DividedWord& CommandDivider::DividedWord::operator=(DividedWord&& other){
-    extractedKeyword = std::move(other.extractedKeyword);
-    commands = std::move(other.commands);
+CommandDivider::InterpreterEntity& CommandDivider::InterpreterEntity::operator=(InterpreterEntity&& other){
+    dataToInterpret = std::move(other.dataToInterpret);
     interpreter = std::move(other.interpreter);
 
     return *this;
@@ -41,32 +60,24 @@ void CommandDivider::clearWhitespace(std::stringstream& stream) const {
 }
 
 void CommandDivider::getLine(std::stringstream& extractFrom, std::string& extractTo) const{
-    int getChar;
     clearWhitespace(extractFrom);
     std::getline(extractFrom, extractTo);
-    while(!extractFrom.eof() && (getChar = extractFrom.get()) != '\n') {}
 }
 
 bool CommandDivider::divideByKeyWords(std::stringstream& command){
-    //unsigned int begin = 0, end = 0;
-    //auto lastInter = interpreters.begin();
-    //bool commandMayBeValid = false;
-    //bool isOption = false;
-    std::vector<std::unique_ptr<DividedWord>>::iterator iterLast;
+    std::vector<std::unique_ptr<InterpreterEntity>>::iterator iterLast;
     std::stringstream &ss = command;
-    std::string word, tmp;
-    int getChar;
 
     while(!ss.eof()){   // get all commands
+        std::string word, tmp;
         getLine(ss, tmp);
-        if(ss.eof()) return false;
 
         std::stringstream sCommand(tmp);
 
         bool isKeyword = false;
         bool isFlag = false;
         bool contLoop = false;
-
+        
         while(!sCommand.eof()){ // get one command at a time
             if(!(sCommand >> word)) return true;
 
@@ -78,8 +89,8 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
 
                 if((*iterLast)->interpreter->isCommand(word)){
                     isFlag = true;
-                    (*iterLast)->commands.push_back(word);
-                    (*iterLast)->commandsArg.push_back(std::vector<std::string>());
+                    (*iterLast)->dataToInterpret.back().commands.push_back(word);
+                    (*iterLast)->dataToInterpret.back().commandsArg.push_back(std::vector<std::string>());
                 }
                 else return true;
 
@@ -87,7 +98,7 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
             }
 
             if(isKeyword && isFlag){
-                (--(*iterLast)->commandsArg.end())->push_back(word);
+                (--(*iterLast)->dataToInterpret.back().commandsArg.end())->push_back(word);
                 continue;
             }
 
@@ -95,7 +106,8 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
                 if((*it)->interpreter->isKeyword(word)){
                     if(isKeyword) return true;
                     isKeyword = true;
-                    (*it)->extractedKeyword = word;
+                    (*it)->dataToInterpret.push_back(CommandDivider::InterpreterEntity::Data());
+                    (*it)->dataToInterpret.back().extractedKeyword = word;
                     iterLast = it;
                     contLoop = true;
                     break;
@@ -111,62 +123,12 @@ bool CommandDivider::divideByKeyWords(std::stringstream& command){
         }
     }
 
-    
-    
-    /*for(unsigned int i = 0; i < command.size(); ++i){
-        if(isOption) return true;   // there was '-' and after that space
-        else if(command[i] == '-') { // options
-            if(!commandMayBeValid) return true;
-            isOption = true;
-        }
-        else if(command[i] == ' '){ // end of options or some word
-
-        }
-        else {  // if there wasn`t space or '-', so there is some word
-            ++end;
-            isOption = false;
-        }
-
-
-        if(command[i] == '-') { // options
-            if(!commandMayBeValid) return true;
-            isOption = true;
-        }
-        else if(command[i] == ' '){
-            if(begin != end){
-                std::string word = command.substr(begin, end - begin);
-                if(isOption){
-                    if(!(*iterLast)->interpreter->isCommand(word)) return true;
-                    (*iterLast)->commands.push_back(word);
-                }
-                else{   // if it is not an option but command name
-                    for(auto it = interpreters.begin(); it != interpreters.end(); ++it){
-                        if((*it)->interpreter->isKeyword(word)){
-                            commandMayBeValid = true;
-                            lastInter = it;
-                            (*it)->extractedKeyword = word;
-                            iterLast = it;
-                        }
-                        else return true; // do not found that phrase
-                    }
-                }
-            }
-
-            begin = i;
-            end = i;
-        }
-        else {
-            ++end;
-            isOption = false;
-        }
-    }*/
     return false;
 }
 
 void CommandDivider::clear(){
     for(auto& it : interpreters){
-        it->extractedKeyword.clear();
-        it->commands.clear();
+        it->dataToInterpret.clear();  
     }
 }
 
@@ -178,7 +140,9 @@ bool CommandDivider::runCommand(const std::string& command, bool clearBuf){
     if(divideByKeyWords(stream)) return true; // here validate string
 
     for(auto& it : interpreters){
-        if(it->interpreter->runCommand(it->extractedKeyword, it->commands, it->commandsArg)) return true;
+        for(const auto& data : it->dataToInterpret){
+            if(it->interpreter->runCommand(data.extractedKeyword, data.commands, data.commandsArg)) return true;
+        }
     }
 
     if(clearBuf) this->clear();
@@ -187,7 +151,7 @@ bool CommandDivider::runCommand(const std::string& command, bool clearBuf){
 }
 
 bool CommandDivider::loadCommandsFromFile(const std::string path, bool clearBuf){
-
+    
     std::ifstream file;
     std::stringstream fileBuf;
     std::string com;
@@ -200,11 +164,9 @@ bool CommandDivider::loadCommandsFromFile(const std::string path, bool clearBuf)
     fileBuf >> std::skipws;
 
     com = fileBuf.str();
-
     if(runCommand(com, clearBuf)) return true;
 
     file.close();
-
     return false;
 }
 
@@ -214,7 +176,7 @@ bool CommandDivider::addInterpreter(const CommandInterpreter& inter){
         if(typeid(*it) == typeid(inter)) return true;
     }
 
-    interpreters.push_back(std::make_unique<DividedWord>(inter));
+    interpreters.push_back(std::make_unique<InterpreterEntity>(inter));
     return false;
 }
 

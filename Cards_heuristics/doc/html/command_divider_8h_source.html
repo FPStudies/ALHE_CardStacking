@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Card Stacking: Plik źródłowy userInterface/commandDivider.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Card Stacking
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_162f291099da0563d90377e7a8468952.html">userInterface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">commandDivider.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="command_divider_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef COMMAND_DIVIDER_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define COMMAND_DIVIDER_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;typeinfo&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="command_interpreter_8h.html">commandInterpreter.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_command_divider.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_command_divider.html">CommandDivider</a>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">struct </span>InterpreterEntity{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html">   39</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html">Data</a>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#a769a26d377f59e631314854ba9504049">   45</a></span>&#160;            std::string <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#a769a26d377f59e631314854ba9504049">extractedKeyword</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#ad00be331955a1ec9908c06f3c210566d">   51</a></span>&#160;            std::vector&lt;std::string&gt; <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#ad00be331955a1ec9908c06f3c210566d">commands</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#ac94ee917e28c35ace7ea589504e30db6">   57</a></span>&#160;            std::vector&lt;std::vector&lt;std::string&gt;&gt; <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#ac94ee917e28c35ace7ea589504e30db6">commandsArg</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#af7919804a5f16bfc18516ce6e020a38a">Data</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#af69d6c396e02a050ba6bac15e5e19625">~Data</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#af7919804a5f16bfc18516ce6e020a38a">Data</a>(<span class="keyword">const</span> <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html">Data</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#af7919804a5f16bfc18516ce6e020a38a">Data</a>(<a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html">Data</a>&amp;&amp; other);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html">Data</a>&amp; <a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#a2f4f8f27f8338c62edac763114868190">operator=</a>(<a class="code" href="struct_command_divider_1_1_interpreter_entity_1_1_data.html">Data</a>&amp;&amp; other);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        };</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::vector&lt;Data&gt; dataToInterpret;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        std::unique_ptr&lt;CommandInterpreter&gt; interpreter;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        InterpreterEntity(<span class="keyword">const</span> InterpreterEntity&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        InterpreterEntity(<span class="keyword">const</span> <a class="code" href="class_command_interpreter.html">CommandInterpreter</a>&amp; inter);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        ~InterpreterEntity();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        InterpreterEntity(InterpreterEntity&amp;&amp; other);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        InterpreterEntity&amp; operator=(InterpreterEntity&amp;&amp; other);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    };</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    std::vector&lt;std::unique_ptr&lt;InterpreterEntity&gt;&gt; interpreters;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">bool</span> divideByKeyWords(std::stringstream&amp; command);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">void</span> getLine(std::stringstream&amp; extractFrom, std::string&amp; extractTo) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> clearWhitespace(std::stringstream&amp; extractFrom) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="class_command_divider.html#ae505e38687d6e6d98be1fa2de6fef2df">CommandDivider</a>();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="class_command_divider.html#aa3e8f3ccb58feb34ae4afcd47e166ee2">~CommandDivider</a>();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="class_command_divider.html#ae505e38687d6e6d98be1fa2de6fef2df">CommandDivider</a>(<span class="keyword">const</span> <a class="code" href="class_command_divider.html">CommandDivider</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_command_divider.html#a0ef845b54b919cac8ca466dfcac3b30c">runCommand</a>(<span class="keyword">const</span> std::string&amp; command, <span class="keywordtype">bool</span> clearBuf = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_command_divider.html#a1d8520956fcb262ef80d636131347f08">loadCommandsFromFile</a>(<span class="keyword">const</span> std::string path, <span class="keywordtype">bool</span> clearBuf = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_command_divider.html#ad48480415d4e5d666a3f117a54bf8889">addInterpreter</a>(<span class="keyword">const</span> <a class="code" href="class_command_interpreter.html">CommandInterpreter</a>&amp; inter);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;};</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_command_divider_html_ad48480415d4e5d666a3f117a54bf8889"><div class="ttname"><a href="class_command_divider.html#ad48480415d4e5d666a3f117a54bf8889">CommandDivider::addInterpreter</a></div><div class="ttdeci">bool addInterpreter(const CommandInterpreter &amp;inter)</div><div class="ttdoc">Dodaje interpretator komendy. Tylko jeden interpretator danej klasy może instnieś w shell-u.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:176</div></div>
+<div class="ttc" id="aclass_command_divider_html"><div class="ttname"><a href="class_command_divider.html">CommandDivider</a></div><div class="ttdoc">Klasa odpowiedzialna za poprawne wczytanie poleceń</div><div class="ttdef"><b>Definition:</b> commandDivider.h:27</div></div>
+<div class="ttc" id="astruct_command_divider_1_1_interpreter_entity_1_1_data_html"><div class="ttname"><a href="struct_command_divider_1_1_interpreter_entity_1_1_data.html">CommandDivider::InterpreterEntity::Data</a></div><div class="ttdoc">Struktura przechowująca wczytane polecenia.</div><div class="ttdef"><b>Definition:</b> commandDivider.h:39</div></div>
+<div class="ttc" id="astruct_command_divider_1_1_interpreter_entity_1_1_data_html_a2f4f8f27f8338c62edac763114868190"><div class="ttname"><a href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#a2f4f8f27f8338c62edac763114868190">CommandDivider::InterpreterEntity::Data::operator=</a></div><div class="ttdeci">Data &amp; operator=(Data &amp;&amp;other)</div><div class="ttdoc">Przenoszący operator przypisania.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:19</div></div>
+<div class="ttc" id="astruct_command_divider_1_1_interpreter_entity_1_1_data_html_af69d6c396e02a050ba6bac15e5e19625"><div class="ttname"><a href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#af69d6c396e02a050ba6bac15e5e19625">CommandDivider::InterpreterEntity::Data::~Data</a></div><div class="ttdeci">~Data()</div><div class="ttdoc">Usuń obiekt Data.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:10</div></div>
+<div class="ttc" id="aclass_command_divider_html_a1d8520956fcb262ef80d636131347f08"><div class="ttname"><a href="class_command_divider.html#a1d8520956fcb262ef80d636131347f08">CommandDivider::loadCommandsFromFile</a></div><div class="ttdeci">bool loadCommandsFromFile(const std::string path, bool clearBuf=true)</div><div class="ttdoc">Wczytanie poleceń z pliku zamiast konsoli.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:153</div></div>
+<div class="ttc" id="aclass_command_divider_html_a0ef845b54b919cac8ca466dfcac3b30c"><div class="ttname"><a href="class_command_divider.html#a0ef845b54b919cac8ca466dfcac3b30c">CommandDivider::runCommand</a></div><div class="ttdeci">bool runCommand(const std::string &amp;command, bool clearBuf=true)</div><div class="ttdoc">Wykonuje komendę użytkownika.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:136</div></div>
+<div class="ttc" id="astruct_command_divider_1_1_interpreter_entity_1_1_data_html_a769a26d377f59e631314854ba9504049"><div class="ttname"><a href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#a769a26d377f59e631314854ba9504049">CommandDivider::InterpreterEntity::Data::extractedKeyword</a></div><div class="ttdeci">std::string extractedKeyword</div><div class="ttdoc">Tryb działania programu.</div><div class="ttdef"><b>Definition:</b> commandDivider.h:45</div></div>
+<div class="ttc" id="acommand_interpreter_8h_html"><div class="ttname"><a href="command_interpreter_8h.html">commandInterpreter.h</a></div><div class="ttdoc">Plik klasy interpretatora poleceń.</div></div>
+<div class="ttc" id="astruct_command_divider_1_1_interpreter_entity_1_1_data_html_af7919804a5f16bfc18516ce6e020a38a"><div class="ttname"><a href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#af7919804a5f16bfc18516ce6e020a38a">CommandDivider::InterpreterEntity::Data::Data</a></div><div class="ttdeci">Data()</div><div class="ttdoc">Stwórz nowy obiekt Data.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:6</div></div>
+<div class="ttc" id="aclass_command_divider_html_ae505e38687d6e6d98be1fa2de6fef2df"><div class="ttname"><a href="class_command_divider.html#ae505e38687d6e6d98be1fa2de6fef2df">CommandDivider::CommandDivider</a></div><div class="ttdeci">CommandDivider()</div><div class="ttdoc">Stwórz nowy obiekt Command Divider.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:49</div></div>
+<div class="ttc" id="astruct_command_divider_1_1_interpreter_entity_1_1_data_html_ad00be331955a1ec9908c06f3c210566d"><div class="ttname"><a href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#ad00be331955a1ec9908c06f3c210566d">CommandDivider::InterpreterEntity::Data::commands</a></div><div class="ttdeci">std::vector&lt; std::string &gt; commands</div><div class="ttdoc">Flagi wykonania.</div><div class="ttdef"><b>Definition:</b> commandDivider.h:51</div></div>
+<div class="ttc" id="aclass_command_interpreter_html"><div class="ttname"><a href="class_command_interpreter.html">CommandInterpreter</a></div><div class="ttdoc">Klasa interpretatora poleceń. Wykorzystywana do rozpoznawania słów kluczowych z wczytanego polecenia ...</div><div class="ttdef"><b>Definition:</b> commandInterpreter.h:17</div></div>
+<div class="ttc" id="aclass_command_divider_html_aa3e8f3ccb58feb34ae4afcd47e166ee2"><div class="ttname"><a href="class_command_divider.html#aa3e8f3ccb58feb34ae4afcd47e166ee2">CommandDivider::~CommandDivider</a></div><div class="ttdeci">~CommandDivider()</div><div class="ttdoc">Usuń obiekt Command Divider.</div><div class="ttdef"><b>Definition:</b> commandDivider.cpp:53</div></div>
+<div class="ttc" id="astruct_command_divider_1_1_interpreter_entity_1_1_data_html_ac94ee917e28c35ace7ea589504e30db6"><div class="ttname"><a href="struct_command_divider_1_1_interpreter_entity_1_1_data.html#ac94ee917e28c35ace7ea589504e30db6">CommandDivider::InterpreterEntity::Data::commandsArg</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::string &gt; &gt; commandsArg</div><div class="ttdoc">Argumenty flag.</div><div class="ttdef"><b>Definition:</b> commandDivider.h:57</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

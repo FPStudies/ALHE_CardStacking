@@ -186,7 +186,7 @@ int BinaryChromosome::getRating() const
 
 unsigned int BinaryChromosome::size() const
 {
-	return chromosome.size();
+	return static_cast<unsigned int>(chromosome.size());
 }
 
 void BinaryChromosome::setRandValues()
@@ -323,7 +323,7 @@ void BinaryChromosome::startHeuristic(const int& groupAIdeal, const int& groupBI
 	int grB = groupBIdeal;
 	unsigned int cards = 10;
 
-	for (int i = chromosome.size() - 1; i >= 0; --i, --it, --cards) {
+	for (int i = static_cast<int>(chromosome.size()) - 1; i >= 0; --i, --it, --cards) {
 		if (grA >= grB) {
 			*it = Symbol::groupA;
 			grA -= cards;

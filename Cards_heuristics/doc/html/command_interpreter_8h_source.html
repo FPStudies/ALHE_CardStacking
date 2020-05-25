@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Card Stacking: Plik źródłowy userInterface/commandInterpreter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Card Stacking
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_162f291099da0563d90377e7a8468952.html">userInterface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">commandInterpreter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="command_interpreter_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef COMMAND_INTERPRETER_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define COMMAND_INTERPRETER_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_command_interpreter.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_command_interpreter.html">CommandInterpreter</a>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_command_interpreter.html#a0d368e3ea229c33e6a1932646962662e">   24</a></span>&#160;    <a class="code" href="class_command_interpreter.html#a0d368e3ea229c33e6a1932646962662e">CommandInterpreter</a>() {};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_command_interpreter.html#a635c0b6f3edf51ba01f7c63b0dec3d9f">   30</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_command_interpreter.html#a635c0b6f3edf51ba01f7c63b0dec3d9f">~CommandInterpreter</a>() {};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_command_interpreter.html#a0d368e3ea229c33e6a1932646962662e">CommandInterpreter</a>(<span class="keyword">const</span> <a class="code" href="class_command_interpreter.html">CommandInterpreter</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_command_interpreter.html#afbd87eddf8d5019902e51480fde8da57">   44</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_command_interpreter.html#afbd87eddf8d5019902e51480fde8da57">runCommand</a>(<span class="keyword">const</span> std::string&amp; keyword, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; flags, <span class="keyword">const</span> std::vector&lt;std::vector&lt;std::string&gt;&gt;&amp; dataToFlags) = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_command_interpreter.html#a5ac7c90e9c4bbaa2ef78867a9e743fa7">   53</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_command_interpreter.html#a5ac7c90e9c4bbaa2ef78867a9e743fa7">isKeyword</a>(<span class="keyword">const</span> std::string&amp; word) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_command_interpreter.html#a5b92217ab5aaf29527f10ba978394f4d">   62</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_command_interpreter.html#a5b92217ab5aaf29527f10ba978394f4d">isCommand</a>(<span class="keyword">const</span> std::string&amp; command) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">     * @brief </span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">     * @param command </span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">     * @param string </span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">     * @return true </span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">     * @return false </span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//virtual bool expectedStringAfterCommand(const std::string&amp; command, const std::string&amp; string) const = 0;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_command_interpreter.html#ab77730a508b35f654db468e7323fa535">   79</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_command_interpreter.html">CommandInterpreter</a>* <a class="code" href="class_command_interpreter.html#ab77730a508b35f654db468e7323fa535">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_command_interpreter_html_a0d368e3ea229c33e6a1932646962662e"><div class="ttname"><a href="class_command_interpreter.html#a0d368e3ea229c33e6a1932646962662e">CommandInterpreter::CommandInterpreter</a></div><div class="ttdeci">CommandInterpreter()</div><div class="ttdoc">Stwórz nowy obiekt Command Interpreter.</div><div class="ttdef"><b>Definition:</b> commandInterpreter.h:24</div></div>
+<div class="ttc" id="aclass_command_interpreter_html_a5b92217ab5aaf29527f10ba978394f4d"><div class="ttname"><a href="class_command_interpreter.html#a5b92217ab5aaf29527f10ba978394f4d">CommandInterpreter::isCommand</a></div><div class="ttdeci">virtual bool isCommand(const std::string &amp;command) const =0</div><div class="ttdoc">Sprawdzenie czy string jest komendą</div></div>
+<div class="ttc" id="aclass_command_interpreter_html_ab77730a508b35f654db468e7323fa535"><div class="ttname"><a href="class_command_interpreter.html#ab77730a508b35f654db468e7323fa535">CommandInterpreter::clone</a></div><div class="ttdeci">virtual CommandInterpreter * clone() const =0</div><div class="ttdoc">Kopiowanie obiektu CommandInterpreter.</div></div>
+<div class="ttc" id="aclass_command_interpreter_html_a5ac7c90e9c4bbaa2ef78867a9e743fa7"><div class="ttname"><a href="class_command_interpreter.html#a5ac7c90e9c4bbaa2ef78867a9e743fa7">CommandInterpreter::isKeyword</a></div><div class="ttdeci">virtual bool isKeyword(const std::string &amp;word) const =0</div><div class="ttdoc">Sprawdzenie czy string jest słowem kluczowym.</div></div>
+<div class="ttc" id="aclass_command_interpreter_html_afbd87eddf8d5019902e51480fde8da57"><div class="ttname"><a href="class_command_interpreter.html#afbd87eddf8d5019902e51480fde8da57">CommandInterpreter::runCommand</a></div><div class="ttdeci">virtual bool runCommand(const std::string &amp;keyword, const std::vector&lt; std::string &gt; &amp;flags, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;dataToFlags)=0</div><div class="ttdoc">Wykonanie akcji związanych z poleceniem. Może być wywoływana rekurencyjnie.</div></div>
+<div class="ttc" id="aclass_command_interpreter_html"><div class="ttname"><a href="class_command_interpreter.html">CommandInterpreter</a></div><div class="ttdoc">Klasa interpretatora poleceń. Wykorzystywana do rozpoznawania słów kluczowych z wczytanego polecenia ...</div><div class="ttdef"><b>Definition:</b> commandInterpreter.h:17</div></div>
+<div class="ttc" id="aclass_command_interpreter_html_a635c0b6f3edf51ba01f7c63b0dec3d9f"><div class="ttname"><a href="class_command_interpreter.html#a635c0b6f3edf51ba01f7c63b0dec3d9f">CommandInterpreter::~CommandInterpreter</a></div><div class="ttdeci">virtual ~CommandInterpreter()</div><div class="ttdoc">Usuń obiekt Command Interpreter.</div><div class="ttdef"><b>Definition:</b> commandInterpreter.h:30</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

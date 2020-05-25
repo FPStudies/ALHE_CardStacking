@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Card Stacking: Plik źródłowy mainAlgorithm/population.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Card Stacking
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b6bbfda923ed08bcc43f682b08f6e829.html">mainAlgorithm</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">population.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="population_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef POPULATION_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define POPULATION_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="binary_chromosome_8h.html">binaryChromosome.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="random_point_8h.html">randomPoint.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_population.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_population.html">Population</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_mating_pool.html">MatingPool</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">using</span> <a class="code" href="class_binary_chromosome.html">Individual</a> = <a class="code" href="class_binary_chromosome.html">BinaryChromosome</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">using</span> Container = std::vector&lt;std::shared_ptr&lt;Individual&gt;&gt;;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Container population;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    #ifdef COUNT_METHOD_CALL</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> constructor_call;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> destructor_call;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> constructor_copy_call;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> constructor_rewriting_call;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> method_operatorAdd_call;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> method_runMutationInPopulation_call;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> method_generatePopulation_call;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> method_evaluate_call;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_population.html#a54eb24ca89470eebe0c27bcb03a0ceae">Population</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">     * @brief Stwórz nowy obiekt Population</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     * @param </span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//Population(const Individual&amp; individual);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_population.html#a4c8cedd0f038e41746fb6084639f5616">~Population</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_population.html#a54eb24ca89470eebe0c27bcb03a0ceae">Population</a>(<span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; other);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="class_population.html#a54eb24ca89470eebe0c27bcb03a0ceae">Population</a>(<a class="code" href="class_population.html">Population</a>&amp;&amp; other) noexcept;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_population.html">Population</a>&amp; <a class="code" href="class_population.html#ad8a2aa9d64006b9637fe53e117934de2">operator=</a>(<a class="code" href="class_population.html">Population</a>&amp;&amp; other) noexcept;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="class_population.html">Population</a>&amp; <a class="code" href="class_population.html#ad8a2aa9d64006b9637fe53e117934de2">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; other);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="class_population.html">Population</a>&amp; <a class="code" href="class_population.html#a5d4d112cfb5a192e441325a07c23a9c3">operator+=</a>(<span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; other);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_population.html#a83772e2da1e07a330bdd5dc87f6911ba">runMutationInPopulation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; mutationProb, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; maxMutationValue = 1000);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_population.html#a3bfa76ae1907f595e874daadbbd1205d">setPopulationSize</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; size);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_population.html#a4f844da2f0e5e7d8e8f854fee6adbd70">generatePopulation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; numberOfGenes);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_population.html#a0579b64a7fc8e0c9dcc32480e8910863">evaluate</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; groupAIdeal, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; groupBIdeal);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_population.html#a1ba5ae74581b20b9e6148fb222462d63">operator&lt;&lt; </a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; pop);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">    #ifdef COUNT_METHOD_CALL</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_constructor_call();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_destructor_call();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_constructor_copy_call();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_constructor_rewriting_call();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_method_operatorAdd_call();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_method_runMutationInPopulation_call();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_method_generatePopulation_call();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_method_evaluate_call();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> method_couter_call_clear();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;};</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_population_html_a5d4d112cfb5a192e441325a07c23a9c3"><div class="ttname"><a href="class_population.html#a5d4d112cfb5a192e441325a07c23a9c3">Population::operator+=</a></div><div class="ttdeci">Population &amp; operator+=(const Population &amp;other)</div><div class="ttdoc">Łączenie populacji.</div><div class="ttdef"><b>Definition:</b> population.cpp:64</div></div>
+<div class="ttc" id="aclass_mating_pool_html"><div class="ttname"><a href="class_mating_pool.html">MatingPool</a></div><div class="ttdoc">Klasa puli rozrodczej.</div><div class="ttdef"><b>Definition:</b> matingPool.h:19</div></div>
+<div class="ttc" id="aclass_population_html_a4f844da2f0e5e7d8e8f854fee6adbd70"><div class="ttname"><a href="class_population.html#a4f844da2f0e5e7d8e8f854fee6adbd70">Population::generatePopulation</a></div><div class="ttdeci">void generatePopulation(const unsigned int &amp;numberOfGenes)</div><div class="ttdoc">Stwórz nową populację</div><div class="ttdef"><b>Definition:</b> population.cpp:90</div></div>
+<div class="ttc" id="aclass_population_html_a83772e2da1e07a330bdd5dc87f6911ba"><div class="ttname"><a href="class_population.html#a83772e2da1e07a330bdd5dc87f6911ba">Population::runMutationInPopulation</a></div><div class="ttdeci">void runMutationInPopulation(const unsigned int &amp;mutationProb, const unsigned int &amp;maxMutationValue=1000)</div><div class="ttdoc">Dokonaj mutacji w populacji.</div><div class="ttdef"><b>Definition:</b> population.cpp:74</div></div>
+<div class="ttc" id="abinary_chromosome_8h_html"><div class="ttname"><a href="binary_chromosome_8h.html">binaryChromosome.h</a></div><div class="ttdoc">Plik klasy chromosomu.</div></div>
+<div class="ttc" id="aclass_population_html_a54eb24ca89470eebe0c27bcb03a0ceae"><div class="ttname"><a href="class_population.html#a54eb24ca89470eebe0c27bcb03a0ceae">Population::Population</a></div><div class="ttdeci">Population()</div><div class="ttdoc">Stwórz nowy obiekt Population.</div><div class="ttdef"><b>Definition:</b> population.cpp:21</div></div>
+<div class="ttc" id="aclass_population_html_a4c8cedd0f038e41746fb6084639f5616"><div class="ttname"><a href="class_population.html#a4c8cedd0f038e41746fb6084639f5616">Population::~Population</a></div><div class="ttdeci">~Population()</div><div class="ttdoc">Usuń obiekt Population.</div><div class="ttdef"><b>Definition:</b> population.cpp:29</div></div>
+<div class="ttc" id="aclass_binary_chromosome_html"><div class="ttname"><a href="class_binary_chromosome.html">BinaryChromosome</a></div><div class="ttdoc">Klasa chromosomu.</div><div class="ttdef"><b>Definition:</b> binaryChromosome.h:23</div></div>
+<div class="ttc" id="aclass_population_html_a0579b64a7fc8e0c9dcc32480e8910863"><div class="ttname"><a href="class_population.html#a0579b64a7fc8e0c9dcc32480e8910863">Population::evaluate</a></div><div class="ttdeci">void evaluate(const int &amp;groupAIdeal, const int &amp;groupBIdeal)</div><div class="ttdoc">Oblicz dobroć osobników populacji.</div><div class="ttdef"><b>Definition:</b> population.cpp:101</div></div>
+<div class="ttc" id="aclass_population_html_ad8a2aa9d64006b9637fe53e117934de2"><div class="ttname"><a href="class_population.html#ad8a2aa9d64006b9637fe53e117934de2">Population::operator=</a></div><div class="ttdeci">Population &amp; operator=(Population &amp;&amp;other) noexcept</div><div class="ttdoc">Przenoszący operator przypisania.</div><div class="ttdef"><b>Definition:</b> population.cpp:48</div></div>
+<div class="ttc" id="arandom_point_8h_html"><div class="ttname"><a href="random_point_8h.html">randomPoint.h</a></div><div class="ttdoc">Plik klasy generatora liczb losowych.</div></div>
+<div class="ttc" id="aclass_population_html_a1ba5ae74581b20b9e6148fb222462d63"><div class="ttname"><a href="class_population.html#a1ba5ae74581b20b9e6148fb222462d63">Population::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Population &amp;pop)</div><div class="ttdoc">Wypisz osobniki populacji do strumienia.</div><div class="ttdef"><b>Definition:</b> population.cpp:113</div></div>
+<div class="ttc" id="aclass_population_html"><div class="ttname"><a href="class_population.html">Population</a></div><div class="ttdoc">Klasa populacji.</div><div class="ttdef"><b>Definition:</b> population.h:20</div></div>
+<div class="ttc" id="aclass_population_html_a3bfa76ae1907f595e874daadbbd1205d"><div class="ttname"><a href="class_population.html#a3bfa76ae1907f595e874daadbbd1205d">Population::setPopulationSize</a></div><div class="ttdeci">void setPopulationSize(const unsigned int &amp;size)</div><div class="ttdoc">Ustaw wartość Population Size.</div><div class="ttdef"><b>Definition:</b> population.cpp:85</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

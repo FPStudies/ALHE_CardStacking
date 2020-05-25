@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Card Stacking: Plik źródłowy mainAlgorithm/randomPoint.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Card Stacking
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b6bbfda923ed08bcc43f682b08f6e829.html">mainAlgorithm</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">randomPoint.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="random_point_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef RAND_CLASS_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define RAND_CLASS_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_random_point.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_random_point.html">RandomPoint</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">using</span> TypeRand = int;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    TypeRand begin, end;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    TypeRand range;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_random_point.html#afd092ffb41633bba08bb9223be9a95a1">RandomPoint</a>(<span class="keyword">const</span> TypeRand size);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_random_point.html#afd092ffb41633bba08bb9223be9a95a1">RandomPoint</a>(<span class="keyword">const</span> TypeRand beginRange, <span class="keyword">const</span> TypeRand endRange);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_random_point.html#a183618d655298a67023e3c6082a95f99">~RandomPoint</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_random_point.html#afd092ffb41633bba08bb9223be9a95a1">RandomPoint</a>(<span class="keyword">const</span> <a class="code" href="class_random_point.html">RandomPoint</a>&amp; other);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_random_point.html#afd092ffb41633bba08bb9223be9a95a1">RandomPoint</a>(<a class="code" href="class_random_point.html">RandomPoint</a>&amp;&amp; other) noexcept;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_random_point.html">RandomPoint</a>&amp; <a class="code" href="class_random_point.html#aeeb7bb1b7ece3ae46d753ca334aef8f2">operator=</a>(<a class="code" href="class_random_point.html">RandomPoint</a>&amp;&amp; other) noexcept;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="class_random_point.html">RandomPoint</a>&amp; <a class="code" href="class_random_point.html#aeeb7bb1b7ece3ae46d753ca334aef8f2">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_random_point.html">RandomPoint</a>&amp; other);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    TypeRand <a class="code" href="class_random_point.html#a20c158db800f3e96322912b9399651dc">getClose</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> TypeRand <a class="code" href="class_random_point.html#a329524e8261694481132f3d153dad66b">const_getClose</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    TypeRand <a class="code" href="class_random_point.html#a91b663b76959f5b8881c00e9198e56e2">getOpen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">const</span> TypeRand <a class="code" href="class_random_point.html#a18363a7a6886bddca78aaa15b3d27b1c">const_getOpen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_random_point.html#a0727a8f3371188311f521fd85264ad88">setNew</a>(<span class="keyword">const</span> TypeRand beginRange, <span class="keyword">const</span> TypeRand endRange);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_random_point.html#a0727a8f3371188311f521fd85264ad88">setNew</a>(<span class="keyword">const</span> TypeRand size);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">static</span> TypeRand <a class="code" href="class_random_point.html#a20c158db800f3e96322912b9399651dc">getClose</a>(<span class="keyword">const</span> TypeRand&amp; beginRange, <span class="keyword">const</span> TypeRand&amp; endRange);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">static</span> TypeRand <a class="code" href="class_random_point.html#a91b663b76959f5b8881c00e9198e56e2">getOpen</a>(<span class="keyword">const</span> TypeRand&amp; beginRange, <span class="keyword">const</span> TypeRand&amp; endRange);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> TypeRand <a class="code" href="class_random_point.html#a329524e8261694481132f3d153dad66b">const_getClose</a>(<span class="keyword">const</span> TypeRand&amp; beginRange, <span class="keyword">const</span> TypeRand&amp; endRange);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> TypeRand <a class="code" href="class_random_point.html#a18363a7a6886bddca78aaa15b3d27b1c">const_getOpen</a>(<span class="keyword">const</span> TypeRand&amp; beginRange, <span class="keyword">const</span> TypeRand&amp; endRange);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_random_point.html#a5ffbb8778128738380009e8586efecb8">getRand</a>(<span class="keyword">const</span> TypeRand&amp; probablility, <span class="keyword">const</span> TypeRand&amp; max);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_random_point.html#a2407aa3ee002ae4f076806c9f4409570">newSeed</a>();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_random_point.html#a2407aa3ee002ae4f076806c9f4409570">newSeed</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> seed);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;};</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_random_point_html"><div class="ttname"><a href="class_random_point.html">RandomPoint</a></div><div class="ttdoc">Klasa generatora liczb losowych.</div><div class="ttdef"><b>Definition:</b> randomPoint.h:18</div></div>
+<div class="ttc" id="aclass_random_point_html_a2407aa3ee002ae4f076806c9f4409570"><div class="ttname"><a href="class_random_point.html#a2407aa3ee002ae4f076806c9f4409570">RandomPoint::newSeed</a></div><div class="ttdeci">static void newSeed()</div><div class="ttdoc">Ustawienie ziarna w oparciu o zegar.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:102</div></div>
+<div class="ttc" id="aclass_random_point_html_a18363a7a6886bddca78aaa15b3d27b1c"><div class="ttname"><a href="class_random_point.html#a18363a7a6886bddca78aaa15b3d27b1c">RandomPoint::const_getOpen</a></div><div class="ttdeci">const TypeRand const_getOpen() const</div><div class="ttdoc">Losowanie z zakresem otwartym.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:56</div></div>
+<div class="ttc" id="aclass_random_point_html_a329524e8261694481132f3d153dad66b"><div class="ttname"><a href="class_random_point.html#a329524e8261694481132f3d153dad66b">RandomPoint::const_getClose</a></div><div class="ttdeci">const TypeRand const_getClose() const</div><div class="ttdoc">Losowanie z zakresem domkniętym.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:46</div></div>
+<div class="ttc" id="aclass_random_point_html_a0727a8f3371188311f521fd85264ad88"><div class="ttname"><a href="class_random_point.html#a0727a8f3371188311f521fd85264ad88">RandomPoint::setNew</a></div><div class="ttdeci">void setNew(const TypeRand beginRange, const TypeRand endRange)</div><div class="ttdoc">Ustaw wartość granic generowania.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:61</div></div>
+<div class="ttc" id="aclass_random_point_html_aeeb7bb1b7ece3ae46d753ca334aef8f2"><div class="ttname"><a href="class_random_point.html#aeeb7bb1b7ece3ae46d753ca334aef8f2">RandomPoint::operator=</a></div><div class="ttdeci">RandomPoint &amp; operator=(RandomPoint &amp;&amp;other) noexcept</div><div class="ttdoc">Przenoszący operator przypisania.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:25</div></div>
+<div class="ttc" id="aclass_random_point_html_a183618d655298a67023e3c6082a95f99"><div class="ttname"><a href="class_random_point.html#a183618d655298a67023e3c6082a95f99">RandomPoint::~RandomPoint</a></div><div class="ttdeci">~RandomPoint()</div><div class="ttdoc">Usuń obiekt Random Point.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:14</div></div>
+<div class="ttc" id="aclass_random_point_html_afd092ffb41633bba08bb9223be9a95a1"><div class="ttname"><a href="class_random_point.html#afd092ffb41633bba08bb9223be9a95a1">RandomPoint::RandomPoint</a></div><div class="ttdeci">RandomPoint(const TypeRand size)</div><div class="ttdoc">Stwórz nowy obiekt Random Point ustawiając zakres jako 0-size.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:6</div></div>
+<div class="ttc" id="aclass_random_point_html_a5ffbb8778128738380009e8586efecb8"><div class="ttname"><a href="class_random_point.html#a5ffbb8778128738380009e8586efecb8">RandomPoint::getRand</a></div><div class="ttdeci">static bool getRand(const TypeRand &amp;probablility, const TypeRand &amp;max)</div><div class="ttdoc">Losowanie wartości z zakresu 0-max i porównanie z podanym prawdopodobieńswem.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:97</div></div>
+<div class="ttc" id="aclass_random_point_html_a91b663b76959f5b8881c00e9198e56e2"><div class="ttname"><a href="class_random_point.html#a91b663b76959f5b8881c00e9198e56e2">RandomPoint::getOpen</a></div><div class="ttdeci">TypeRand getOpen() const</div><div class="ttdoc">Losowanie z zakresem otwartym.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:51</div></div>
+<div class="ttc" id="aclass_random_point_html_a20c158db800f3e96322912b9399651dc"><div class="ttname"><a href="class_random_point.html#a20c158db800f3e96322912b9399651dc">RandomPoint::getClose</a></div><div class="ttdeci">TypeRand getClose() const</div><div class="ttdoc">Losowanie z zakresem domkniętym.</div><div class="ttdef"><b>Definition:</b> randomPoint.cpp:41</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

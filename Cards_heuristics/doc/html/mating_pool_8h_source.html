@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Card Stacking: Plik źródłowy mainAlgorithm/matingPool.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Card Stacking
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b6bbfda923ed08bcc43f682b08f6e829.html">mainAlgorithm</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">matingPool.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mating_pool_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef MATING_POOL_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define MATING_POOL_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="population_8h.html">population.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_mating_pool.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mating_pool.html">MatingPool</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">enum class</span> CrossoverType;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_population.html">Population</a> population_;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> populationSize;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> populationSizeAfterSelection;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCrossovers_;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mutationProb;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> maxProbValue;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> groupAVal;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> groupBVal;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> populationCreated;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> duringSimulation;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> foundOptimal;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfGenes;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    std::shared_ptr&lt;Population::Individual&gt; best;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="class_population.html">Population</a> rouletteWheel(<span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; oldGeneration, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; sizeOfNewPop);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_population.html">Population</a> crossover(<span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; selectedPopulation, CrossoverType type, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; numberOfPointCross = 3);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> mutation(<a class="code" href="class_population.html">Population</a>&amp; population);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> populationEvaluation(<a class="code" href="class_population.html">Population</a>&amp; population, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; groupAIdeal, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; groupBIdeal);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="class_population.html">Population</a> selectFromTwoGenerations(<span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; oldGeneration, <span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; newGeneration);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    std::shared_ptr&lt;Population::Individual&gt; findBestPointer();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    std::shared_ptr&lt;Population::Individual&gt; findBestPointerCopy();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    std::shared_ptr&lt;Population::Individual&gt; findWorstPointer();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    std::pair&lt;std::shared_ptr&lt;Population::Individual&gt;, std::shared_ptr&lt;Population::Individual&gt;&gt; chooseTwoToCrossover(<span class="keyword">const</span> <a class="code" href="class_population.html">Population</a>&amp; selectedPopulation);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">double</span> raitingFunction(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; rating);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="class_mating_pool.html#a6edc0bab633a640815c4dc89480291ac">MatingPool</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="class_mating_pool.html#af5dbdead41a639648e9a39d2cf01e8b5">~MatingPool</a>();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="class_mating_pool.html#a6edc0bab633a640815c4dc89480291ac">MatingPool</a>(<span class="keyword">const</span> <a class="code" href="class_mating_pool.html">MatingPool</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="class_mating_pool.html#a6edc0bab633a640815c4dc89480291ac">MatingPool</a>(<a class="code" href="class_mating_pool.html">MatingPool</a>&amp;&amp; other) noexcept;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="class_mating_pool.html">MatingPool</a>&amp; operator=(<a class="code" href="class_mating_pool.html">MatingPool</a>&amp;&amp; other) noexcept;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#ab02a0ab8b80aa768b25de96c5ec75da3">createFirstPopulation</a>();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#a8702ee767514624f5c520b0ba8884026">setPopulationSize</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; popSize);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#adf27ea5eeea839f72bb1f4d8523ca656">setMutationProbability</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; random, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; max);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#a352f394101213b985f8c7915bbd35615">setNumberOfCrossovers</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#a223eed1b148cbcd74c675def5917b25b">setPopulationSizeAfterSelection</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#afd7be45e1b1f7e6e567c1e07bd9ffed2">setGroupAValue</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#a6c917ba22acf969c6bec44ae70cfe795">setGroupBValue</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; value);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_mating_pool.html#a5712e10118993aede33b64bda4e57a59">isDataValid</a>();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mating_pool.html#aed374365097ed00d89dcd401c45bf9b4">runOneGeneration</a>(CrossoverType type, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; numberOfPointCross = 1);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="class_binary_chromosome.html">BinaryChromosome</a> <a class="code" href="class_mating_pool.html#abe1852268650664a6604598d72cd12d8">runHeuristic</a>();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <a class="code" href="class_binary_chromosome.html">Population::Individual</a> <a class="code" href="class_mating_pool.html#aeb8052994caa176b6c892f52ef44d312">findBest</a>();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_mating_pool.html#a512d664afeaf9e63d79e1ccaa245ec95">isBestFound</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="class_binary_chromosome.html">Population::Individual</a> <a class="code" href="class_mating_pool.html#aa4a35e9c7382d6c6eeb7ab24c37dad07">returnBest</a>();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keyword">enum class</span> CrossoverType {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        multiplePoint,</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        uniform,</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        singlePoint</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    };</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_mating_pool.html#a567186f0719c02017757acb78ed7225a">operator&lt;&lt; </a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_mating_pool.html">MatingPool</a>&amp; pool);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;};</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_mating_pool_html_a6c917ba22acf969c6bec44ae70cfe795"><div class="ttname"><a href="class_mating_pool.html#a6c917ba22acf969c6bec44ae70cfe795">MatingPool::setGroupBValue</a></div><div class="ttdeci">void setGroupBValue(const int &amp;value)</div><div class="ttdoc">Ustaw wartość Group B Value.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:85</div></div>
+<div class="ttc" id="aclass_mating_pool_html"><div class="ttname"><a href="class_mating_pool.html">MatingPool</a></div><div class="ttdoc">Klasa puli rozrodczej.</div><div class="ttdef"><b>Definition:</b> matingPool.h:19</div></div>
+<div class="ttc" id="aclass_mating_pool_html_af5dbdead41a639648e9a39d2cf01e8b5"><div class="ttname"><a href="class_mating_pool.html#af5dbdead41a639648e9a39d2cf01e8b5">MatingPool::~MatingPool</a></div><div class="ttdeci">~MatingPool()</div><div class="ttdoc">Usuń obiekt Mating Pool.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:23</div></div>
+<div class="ttc" id="aclass_mating_pool_html_a512d664afeaf9e63d79e1ccaa245ec95"><div class="ttname"><a href="class_mating_pool.html#a512d664afeaf9e63d79e1ccaa245ec95">MatingPool::isBestFound</a></div><div class="ttdeci">bool isBestFound()</div><div class="ttdoc">Czy znaleziono rozwiązanie optymalne.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:170</div></div>
+<div class="ttc" id="aclass_mating_pool_html_a567186f0719c02017757acb78ed7225a"><div class="ttname"><a href="class_mating_pool.html#a567186f0719c02017757acb78ed7225a">MatingPool::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const MatingPool &amp;pool)</div><div class="ttdoc">Wypisanie populacji do strumienia.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:318</div></div>
+<div class="ttc" id="aclass_mating_pool_html_aeb8052994caa176b6c892f52ef44d312"><div class="ttname"><a href="class_mating_pool.html#aeb8052994caa176b6c892f52ef44d312">MatingPool::findBest</a></div><div class="ttdeci">Population::Individual findBest()</div><div class="ttdoc">Znajdź najlepszego osobnika populacji.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:150</div></div>
+<div class="ttc" id="aclass_mating_pool_html_aa4a35e9c7382d6c6eeb7ab24c37dad07"><div class="ttname"><a href="class_mating_pool.html#aa4a35e9c7382d6c6eeb7ab24c37dad07">MatingPool::returnBest</a></div><div class="ttdeci">Population::Individual returnBest()</div><div class="ttdoc">Zwróć znalezione rozwiązanie optymalne.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:175</div></div>
+<div class="ttc" id="aclass_mating_pool_html_a5712e10118993aede33b64bda4e57a59"><div class="ttname"><a href="class_mating_pool.html#a5712e10118993aede33b64bda4e57a59">MatingPool::isDataValid</a></div><div class="ttdeci">bool isDataValid()</div><div class="ttdoc">Sprawdzenie czy ustawione parametry algorytmu są poprawne.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:91</div></div>
+<div class="ttc" id="aclass_mating_pool_html_afd7be45e1b1f7e6e567c1e07bd9ffed2"><div class="ttname"><a href="class_mating_pool.html#afd7be45e1b1f7e6e567c1e07bd9ffed2">MatingPool::setGroupAValue</a></div><div class="ttdeci">void setGroupAValue(const int &amp;value)</div><div class="ttdoc">Ustaw wartość Group A Value.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:79</div></div>
+<div class="ttc" id="aclass_mating_pool_html_aed374365097ed00d89dcd401c45bf9b4"><div class="ttname"><a href="class_mating_pool.html#aed374365097ed00d89dcd401c45bf9b4">MatingPool::runOneGeneration</a></div><div class="ttdeci">void runOneGeneration(CrossoverType type, const unsigned int &amp;numberOfPointCross=1)</div><div class="ttdoc">Stwórz kolejne pokolenie.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:117</div></div>
+<div class="ttc" id="apopulation_8h_html"><div class="ttname"><a href="population_8h.html">population.h</a></div><div class="ttdoc">Plik klasy populacji.</div></div>
+<div class="ttc" id="aclass_binary_chromosome_html"><div class="ttname"><a href="class_binary_chromosome.html">BinaryChromosome</a></div><div class="ttdoc">Klasa chromosomu.</div><div class="ttdef"><b>Definition:</b> binaryChromosome.h:23</div></div>
+<div class="ttc" id="aclass_mating_pool_html_a352f394101213b985f8c7915bbd35615"><div class="ttname"><a href="class_mating_pool.html#a352f394101213b985f8c7915bbd35615">MatingPool::setNumberOfCrossovers</a></div><div class="ttdeci">void setNumberOfCrossovers(const unsigned int &amp;value)</div><div class="ttdoc">Ustaw wartość Number Of Crossovers.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:73</div></div>
+<div class="ttc" id="aclass_mating_pool_html_adf27ea5eeea839f72bb1f4d8523ca656"><div class="ttname"><a href="class_mating_pool.html#adf27ea5eeea839f72bb1f4d8523ca656">MatingPool::setMutationProbability</a></div><div class="ttdeci">void setMutationProbability(const unsigned int &amp;random, const unsigned int &amp;max)</div><div class="ttdoc">Ustaw wartość Mutation Probability.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:66</div></div>
+<div class="ttc" id="aclass_mating_pool_html_a6edc0bab633a640815c4dc89480291ac"><div class="ttname"><a href="class_mating_pool.html#a6edc0bab633a640815c4dc89480291ac">MatingPool::MatingPool</a></div><div class="ttdeci">MatingPool()</div><div class="ttdoc">Stwórz nowy obiekt Mating Pool.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:8</div></div>
+<div class="ttc" id="aclass_population_html"><div class="ttname"><a href="class_population.html">Population</a></div><div class="ttdoc">Klasa populacji.</div><div class="ttdef"><b>Definition:</b> population.h:20</div></div>
+<div class="ttc" id="aclass_mating_pool_html_abe1852268650664a6604598d72cd12d8"><div class="ttname"><a href="class_mating_pool.html#abe1852268650664a6604598d72cd12d8">MatingPool::runHeuristic</a></div><div class="ttdeci">BinaryChromosome runHeuristic()</div><div class="ttdoc">Rozwiąż zadanie algorytmem zachłannym.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:324</div></div>
+<div class="ttc" id="aclass_mating_pool_html_ab02a0ab8b80aa768b25de96c5ec75da3"><div class="ttname"><a href="class_mating_pool.html#ab02a0ab8b80aa768b25de96c5ec75da3">MatingPool::createFirstPopulation</a></div><div class="ttdeci">void createFirstPopulation()</div><div class="ttdoc">Stwórz pierwsze pokolenie.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:109</div></div>
+<div class="ttc" id="aclass_mating_pool_html_a8702ee767514624f5c520b0ba8884026"><div class="ttname"><a href="class_mating_pool.html#a8702ee767514624f5c520b0ba8884026">MatingPool::setPopulationSize</a></div><div class="ttdeci">void setPopulationSize(const unsigned int &amp;popSize)</div><div class="ttdoc">Ustaw wartość Population Size.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:59</div></div>
+<div class="ttc" id="aclass_mating_pool_html_a223eed1b148cbcd74c675def5917b25b"><div class="ttname"><a href="class_mating_pool.html#a223eed1b148cbcd74c675def5917b25b">MatingPool::setPopulationSizeAfterSelection</a></div><div class="ttdeci">void setPopulationSizeAfterSelection(const int &amp;value)</div><div class="ttdoc">Ustaw wartość Population Size After Selection.</div><div class="ttdef"><b>Definition:</b> matingPool.cpp:102</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

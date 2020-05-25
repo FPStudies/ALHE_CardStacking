@@ -1,5 +1,3 @@
-
-
 *.o
 .vs/
 *.code-workspace
@@ -10,3 +8,6 @@ Debug/
 *.a
 *.lib
 x64/
+*.sconsign.dblite
+*/testOut*
+~$*
