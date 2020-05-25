@@ -3,7 +3,7 @@
 
 #include "testNormal.h"
 
-const char* TestNormal::keyword[3] = {"testNormal","testNormalSilent","testNormalHeuristic"};
+const char* TestNormal::keyword[4] = {"testNormal","testNormalSilent","testNormalHeuristic", "testNormalHeuristicSilent"};
 
 
 TestNormal::TestNormal(const unsigned int& maxNumberOfIterations)
@@ -32,6 +32,10 @@ int TestNormal::runTest(const std::string& keyword, const std::string& path)
 		{
 			runTestHeuristic(path);
 			return -1;
+		}
+	else if (keyword == TestNormal::keyword[3])
+		{
+			return runTestHeuristicSilent(path);
 		}
 	return -2;
 }

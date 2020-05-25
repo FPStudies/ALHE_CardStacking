@@ -22,7 +22,7 @@ class TestNormal: public TestCardsHeuristic{
 	 * @brief Nazwy trybów działania programu
 	 * 
 	 */
-	const static char* keyword[3];
+	const static char* keyword[4];
 
 public:
 	/**

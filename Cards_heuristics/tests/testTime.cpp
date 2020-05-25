@@ -3,7 +3,7 @@
 
 #include "testTime.h"
 
-const char* TestTime::keyword[3] = {"testTime","testTimeSilent","testTimeHeuristic"};
+const char* TestTime::keyword[4] = {"testTime","testTimeSilent","testTimeHeuristic", "testTimeHeuristicSilent"};
 
 TestTime::TestTime(const unsigned int& maxNumberOfIterations)
 	:TestCardsHeuristic(maxNumberOfIterations)
@@ -32,6 +32,10 @@ int TestTime::runTest(const std::string& keyword, const std::string& path)
 		{
 			runTestHeuristic(path);
 			return -1;
+		}
+	else if (keyword == TestTime::keyword[3])
+		{
+			return runTestHeuristicSilent(path);
 		}
 	return -2;
 }
