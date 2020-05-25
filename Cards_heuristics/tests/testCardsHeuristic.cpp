@@ -14,7 +14,7 @@
 *	popsizetourn - wielkość populacji po selekcji
 *	crosspoints - ilość punktów przecięcia dla krzyżowania wielopunktowego
 *	crosstype - typ krzyżowania
-*	path - ściećka dla pliku wynikowego
+*	path - ścieżka dla pliku wynikowego
 */
 const char* TestCardsHeuristic::command[10] = {"A", "B", "mrand", "mmax", "cnumb", "popsize", "popsizetourn", "crosspoints", "crosstype", "path"};
 
