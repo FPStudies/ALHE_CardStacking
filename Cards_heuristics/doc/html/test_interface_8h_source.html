@@ -70,29 +70,43 @@ $(function() {
 <div class="title">testInterface.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TEST_INTERFACE_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TEST_INTERFACE_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_test_interface.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_interface.html">TestInterface</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_test_interface.html">TestInterface</a>() {};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    ~<a class="code" href="class_test_interface.html">TestInterface</a>() {};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_test_interface.html">TestInterface</a>(<span class="keyword">const</span> <a class="code" href="class_test_interface.html">TestInterface</a>&amp; other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> runTest(<span class="keyword">const</span> std::string&amp; path) = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_interface.html">TestInterface</a>* clone() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isDataValid() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="test_interface_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef TEST_INTERFACE_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define TEST_INTERFACE_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_test_interface.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_interface.html">TestInterface</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_test_interface.html#a5866d5d399da5c99c0f64e65b94b0d38">   25</a></span>&#160;    <a class="code" href="class_test_interface.html#a5866d5d399da5c99c0f64e65b94b0d38">TestInterface</a>() {};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_test_interface.html#a81806ad3e8c4a03e90262a2409239091">   31</a></span>&#160;    <a class="code" href="class_test_interface.html#a81806ad3e8c4a03e90262a2409239091">~TestInterface</a>() {};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_test_interface.html#a5866d5d399da5c99c0f64e65b94b0d38">TestInterface</a>(<span class="keyword">const</span> <a class="code" href="class_test_interface.html">TestInterface</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     * @brief Uruchom test</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     * @param path ścieżka do pliku z poleceniami</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//virtual void runTest(const std::string&amp; path) = 0;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_test_interface.html#afe1ec3fb5c3be7c5296d5ae261bd2d28">   47</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_interface.html">TestInterface</a>* <a class="code" href="class_test_interface.html#afe1ec3fb5c3be7c5296d5ae261bd2d28">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_test_interface.html#ae7d5e371360ca71c437ff3972c349d65">   55</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_interface.html#ae7d5e371360ca71c437ff3972c349d65">isDataValid</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_test_interface_html"><div class="ttname"><a href="class_test_interface.html">TestInterface</a></div><div class="ttdef"><b>Definition:</b> testInterface.h:9</div></div>
+<div class="ttc" id="aclass_test_interface_html_a81806ad3e8c4a03e90262a2409239091"><div class="ttname"><a href="class_test_interface.html#a81806ad3e8c4a03e90262a2409239091">TestInterface::~TestInterface</a></div><div class="ttdeci">~TestInterface()</div><div class="ttdoc">Usuń obiekt Test Interface.</div><div class="ttdef"><b>Definition:</b> testInterface.h:31</div></div>
+<div class="ttc" id="aclass_test_interface_html_afe1ec3fb5c3be7c5296d5ae261bd2d28"><div class="ttname"><a href="class_test_interface.html#afe1ec3fb5c3be7c5296d5ae261bd2d28">TestInterface::clone</a></div><div class="ttdeci">virtual TestInterface * clone() const =0</div><div class="ttdoc">Skopiuj obiekt klasy TestInterface.</div></div>
+<div class="ttc" id="aclass_test_interface_html_ae7d5e371360ca71c437ff3972c349d65"><div class="ttname"><a href="class_test_interface.html#ae7d5e371360ca71c437ff3972c349d65">TestInterface::isDataValid</a></div><div class="ttdeci">virtual bool isDataValid() const =0</div><div class="ttdoc">Sprawdź czy parametry algorytmu są prawidłowe.</div></div>
+<div class="ttc" id="aclass_test_interface_html_a5866d5d399da5c99c0f64e65b94b0d38"><div class="ttname"><a href="class_test_interface.html#a5866d5d399da5c99c0f64e65b94b0d38">TestInterface::TestInterface</a></div><div class="ttdeci">TestInterface()</div><div class="ttdoc">Stwórz nowy obiekt Test Interface.</div><div class="ttdef"><b>Definition:</b> testInterface.h:25</div></div>
+<div class="ttc" id="aclass_test_interface_html"><div class="ttname"><a href="class_test_interface.html">TestInterface</a></div><div class="ttdoc">Klasa interfejsu testów.</div><div class="ttdef"><b>Definition:</b> testInterface.h:19</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">

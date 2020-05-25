@@ -1,7 +1,8 @@
-/**	@file main.cpp
-*	@brief Plik g≥Ûwnej funkcji programu.
-*/
-
+/**
+ * @file main.cpp
+ * @brief Plik g≈Ç√≥wnej funkcji programu.
+ * 
+ */
 #include <iostream>
 #include "mainAlgorithm/matingPool.h"
 #include "mainAlgorithm/randomPoint.h"
@@ -11,9 +12,10 @@
 
 using namespace std;
 
-/** G≥Ûwna funkcja programu.
-*	Wczytuje polecenie, uruchamia algorytm i zwraca wynik.
-*/
+/**
+ * @brief G≈Ç√≥wna funkcja programu. 
+ * Wywo≈Çuje modu≈Çy odpowiedzialne za wczytanie danych i rozwiƒÖzanie zadania.
+ */
 int main(int argc, char**argv) {
 	cout << "Hello" << endl;
 

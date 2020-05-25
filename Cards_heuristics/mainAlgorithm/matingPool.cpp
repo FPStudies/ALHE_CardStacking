@@ -8,7 +8,7 @@ const unsigned int MatingPool::numberOfGenes = 10;
 MatingPool::MatingPool()
 	: population_(), 
 	populationSize(0), 
-	populationSizeAfterTournament(0),
+	populationSizeAfterSelection(0),
 	numberOfCrossovers_(0),
 	mutationProb(0),
 	maxProbValue(1000),
@@ -27,7 +27,7 @@ MatingPool::~MatingPool()
 MatingPool::MatingPool(MatingPool&& other) noexcept
 	:population_(std::move(other.population_)),
 	populationSize(std::move(other.populationSize)),
-	populationSizeAfterTournament(std::move(other.populationSizeAfterTournament)),
+	populationSizeAfterSelection(std::move(other.populationSizeAfterSelection)),
 	numberOfCrossovers_(std::move(other.numberOfCrossovers_)),
 	mutationProb(std::move(other.mutationProb)),
 	maxProbValue(std::move(other.maxProbValue)),
@@ -43,7 +43,7 @@ MatingPool& MatingPool::operator=(MatingPool&& other) noexcept
 {
 	population_ = std::move(other.population_);
 	populationSize = std::move(other.populationSize);
-	populationSizeAfterTournament = std::move(other.populationSizeAfterTournament);
+	populationSizeAfterSelection = std::move(other.populationSizeAfterSelection);
 	numberOfCrossovers_ = std::move(other.numberOfCrossovers_);
 	mutationProb = std::move(other.mutationProb);
 	maxProbValue = std::move(other.maxProbValue);
@@ -90,19 +90,21 @@ void MatingPool::setGroupBValue(const int& value)
 
 bool MatingPool::isDataValid()
 {
-	if (populationSize > 1 && populationSizeAfterTournament <= populationSize && populationSizeAfterTournament > 1) {
-		if (numberOfCrossovers_ <= populationSizeAfterTournament && numberOfCrossovers_ > 1)
+	if (populationSize > 1 && populationSizeAfterSelection <= populationSize && populationSizeAfterSelection > 1) {
+		if (numberOfCrossovers_ <= populationSizeAfterSelection && numberOfCrossovers_ > 1)
 			if (mutationProb <= maxProbValue) return true;
 	}
 
 	return false;
 }
 
-void MatingPool::setPopulationSizeAfterTounament(const int& value)
+
+void MatingPool::setPopulationSizeAfterSelection(const int& value)
 {
 	if (duringSimulation) return;
-	populationSizeAfterTournament = value;
+	populationSizeAfterSelection = value;
 }
+
 
 void MatingPool::createFirstPopulation()
 {
@@ -120,7 +122,7 @@ void MatingPool::runOneGeneration(CrossoverType type, const unsigned int& number
 	std::shared_ptr<Population::Individual> pointerToBest = findBestPointer();
 	std::shared_ptr<Population::Individual> copiedBest = pointerToBest->copy();
 
-	Population toCrossover = std::move(rouletteWheel(population_, populationSizeAfterTournament)); // tu wywala
+	Population toCrossover = std::move(rouletteWheel(population_, populationSizeAfterSelection));
 	if (foundOptimal) {
 		population_ = std::move(toCrossover);
 		return;

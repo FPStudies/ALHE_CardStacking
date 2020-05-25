@@ -3,7 +3,7 @@
 
 #include "testNormal.h"
 
-const char* TestNormal::keyword[1] = {"testNormal"};
+const char* TestNormal::keyword[3] = {"testNormal","testNormalSilent","testNormalHeuristic"};
 
 
 TestNormal::TestNormal(const unsigned int& maxNumberOfIterations)
@@ -17,7 +17,26 @@ TestNormal::TestNormal(const TestNormal& other)
 	:TestCardsHeuristic(other)
 {}
 
-void TestNormal::runTest(const std::string& path)
+int TestNormal::runTest(const std::string& keyword, const std::string& path)
+{
+	if (keyword == TestNormal::keyword[0])
+		{
+			runTestBasic(path);
+			return -1;
+		}
+	else if (keyword == TestNormal::keyword[1])
+		{
+			return runTestSilent(path);
+		}
+	else if (keyword == TestNormal::keyword[2])
+		{
+			runTestHeuristic(path);
+			return -1;
+		}
+	return -2;
+}
+
+void TestNormal::runTestBasic(const std::string& path)
 {
 	std::ofstream file;
 	std::ostream* out;

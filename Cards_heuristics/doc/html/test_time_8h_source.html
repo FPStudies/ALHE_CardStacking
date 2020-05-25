@@ -70,34 +70,55 @@ $(function() {
 <div class="title">testTime.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TEST_TIME_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TEST_TIME_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;testCardsHeuristic.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_test_time.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_time.html">TestTime</a>: <span class="keyword">public</span> <a class="code" href="class_test_cards_heuristic.html">TestCardsHeuristic</a>{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">char</span>* keyword[1];</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_test_time.html">TestTime</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; maxNumberOfIterations);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_test_time.html">TestTime</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_test_time.html">TestTime</a>(<span class="keyword">const</span> <a class="code" href="class_test_time.html">TestTime</a>&amp; other);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> runTest(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_time.html">TestTime</a>* clone() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_time.html#ac95c6ec2a24972f0aa45d53876284e8c">isKeyword</a>(<span class="keyword">const</span> std::string&amp; word) <span class="keyword">const override</span>; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="test_time_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef TEST_TIME_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define TEST_TIME_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="test_cards_heuristic_8h.html">testCardsHeuristic.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_test_time.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_time.html">TestTime</a>: <span class="keyword">public</span> <a class="code" href="class_test_cards_heuristic.html">TestCardsHeuristic</a>{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">char</span>* keyword[3];</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_test_time.html#a0e3ce2d247cf80b796bfc81e0791b50a">TestTime</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; maxNumberOfIterations);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_time.html#a2164003481ccf9e0ecb34c8f7c2ed1c9">~TestTime</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_test_time.html#a0e3ce2d247cf80b796bfc81e0791b50a">TestTime</a>(<span class="keyword">const</span> <a class="code" href="class_test_time.html">TestTime</a>&amp; other);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_time.html#a00ffe62fb5bcd01f1fa9d436c539e959">runTest</a>(<span class="keyword">const</span> std::string&amp; keyword, <span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_time.html#a59ed7800b1db6c257708cbe262f4f5cf">runTestBasic</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_time.html#a6415e35ed7020c22bb74897594ace322">runTestSilent</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_time.html#a4ce620baf4e1e50427c610ba1d5d7281">runTestHeuristic</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_time.html#a771602ce7f3651e997a8e7fc41a8327d">runTestHeuristicSilent</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_time.html">TestTime</a>* <a class="code" href="class_test_time.html#a85c12e702003d4e0198df452efcda5fd">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_time.html#ac95c6ec2a24972f0aa45d53876284e8c">isKeyword</a>(<span class="keyword">const</span> std::string&amp; word) <span class="keyword">const override</span>; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_test_time_html_ac95c6ec2a24972f0aa45d53876284e8c"><div class="ttname"><a href="class_test_time.html#ac95c6ec2a24972f0aa45d53876284e8c">TestTime::isKeyword</a></div><div class="ttdeci">virtual bool isKeyword(const std::string &amp;word) const override</div><div class="ttdef"><b>Definition:</b> testTime.cpp:63</div></div>
-<div class="ttc" id="aclass_test_time_html"><div class="ttname"><a href="class_test_time.html">TestTime</a></div><div class="ttdef"><b>Definition:</b> testTime.h:8</div></div>
-<div class="ttc" id="aclass_test_cards_heuristic_html"><div class="ttname"><a href="class_test_cards_heuristic.html">TestCardsHeuristic</a></div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:12</div></div>
+<div class="ttc" id="aclass_test_time_html_a85c12e702003d4e0198df452efcda5fd"><div class="ttname"><a href="class_test_time.html#a85c12e702003d4e0198df452efcda5fd">TestTime::clone</a></div><div class="ttdeci">virtual TestTime * clone() const override</div><div class="ttdoc">Kopiowanie obiektu klasy TestNormal.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:178</div></div>
+<div class="ttc" id="aclass_test_time_html_ac95c6ec2a24972f0aa45d53876284e8c"><div class="ttname"><a href="class_test_time.html#ac95c6ec2a24972f0aa45d53876284e8c">TestTime::isKeyword</a></div><div class="ttdeci">virtual bool isKeyword(const std::string &amp;word) const override</div><div class="ttdoc">Sprawdź czy string jest trybem działania programu.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:183</div></div>
+<div class="ttc" id="aclass_test_time_html_a0e3ce2d247cf80b796bfc81e0791b50a"><div class="ttname"><a href="class_test_time.html#a0e3ce2d247cf80b796bfc81e0791b50a">TestTime::TestTime</a></div><div class="ttdeci">TestTime(const unsigned int &amp;maxNumberOfIterations)</div><div class="ttdoc">Stwórz nowy obiekt Test Time.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:8</div></div>
+<div class="ttc" id="aclass_test_time_html_a6415e35ed7020c22bb74897594ace322"><div class="ttname"><a href="class_test_time.html#a6415e35ed7020c22bb74897594ace322">TestTime::runTestSilent</a></div><div class="ttdeci">virtual int runTestSilent(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test algorytmu genetycznego z minimalnym wypisem do strumienia.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:78</div></div>
+<div class="ttc" id="aclass_test_time_html_a771602ce7f3651e997a8e7fc41a8327d"><div class="ttname"><a href="class_test_time.html#a771602ce7f3651e997a8e7fc41a8327d">TestTime::runTestHeuristicSilent</a></div><div class="ttdeci">virtual int runTestHeuristicSilent(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test algorytmu z minimalnym wypisem do strumienia.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:147</div></div>
+<div class="ttc" id="aclass_test_time_html_a4ce620baf4e1e50427c610ba1d5d7281"><div class="ttname"><a href="class_test_time.html#a4ce620baf4e1e50427c610ba1d5d7281">TestTime::runTestHeuristic</a></div><div class="ttdeci">virtual void runTestHeuristic(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test algorytmu zachłannego.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:114</div></div>
+<div class="ttc" id="aclass_test_time_html"><div class="ttname"><a href="class_test_time.html">TestTime</a></div><div class="ttdoc">Klasa testu z pomiarem czasu.</div><div class="ttdef"><b>Definition:</b> testTime.h:18</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html"><div class="ttname"><a href="class_test_cards_heuristic.html">TestCardsHeuristic</a></div><div class="ttdoc">Bazowa klasa testowania.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:22</div></div>
+<div class="ttc" id="aclass_test_time_html_a59ed7800b1db6c257708cbe262f4f5cf"><div class="ttname"><a href="class_test_time.html#a59ed7800b1db6c257708cbe262f4f5cf">TestTime::runTestBasic</a></div><div class="ttdeci">virtual void runTestBasic(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test metody genetycznej.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:39</div></div>
+<div class="ttc" id="aclass_test_time_html_a2164003481ccf9e0ecb34c8f7c2ed1c9"><div class="ttname"><a href="class_test_time.html#a2164003481ccf9e0ecb34c8f7c2ed1c9">TestTime::~TestTime</a></div><div class="ttdeci">virtual ~TestTime()</div><div class="ttdoc">Usuń obiekt Test Time.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:12</div></div>
+<div class="ttc" id="atest_cards_heuristic_8h_html"><div class="ttname"><a href="test_cards_heuristic_8h.html">testCardsHeuristic.h</a></div><div class="ttdoc">Plik bazowej klasy testowania.</div></div>
+<div class="ttc" id="aclass_test_time_html_a00ffe62fb5bcd01f1fa9d436c539e959"><div class="ttname"><a href="class_test_time.html#a00ffe62fb5bcd01f1fa9d436c539e959">TestTime::runTest</a></div><div class="ttdeci">virtual int runTest(const std::string &amp;keyword, const std::string &amp;path) override</div><div class="ttdoc">Uruchom odpowiedni test metody genetycznej.</div><div class="ttdef"><b>Definition:</b> testTime.cpp:20</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">

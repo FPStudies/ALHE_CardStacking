@@ -70,36 +70,58 @@ $(function() {
 <div class="title">testNormal.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TEST_NORMAL_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TEST_NORMAL_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;testInterface.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;testCardsHeuristic.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_test_normal.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_normal.html">TestNormal</a>: <span class="keyword">public</span> <a class="code" href="class_test_cards_heuristic.html">TestCardsHeuristic</a>{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">char</span>* keyword[1];</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_test_normal.html">TestNormal</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; maxNumberOfIterations);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_test_normal.html">TestNormal</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_test_normal.html">TestNormal</a>(<span class="keyword">const</span> <a class="code" href="class_test_normal.html">TestNormal</a>&amp; other);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> runTest(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_normal.html">TestNormal</a>* clone() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_normal.html#a96d2b0cde740e984456aef2690a28537">isKeyword</a>(<span class="keyword">const</span> std::string&amp; word) <span class="keyword">const override</span>; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="test_normal_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef TEST_NORMAL_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define TEST_NORMAL_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="test_interface_8h.html">testInterface.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="test_cards_heuristic_8h.html">testCardsHeuristic.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_test_normal.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_normal.html">TestNormal</a>: <span class="keyword">public</span> <a class="code" href="class_test_cards_heuristic.html">TestCardsHeuristic</a>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">char</span>* keyword[3];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_test_normal.html#a682393b71ad9be4e7de1f7f19b2cfda9">TestNormal</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; maxNumberOfIterations);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_normal.html#a9e04903c919955417a58b79148b2ab6d">~TestNormal</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_test_normal.html#a682393b71ad9be4e7de1f7f19b2cfda9">TestNormal</a>(<span class="keyword">const</span> <a class="code" href="class_test_normal.html">TestNormal</a>&amp; other);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_normal.html#ae06f8f1ba165b68e21e46489db695e9b">runTest</a>(<span class="keyword">const</span> std::string&amp; keyword, <span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_normal.html#abdbf12e8ead503b5cb465a7bb798840d">runTestBasic</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_normal.html#a265caecb172e259c62bb62ff8c25cb9b">runTestSilent</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_normal.html#ab232a4c3347cd0efa8ecd60cd8777eb6">runTestHeuristic</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_test_normal.html#ad200d9a4d04eb5e6557c3cb352a0b73e">runTestHeuristicSilent</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_test_normal.html">TestNormal</a>* <a class="code" href="class_test_normal.html#ac36efc8a324e259bc915a6bced51a413">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_normal.html#a96d2b0cde740e984456aef2690a28537">isKeyword</a>(<span class="keyword">const</span> std::string&amp; word) <span class="keyword">const override</span>; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_test_cards_heuristic_html"><div class="ttname"><a href="class_test_cards_heuristic.html">TestCardsHeuristic</a></div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:12</div></div>
-<div class="ttc" id="aclass_test_normal_html"><div class="ttname"><a href="class_test_normal.html">TestNormal</a></div><div class="ttdef"><b>Definition:</b> testNormal.h:11</div></div>
-<div class="ttc" id="aclass_test_normal_html_a96d2b0cde740e984456aef2690a28537"><div class="ttname"><a href="class_test_normal.html#a96d2b0cde740e984456aef2690a28537">TestNormal::isKeyword</a></div><div class="ttdeci">virtual bool isKeyword(const std::string &amp;word) const override</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:59</div></div>
+<div class="ttc" id="aclass_test_normal_html_a265caecb172e259c62bb62ff8c25cb9b"><div class="ttname"><a href="class_test_normal.html#a265caecb172e259c62bb62ff8c25cb9b">TestNormal::runTestSilent</a></div><div class="ttdeci">virtual int runTestSilent(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test algorytmu genetycznego z minimalnym wypisem do strumienia.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:73</div></div>
+<div class="ttc" id="aclass_test_normal_html_ae06f8f1ba165b68e21e46489db695e9b"><div class="ttname"><a href="class_test_normal.html#ae06f8f1ba165b68e21e46489db695e9b">TestNormal::runTest</a></div><div class="ttdeci">virtual int runTest(const std::string &amp;keyword, const std::string &amp;path) override</div><div class="ttdoc">Uruchom odpowiedni test metody genetycznej.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:20</div></div>
+<div class="ttc" id="aclass_test_normal_html_a682393b71ad9be4e7de1f7f19b2cfda9"><div class="ttname"><a href="class_test_normal.html#a682393b71ad9be4e7de1f7f19b2cfda9">TestNormal::TestNormal</a></div><div class="ttdeci">TestNormal(const unsigned int &amp;maxNumberOfIterations)</div><div class="ttdoc">Stwórz nowy obiekt Test Normal.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:9</div></div>
+<div class="ttc" id="aclass_test_normal_html_ad200d9a4d04eb5e6557c3cb352a0b73e"><div class="ttname"><a href="class_test_normal.html#ad200d9a4d04eb5e6557c3cb352a0b73e">TestNormal::runTestHeuristicSilent</a></div><div class="ttdeci">virtual int runTestHeuristicSilent(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test algorytmu z minimalnym wypisem do strumienia.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:137</div></div>
+<div class="ttc" id="aclass_test_normal_html_a9e04903c919955417a58b79148b2ab6d"><div class="ttname"><a href="class_test_normal.html#a9e04903c919955417a58b79148b2ab6d">TestNormal::~TestNormal</a></div><div class="ttdeci">virtual ~TestNormal()</div><div class="ttdoc">Usuń obiekt Test Normal.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:13</div></div>
+<div class="ttc" id="aclass_test_normal_html_ac36efc8a324e259bc915a6bced51a413"><div class="ttname"><a href="class_test_normal.html#ac36efc8a324e259bc915a6bced51a413">TestNormal::clone</a></div><div class="ttdeci">virtual TestNormal * clone() const override</div><div class="ttdoc">Kopiowanie obiektu klasy TestNormal.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:166</div></div>
+<div class="ttc" id="atest_interface_8h_html"><div class="ttname"><a href="test_interface_8h.html">testInterface.h</a></div><div class="ttdoc">Plik klasy interfejsu testów.</div></div>
+<div class="ttc" id="aclass_test_normal_html_abdbf12e8ead503b5cb465a7bb798840d"><div class="ttname"><a href="class_test_normal.html#abdbf12e8ead503b5cb465a7bb798840d">TestNormal::runTestBasic</a></div><div class="ttdeci">virtual void runTestBasic(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test metody genetycznej.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:39</div></div>
+<div class="ttc" id="aclass_test_cards_heuristic_html"><div class="ttname"><a href="class_test_cards_heuristic.html">TestCardsHeuristic</a></div><div class="ttdoc">Bazowa klasa testowania.</div><div class="ttdef"><b>Definition:</b> testCardsHeuristic.h:22</div></div>
+<div class="ttc" id="aclass_test_normal_html"><div class="ttname"><a href="class_test_normal.html">TestNormal</a></div><div class="ttdoc">Klasa podstawowego testu.</div><div class="ttdef"><b>Definition:</b> testNormal.h:20</div></div>
+<div class="ttc" id="aclass_test_normal_html_a96d2b0cde740e984456aef2690a28537"><div class="ttname"><a href="class_test_normal.html#a96d2b0cde740e984456aef2690a28537">TestNormal::isKeyword</a></div><div class="ttdeci">virtual bool isKeyword(const std::string &amp;word) const override</div><div class="ttdoc">Sprawdź czy string jest trybem działania programu.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:171</div></div>
+<div class="ttc" id="aclass_test_normal_html_ab232a4c3347cd0efa8ecd60cd8777eb6"><div class="ttname"><a href="class_test_normal.html#ab232a4c3347cd0efa8ecd60cd8777eb6">TestNormal::runTestHeuristic</a></div><div class="ttdeci">virtual void runTestHeuristic(const std::string &amp;path) override</div><div class="ttdoc">Uruchom test algorytmu zachłannego.</div><div class="ttdef"><b>Definition:</b> testNormal.cpp:106</div></div>
+<div class="ttc" id="atest_cards_heuristic_8h_html"><div class="ttname"><a href="test_cards_heuristic_8h.html">testCardsHeuristic.h</a></div><div class="ttdoc">Plik bazowej klasy testowania.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">

@@ -3,7 +3,7 @@
 
 #include "testTime.h"
 
-const char* TestTime::keyword[1] = {"testTime"};
+const char* TestTime::keyword[3] = {"testTime","testTimeSilent","testTimeHeuristic"};
 
 TestTime::TestTime(const unsigned int& maxNumberOfIterations)
 	:TestCardsHeuristic(maxNumberOfIterations)
@@ -16,7 +16,27 @@ TestTime::TestTime(const TestTime& other)
 	:TestCardsHeuristic(other)
 {}
 
-void TestTime::runTest(const std::string& path){
+
+int TestTime::runTest(const std::string& keyword, const std::string& path)
+{
+	if (keyword == TestTime::keyword[0])
+		{
+			runTestBasic(path);
+			return -1;
+		}
+	else if (keyword == TestTime::keyword[1])
+		{
+			return runTestSilent(path);
+		}
+	else if (keyword == TestTime::keyword[2])
+		{
+			runTestHeuristic(path);
+			return -1;
+		}
+	return -2;
+}
+
+void TestTime::runTestBasic(const std::string& path){
     std::ofstream file;
 	std::ostream* out;
 	bool fileOpened = false;

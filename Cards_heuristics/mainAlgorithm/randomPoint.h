@@ -1,66 +1,191 @@
+/**
+ * @file randomPoint.h
+ * @brief Plik klasy generatora liczb losowych.
+ * 
+ */
 #ifndef RAND_CLASS_H
 #define RAND_CLASS_H
-
-/**	@file randomPoint.h
-*	@brief Plik klasy generatora liczb losowych.
-*/
 
 #include <utility>
 #include <ctime>
 #include <stdlib.h>
 
-/** Klasa generatora liczb losowych */
+/**
+ * @brief Klasa generatora liczb losowych
+ * 
+ */
 class RandomPoint
 {
-	using TypeRand = int;	/**< Typ losowanych warto�ci*/
-	TypeRand begin, end;	/**< Granice generowanych warto�ci*/
-	TypeRand range;			/**< D�ugo�� zakresu generowanych warto�ci*/
+	/**
+	 * @brief Typ losowanych wartości
+	 * 
+	 */
+	using TypeRand = int;
+
+	/**
+	 * @brief Granice generowanych wartości
+	 * 
+	 */
+	TypeRand begin, end;
+
+	/**
+	 * @brief Długość zakresu generowanych wartości
+	 * 
+	 */
+	TypeRand range;
 
 public:
-	/** Konstruktor z przypisaniem zakresu jako 0-size*/
+	/**
+	 * @brief Stwórz nowy obiekt Random Point ustawiając zakres jako 0-size
+	 * 
+	 * @param size koniec zakresu generowanych wartości
+	 */
 	RandomPoint(const TypeRand size);
-	/** Konstruktor z przypisaniem zakresu jako beginRange-endRange*/
+
+	/**
+	 * @brief Stwórz nowy obiekt Random Point ustawiając zakres jako beginRange-endRange
+	 * 
+	 * @param beginRange początek zakresu generowanych wartości
+	 * @param endRange koniec zakresu generowanych wartości
+	 */
 	RandomPoint(const TypeRand beginRange, const TypeRand endRange);
+
+	/**
+	 * @brief Usuń obiekt Random Point
+	 * 
+	 */
 	~RandomPoint();
+
+	/**
+	 * @brief Stwórz nowy obiekt Random Point kopiując inny
+	 * 
+	 * @param other obiekt do skopiowania
+	 */
 	RandomPoint(const RandomPoint& other);
+
+	/**
+	 * @brief Stwórz nowy obiekt Random Point przenosząc inny
+	 * 
+	 * @param other obiekt do przeniesienia
+	 */
 	RandomPoint(RandomPoint&& other) noexcept;
+
+	/**
+	 * @brief Przenoszący operator przypisania
+	 * 
+	 * @param other obiekt do przeniesienia
+	 * @return RandomPoint& wynik przeniesienia
+	 */
 	RandomPoint& operator=(RandomPoint&& other) noexcept;
+
+	/**
+	 * @brief Kopiujący operator przypisania
+	 * 
+	 * @param other obiekt do skopiowania
+	 * @return RandomPoint& wynik kopiowania
+	 */
 	RandomPoint& operator=(const RandomPoint& other);
 
-	/** Losowanie z zakresem domkni�tym*/
+	/**
+	 * @brief Losowanie z zakresem domkniętym
+	 * 
+	 * @return TypeRand wynik losowania
+	 */
 	TypeRand getClose() const;
-	/** Losowanie z zakresem domkni�tym*/
+
+	/**
+	 * @brief Losowanie z zakresem domkniętym
+	 * 
+	 * @return const TypeRand stały wynik losowania
+	 */
 	const TypeRand const_getClose() const;
-	/** Losowanie z zakresem otwartym*/
+
+	/**
+	 * @brief Losowanie z zakresem otwartym
+	 * 
+	 * @return TypeRand wynik losowania
+	 */
 	TypeRand getOpen() const;
-	/** Losowanie z zakresem otwartym*/
+
+	/**
+	 * @brief Losowanie z zakresem otwartym
+	 * 
+	 * @return const TypeRand stały wynik losowania
+	 */
 	const TypeRand const_getOpen() const;
 
-	/** Zmiana cech generatora w oparciu o nowe granice zakresu*/
+	/**
+	 * @brief Ustaw wartość granic generowania
+	 * 
+	 * @param beginRange początek zakresu
+	 * @param endRange koniec zakresu
+	 */
 	void setNew(const TypeRand beginRange, const TypeRand endRange);
-	/** Zmiana cech generatora w oparciu o now� d�ugo�� zakresu*/
+
+	/**
+	 * @brief Ustaw wartość długości zakresu generowania
+	 * 
+	 * @param size długość zakresu
+	 */
 	void setNew(const TypeRand size);
 
-	/** Losowanie z zakresem domkni�tym na podstawie podanych granic zakresu*/
+	/**
+	 * @brief Losowanie z zakresem domkniętym na podstawie podanych granic zakresu
+	 * 
+	 * @param beginRange początek zakresu
+	 * @param endRange koniec zakresu
+	 * @return TypeRand wynik losowania
+	 */
 	static TypeRand getClose(const TypeRand& beginRange, const TypeRand& endRange);
-	/** Losowanie z zakresem otwartym na podstawie podanych granic zakresu*/
+
+	/**
+	 * @brief Losowanie z zakresem otwartym na podstawie podanych granic zakresu
+	 * 
+	 * @param beginRange początek zakresu
+	 * @param endRange koniec zakresu
+	 * @return TypeRand wynik losowania
+	 */
 	static TypeRand getOpen(const TypeRand& beginRange, const TypeRand& endRange);
 
-	/** */
+	/**
+	 * @brief Losowanie z zakresem domkniętym na podstawie podanych granic zakresu
+	 * 
+	 * @param beginRange początek zakresu
+	 * @param endRange koniec zakresu
+	 * @return const TypeRand stały wynik losowania
+	 */
 	static const TypeRand const_getClose(const TypeRand& beginRange, const TypeRand& endRange);
-	/** */
+
+	/**
+	 * @brief Losowanie z zakresem otwartym na podstawie podanych granic zakresu
+	 * 
+	 * @param beginRange początek zakresu
+	 * @param endRange koniec zakresu
+	 * @return const TypeRand stały wynik losowania
+	 */
 	static const TypeRand const_getOpen(const TypeRand& beginRange, const TypeRand& endRange);
 
-	/** Losowanie warto�ci z zakresu 0-max i por�wnanie z podanym prawdopodobie�swem
-	*	@param probablility - prawdopodobnie�two w promilach.
-	*	@return true - wulosowano warto�� <= probability
-	*	@return false - wulosowano warto�� > probability
-	*/
+	/**
+	 * @brief Losowanie wartości z zakresu 0-max i porównanie z podanym prawdopodobieńswem
+	 * 
+	 * @param probablility prawdopodobnieńtwo w promilach
+	 * @param max koniec zakresu losowania
+	 * @return true wulosowano wartość <= probability
+	 * @return false wulosowano wartość > probability
+	 */
 	static bool getRand(const TypeRand& probablility, const TypeRand& max);
 
-	/** Ustawienie ziarna w oparciu o zegar*/
+	/**
+	 * @brief Ustawienie ziarna w oparciu o zegar
+	 * 
+	 */
 	static void newSeed();
-	/** Ustawienie ziarna na zadan� warto��*/
+
+	/**
+	 * @brief Ustawienie ziarna na zadaną wartość
+	 * 
+	 * @param seed nowa wartość ziarna
+	 */
 	static void newSeed(const int seed);
 };
 

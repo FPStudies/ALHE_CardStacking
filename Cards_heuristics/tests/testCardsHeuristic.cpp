@@ -3,24 +3,26 @@
 
 #include "testCardsHeuristic.h"
 
-/** Dostêpne komendy (flagi):
-*	A - docelowa wartoœæ dla stosu A
-*	B - docelowa wartoœæ dla stosu B
-*	mrand - prawdopodobieñstwo mutacji
-*	mmax - 
-*	cnumb - 
-*	popsize - wielkoœæ populacji
-*	popsizetourn - wielkoœæ turnieji
-*	crosspoints - iloœæ punktów przeciêcia dla krzy¿owania wielopunktowego
-*	crosstype - typ krzy¿owania
-*	path - œcie¿ka dla pliku wynikowego
+/** 
+* 	@brief DostÄ™pne komendy (flagi):
+*	A - docelowa wartoÅ›Ä‡ dla stosu A
+*	B - docelowa wartoÅ›Ä‡ dla stosu B
+*	mrand - licznik prawdopodobieÅ„stwa mutacji
+*	mmax - mianownik prawdopodobieÅ„stwa mutacji
+*	cnumb - iloÅ›Ä‡ osobnikÃ³w poddawanych krzyÅ¼owaniu w kaÅ¼dym pokoleniu
+*	popsize - wielkoÅ›Ä‡ populacji
+*	popsizetourn - wielkoÅ›Ä‡ populacji po selekcji
+*	crosspoints - iloÅ›Ä‡ punktÃ³w przeciÄ™cia dla krzyÅ¼owania wielopunktowego
+*	crosstype - typ krzyÅ¼owania
+*	path - Å›cieÄ‡ka dla pliku wynikowego
 */
 const char* TestCardsHeuristic::command[10] = {"A", "B", "mrand", "mmax", "cnumb", "popsize", "popsizetourn", "crosspoints", "crosstype", "path"};
 
-/** Dostêpne tryby krzy¿owania:
+/** 
+* 	@brief DostÄ™pne tryby krzyÅ¼owania:
 *	singlePoint - jednopunktowe
 *	multiplePoint - wielopunktowe
-*	uniform - 
+*	uniform - rÃ³wnomierne
 */
 const char* TestCardsHeuristic::crossoverMode[3] = {"singlePoint", "multiplePoint", "uniform"};
 
@@ -31,7 +33,7 @@ void TestCardsHeuristic::setPoolValues(MatingPool& pool)
 	pool.setMutationProbability(mutationRand, mutationMax);
 	pool.setNumberOfCrossovers(crossoverNumber);
 	pool.setPopulationSize(populationSize);
-	pool.setPopulationSizeAfterTounament(populationSizeAfterTournament);
+	pool.setPopulationSizeAfterSelection(populationSizeAfterSelection);
 }
 
 TestCardsHeuristic::TestCardsHeuristic(const unsigned int& maxNumberOfIterations)
@@ -42,7 +44,7 @@ TestCardsHeuristic::TestCardsHeuristic(const unsigned int& maxNumberOfIterations
 	mutationMax(UINT_MAX),
 	crossoverNumber(UINT_MAX),
 	populationSize(UINT_MAX),
-	populationSizeAfterTournament(UINT_MAX),
+	populationSizeAfterSelection(UINT_MAX),
 	crossoverPoints(UINT_MAX),
 	crossType(MatingPool::CrossoverType::uniform),
 	isCrossTypeSet(false)
@@ -59,7 +61,7 @@ TestCardsHeuristic::TestCardsHeuristic(const TestCardsHeuristic& other)
 	mutationMax(other.mutationMax),
 	crossoverNumber(other.crossoverNumber),
 	populationSize(other.populationSize),
-	populationSizeAfterTournament(other.populationSizeAfterTournament),
+	populationSizeAfterSelection(other.populationSizeAfterSelection),
 	crossoverPoints(other.crossoverPoints),
 	crossType(other.crossType),
 	isCrossTypeSet(other.isCrossTypeSet)
@@ -67,7 +69,7 @@ TestCardsHeuristic::TestCardsHeuristic(const TestCardsHeuristic& other)
 
 bool TestCardsHeuristic::isDataValid() const {
 	if(groupAValue == INT_MAX || groupBValue == INT_MAX || mutationRand == UINT_MAX || mutationMax == UINT_MAX || !isCrossTypeSet || \
-	crossoverNumber == UINT_MAX || populationSize == UINT_MAX || populationSizeAfterTournament == UINT_MAX || crossoverPoints == UINT_MAX)
+	crossoverNumber == UINT_MAX || populationSize == UINT_MAX || populationSizeAfterSelection == UINT_MAX || crossoverPoints == UINT_MAX)
 	{
 		return false;
 	}
@@ -78,7 +80,7 @@ bool TestCardsHeuristic::isDataValid() const {
 void TestCardsHeuristic::setPopulationSize(const unsigned int& popSize) {populationSize = popSize; }
 void TestCardsHeuristic::setMutationProbability(const unsigned int& random, const unsigned int& max) {mutationRand = random; mutationMax = max; }
 void TestCardsHeuristic::setNumberOfCrossovers(const unsigned int& value) {crossoverNumber = value; }
-void TestCardsHeuristic::setPopulationSizeAfterTounament(const int& value) {populationSizeAfterTournament = value; }
+void TestCardsHeuristic::setPopulationSizeAfterSelection(const int& value) {populationSizeAfterSelection = value; }
 
 void TestCardsHeuristic::setGroupAValue(const int& value) {groupAValue = value; }
 void TestCardsHeuristic::setGroupBValue(const int& value) {groupBValue = value; }
@@ -97,6 +99,7 @@ bool TestCardsHeuristic::isCommand(const std::string& com) const {
 	return false;
 }
 
+/*
 bool TestCardsHeuristic::expectedStringAfterCommand(const std::string& com, const std::string& string) const {
 	unsigned int pos = 0;
 	std::stringstream ss(string);
@@ -134,7 +137,7 @@ bool TestCardsHeuristic::expectedStringAfterCommand(const std::string& com, cons
 
 	return true;
 }
-
+*/
 
 bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vector<std::string>& flags, const std::vector<std::vector<std::string>>& dataToFlags) {
 	if(flags.size() != dataToFlags.size()) return true;
@@ -167,7 +170,7 @@ bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vecto
 							std::stringstream(str) >> populationSize;
 							break;
 						case 6:
-							std::stringstream(str) >> populationSizeAfterTournament;
+							std::stringstream(str) >> populationSizeAfterSelection;
 							break;
 						case 7:
 							std::stringstream(str) >> crossoverPoints;
@@ -203,9 +206,7 @@ bool TestCardsHeuristic::runCommand(const std::string& keyword, const std::vecto
 		}
 	}
 
-	runTest(pathToOutputFile);
-	//runTestSilent(pathToOutputFile);
-	//runTestHeuristicSilent(pathToOutputFile);
+	runTest(keyword, pathToOutputFile);
 
 	return false;
 }

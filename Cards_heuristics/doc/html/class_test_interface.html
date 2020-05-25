@@ -69,34 +69,161 @@ $(function() {
 <div class="title">Dokumentacja klasy TestInterface<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Klasa interfejsu testów.  
+ <a href="class_test_interface.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="test_interface_8h_source.html">testInterface.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla TestInterface</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_test_interface.png" usemap="#TestInterface_map" alt=""/>
   <map id="TestInterface_map" name="TestInterface_map">
-<area href="class_test_cards_heuristic.html" alt="TestCardsHeuristic" shape="rect" coords="129,56,248,80"/>
-<area href="class_test_auto.html" alt="TestAuto" shape="rect" coords="0,112,119,136"/>
-<area href="class_test_normal.html" alt="TestNormal" shape="rect" coords="129,112,248,136"/>
-<area href="class_test_time.html" alt="TestTime" shape="rect" coords="258,112,377,136"/>
+<area href="class_test_cards_heuristic.html" title="Bazowa klasa testowania." alt="TestCardsHeuristic" shape="rect" coords="64,56,183,80"/>
+<area href="class_test_normal.html" title="Klasa podstawowego testu." alt="TestNormal" shape="rect" coords="0,112,119,136"/>
+<area href="class_test_time.html" title="Klasa testu z pomiarem czasu." alt="TestTime" shape="rect" coords="129,112,248,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
+<tr class="memitem:a5866d5d399da5c99c0f64e65b94b0d38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_interface.html#a5866d5d399da5c99c0f64e65b94b0d38">TestInterface</a> ()</td></tr>
+<tr class="memdesc:a5866d5d399da5c99c0f64e65b94b0d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stwórz nowy obiekt Test Interface.  <a href="class_test_interface.html#a5866d5d399da5c99c0f64e65b94b0d38">Więcej...</a><br /></td></tr>
+<tr class="separator:a5866d5d399da5c99c0f64e65b94b0d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81806ad3e8c4a03e90262a2409239091"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_interface.html#a81806ad3e8c4a03e90262a2409239091">~TestInterface</a> ()</td></tr>
+<tr class="memdesc:a81806ad3e8c4a03e90262a2409239091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuń obiekt Test Interface.  <a href="class_test_interface.html#a81806ad3e8c4a03e90262a2409239091">Więcej...</a><br /></td></tr>
+<tr class="separator:a81806ad3e8c4a03e90262a2409239091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b7d1ea5db61afc23bd004834122babf"><td class="memItemLeft" align="right" valign="top"><a id="a7b7d1ea5db61afc23bd004834122babf"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TestInterface</b> (const <a class="el" href="class_test_interface.html">TestInterface</a> &amp;other)=delete</td></tr>
 <tr class="separator:a7b7d1ea5db61afc23bd004834122babf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed7074d38fda4c11a56e5c8030f443f"><td class="memItemLeft" align="right" valign="top"><a id="abed7074d38fda4c11a56e5c8030f443f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>runTest</b> (const std::string &amp;path)=0</td></tr>
-<tr class="separator:abed7074d38fda4c11a56e5c8030f443f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe1ec3fb5c3be7c5296d5ae261bd2d28"><td class="memItemLeft" align="right" valign="top"><a id="afe1ec3fb5c3be7c5296d5ae261bd2d28"></a>
-virtual <a class="el" href="class_test_interface.html">TestInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const =0</td></tr>
+<tr class="memitem:afe1ec3fb5c3be7c5296d5ae261bd2d28"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_test_interface.html">TestInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_interface.html#afe1ec3fb5c3be7c5296d5ae261bd2d28">clone</a> () const =0</td></tr>
+<tr class="memdesc:afe1ec3fb5c3be7c5296d5ae261bd2d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skopiuj obiekt klasy <a class="el" href="class_test_interface.html" title="Klasa interfejsu testów.">TestInterface</a>.  <a href="class_test_interface.html#afe1ec3fb5c3be7c5296d5ae261bd2d28">Więcej...</a><br /></td></tr>
 <tr class="separator:afe1ec3fb5c3be7c5296d5ae261bd2d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7d5e371360ca71c437ff3972c349d65"><td class="memItemLeft" align="right" valign="top"><a id="ae7d5e371360ca71c437ff3972c349d65"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDataValid</b> () const =0</td></tr>
+<tr class="memitem:ae7d5e371360ca71c437ff3972c349d65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_interface.html#ae7d5e371360ca71c437ff3972c349d65">isDataValid</a> () const =0</td></tr>
+<tr class="memdesc:ae7d5e371360ca71c437ff3972c349d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdź czy parametry algorytmu są prawidłowe.  <a href="class_test_interface.html#ae7d5e371360ca71c437ff3972c349d65">Więcej...</a><br /></td></tr>
 <tr class="separator:ae7d5e371360ca71c437ff3972c349d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa interfejsu testów. </p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a5866d5d399da5c99c0f64e65b94b0d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5866d5d399da5c99c0f64e65b94b0d38">&#9670;&nbsp;</a></span>TestInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TestInterface::TestInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stwórz nowy obiekt Test Interface. </p>
+
+</div>
+</div>
+<a id="a81806ad3e8c4a03e90262a2409239091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81806ad3e8c4a03e90262a2409239091">&#9670;&nbsp;</a></span>~TestInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TestInterface::~TestInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Usuń obiekt Test Interface. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="afe1ec3fb5c3be7c5296d5ae261bd2d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1ec3fb5c3be7c5296d5ae261bd2d28">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_test_interface.html">TestInterface</a>* TestInterface::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Skopiuj obiekt klasy <a class="el" href="class_test_interface.html" title="Klasa interfejsu testów.">TestInterface</a>. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>TestInterface* wskaźnik na kopię </dd></dl>
+
+<p>Implementowany w <a class="el" href="class_test_normal.html#ac36efc8a324e259bc915a6bced51a413">TestNormal</a>, <a class="el" href="class_test_time.html#a85c12e702003d4e0198df452efcda5fd">TestTime</a> i <a class="el" href="class_test_cards_heuristic.html#ac783c585406bfd1d482d825d74872cb2">TestCardsHeuristic</a>.</p>
+
+</div>
+</div>
+<a id="ae7d5e371360ca71c437ff3972c349d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d5e371360ca71c437ff3972c349d65">&#9670;&nbsp;</a></span>isDataValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool TestInterface::isDataValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sprawdź czy parametry algorytmu są prawidłowe. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>true są </dd>
+<dd>
+false nie są </dd></dl>
+
+<p>Implementowany w <a class="el" href="class_test_cards_heuristic.html#a610af181d43ab4dbefb00cb5f058ffef">TestCardsHeuristic</a>.</p>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
 <li>tests/<a class="el" href="test_interface_8h_source.html">testInterface.h</a></li>
 </ul>

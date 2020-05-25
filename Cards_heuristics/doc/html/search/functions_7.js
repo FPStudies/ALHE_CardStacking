@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['randompoint_61',['RandomPoint',['../class_random_point.html#afd092ffb41633bba08bb9223be9a95a1',1,'RandomPoint::RandomPoint(const TypeRand size)'],['../class_random_point.html#abaeb67ad9682839253f4d0d2322fcf09',1,'RandomPoint::RandomPoint(const TypeRand beginRange, const TypeRand endRange)']]],
-  ['runcommand_62',['runCommand',['../class_command_divider.html#a0ef845b54b919cac8ca466dfcac3b30c',1,'CommandDivider::runCommand()'],['../class_command_interpreter.html#afbd87eddf8d5019902e51480fde8da57',1,'CommandInterpreter::runCommand()'],['../class_test_cards_heuristic.html#a45eaacfce352a7aa4456bbbcc9d3dd29',1,'TestCardsHeuristic::runCommand()']]]
+  ['isbestfound_145',['isBestFound',['../class_mating_pool.html#a512d664afeaf9e63d79e1ccaa245ec95',1,'MatingPool']]],
+  ['iscommand_146',['isCommand',['../class_command_interpreter.html#a5b92217ab5aaf29527f10ba978394f4d',1,'CommandInterpreter::isCommand()'],['../class_test_cards_heuristic.html#a6eb87ac22be0a152b012a184bfbc7e1e',1,'TestCardsHeuristic::isCommand()']]],
+  ['isdatavalid_147',['isDataValid',['../class_test_cards_heuristic.html#a610af181d43ab4dbefb00cb5f058ffef',1,'TestCardsHeuristic::isDataValid()'],['../class_test_interface.html#ae7d5e371360ca71c437ff3972c349d65',1,'TestInterface::isDataValid()'],['../class_mating_pool.html#a5712e10118993aede33b64bda4e57a59',1,'MatingPool::isDataValid()']]],
+  ['iskeyword_148',['isKeyword',['../class_command_interpreter.html#a5ac7c90e9c4bbaa2ef78867a9e743fa7',1,'CommandInterpreter::isKeyword()'],['../class_test_cards_heuristic.html#ac087fc4720466f339c3bf26a584a8632',1,'TestCardsHeuristic::isKeyword()'],['../class_test_normal.html#a96d2b0cde740e984456aef2690a28537',1,'TestNormal::isKeyword()'],['../class_test_time.html#ac95c6ec2a24972f0aa45d53876284e8c',1,'TestTime::isKeyword()']]]
 ];

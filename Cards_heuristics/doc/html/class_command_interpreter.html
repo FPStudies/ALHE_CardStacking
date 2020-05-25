@@ -70,6 +70,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa interpretatora poleceń. Wykorzystywana do rozpoznawania słów kluczowych z wczytanego polecenia i odpowiedniej zmiany działania programu.  
+ <a href="class_command_interpreter.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="command_interpreter_8h_source.html">commandInterpreter.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla CommandInterpreter</div>
@@ -77,35 +80,124 @@ Diagram dziedziczenia dla CommandInterpreter</div>
  <div class="center">
   <img src="class_command_interpreter.png" usemap="#CommandInterpreter_map" alt=""/>
   <map id="CommandInterpreter_map" name="CommandInterpreter_map">
-<area href="class_test_cards_heuristic.html" alt="TestCardsHeuristic" shape="rect" coords="136,56,262,80"/>
-<area href="class_test_auto.html" alt="TestAuto" shape="rect" coords="0,112,126,136"/>
-<area href="class_test_normal.html" alt="TestNormal" shape="rect" coords="136,112,262,136"/>
-<area href="class_test_time.html" alt="TestTime" shape="rect" coords="272,112,398,136"/>
+<area href="class_test_cards_heuristic.html" title="Bazowa klasa testowania." alt="TestCardsHeuristic" shape="rect" coords="68,56,194,80"/>
+<area href="class_test_normal.html" title="Klasa podstawowego testu." alt="TestNormal" shape="rect" coords="0,112,126,136"/>
+<area href="class_test_time.html" title="Klasa testu z pomiarem czasu." alt="TestTime" shape="rect" coords="136,112,262,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
+<tr class="memitem:a0d368e3ea229c33e6a1932646962662e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interpreter.html#a0d368e3ea229c33e6a1932646962662e">CommandInterpreter</a> ()</td></tr>
+<tr class="memdesc:a0d368e3ea229c33e6a1932646962662e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stwórz nowy obiekt Command Interpreter.  <a href="class_command_interpreter.html#a0d368e3ea229c33e6a1932646962662e">Więcej...</a><br /></td></tr>
+<tr class="separator:a0d368e3ea229c33e6a1932646962662e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635c0b6f3edf51ba01f7c63b0dec3d9f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interpreter.html#a635c0b6f3edf51ba01f7c63b0dec3d9f">~CommandInterpreter</a> ()</td></tr>
+<tr class="memdesc:a635c0b6f3edf51ba01f7c63b0dec3d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuń obiekt Command Interpreter.  <a href="class_command_interpreter.html#a635c0b6f3edf51ba01f7c63b0dec3d9f">Więcej...</a><br /></td></tr>
+<tr class="separator:a635c0b6f3edf51ba01f7c63b0dec3d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6557552906e8e8234e59e7356d3cd635"><td class="memItemLeft" align="right" valign="top"><a id="a6557552906e8e8234e59e7356d3cd635"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CommandInterpreter</b> (const <a class="el" href="class_command_interpreter.html">CommandInterpreter</a> &amp;other)=delete</td></tr>
 <tr class="separator:a6557552906e8e8234e59e7356d3cd635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbd87eddf8d5019902e51480fde8da57"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interpreter.html#afbd87eddf8d5019902e51480fde8da57">runCommand</a> (const std::string &amp;keyword, const std::vector&lt; std::string &gt; &amp;flags, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;dataToFlags)=0</td></tr>
-<tr class="memdesc:afbd87eddf8d5019902e51480fde8da57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje akcje zwi�zane z poleceniem. Can be used in recursion to extract key phrases of commands such as flags.  <a href="class_command_interpreter.html#afbd87eddf8d5019902e51480fde8da57">Więcej...</a><br /></td></tr>
+<tr class="memdesc:afbd87eddf8d5019902e51480fde8da57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonanie akcji związanych z poleceniem. Może być wywoływana rekurencyjnie.  <a href="class_command_interpreter.html#afbd87eddf8d5019902e51480fde8da57">Więcej...</a><br /></td></tr>
 <tr class="separator:afbd87eddf8d5019902e51480fde8da57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ac7c90e9c4bbaa2ef78867a9e743fa7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interpreter.html#a5ac7c90e9c4bbaa2ef78867a9e743fa7">isKeyword</a> (const std::string &amp;word) const =0</td></tr>
+<tr class="memdesc:a5ac7c90e9c4bbaa2ef78867a9e743fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdzenie czy string jest słowem kluczowym.  <a href="class_command_interpreter.html#a5ac7c90e9c4bbaa2ef78867a9e743fa7">Więcej...</a><br /></td></tr>
 <tr class="separator:a5ac7c90e9c4bbaa2ef78867a9e743fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b92217ab5aaf29527f10ba978394f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interpreter.html#a5b92217ab5aaf29527f10ba978394f4d">isCommand</a> (const std::string &amp;command) const =0</td></tr>
+<tr class="memdesc:a5b92217ab5aaf29527f10ba978394f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdzenie czy string jest komendą  <a href="class_command_interpreter.html#a5b92217ab5aaf29527f10ba978394f4d">Więcej...</a><br /></td></tr>
 <tr class="separator:a5b92217ab5aaf29527f10ba978394f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd844fcddcc3e19f3abe83b5f78eff9"><td class="memItemLeft" align="right" valign="top"><a id="aedd844fcddcc3e19f3abe83b5f78eff9"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>expectedStringAfterCommand</b> (const std::string &amp;command, const std::string &amp;string) const =0</td></tr>
-<tr class="separator:aedd844fcddcc3e19f3abe83b5f78eff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77730a508b35f654db468e7323fa535"><td class="memItemLeft" align="right" valign="top"><a id="ab77730a508b35f654db468e7323fa535"></a>
-virtual <a class="el" href="class_command_interpreter.html">CommandInterpreter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const =0</td></tr>
+<tr class="memitem:ab77730a508b35f654db468e7323fa535"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_command_interpreter.html">CommandInterpreter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interpreter.html#ab77730a508b35f654db468e7323fa535">clone</a> () const =0</td></tr>
+<tr class="memdesc:ab77730a508b35f654db468e7323fa535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopiowanie obiektu <a class="el" href="class_command_interpreter.html" title="Klasa interpretatora poleceń. Wykorzystywana do rozpoznawania słów kluczowych z wczytanego polecenia ...">CommandInterpreter</a>.  <a href="class_command_interpreter.html#ab77730a508b35f654db468e7323fa535">Więcej...</a><br /></td></tr>
 <tr class="separator:ab77730a508b35f654db468e7323fa535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock"><p>Klasa interpretatora polece�. Wykorzystywana do rozpoznawania s��w kluczowych z wczytanego polecenia i odpowiedniej zmiany dzia�ania programu. </p>
-</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<div class="textblock"><p>Klasa interpretatora poleceń. Wykorzystywana do rozpoznawania słów kluczowych z wczytanego polecenia i odpowiedniej zmiany działania programu. </p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a0d368e3ea229c33e6a1932646962662e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d368e3ea229c33e6a1932646962662e">&#9670;&nbsp;</a></span>CommandInterpreter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandInterpreter::CommandInterpreter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stwórz nowy obiekt Command Interpreter. </p>
+
+</div>
+</div>
+<a id="a635c0b6f3edf51ba01f7c63b0dec3d9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635c0b6f3edf51ba01f7c63b0dec3d9f">&#9670;&nbsp;</a></span>~CommandInterpreter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual CommandInterpreter::~CommandInterpreter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Usuń obiekt Command Interpreter. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ab77730a508b35f654db468e7323fa535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77730a508b35f654db468e7323fa535">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_command_interpreter.html">CommandInterpreter</a>* CommandInterpreter::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kopiowanie obiektu <a class="el" href="class_command_interpreter.html" title="Klasa interpretatora poleceń. Wykorzystywana do rozpoznawania słów kluczowych z wczytanego polecenia ...">CommandInterpreter</a>. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>CommandInterpreter* wskaźnik na powstałą kopię </dd></dl>
+
+<p>Implementowany w <a class="el" href="class_test_normal.html#ac36efc8a324e259bc915a6bced51a413">TestNormal</a>, <a class="el" href="class_test_time.html#a85c12e702003d4e0198df452efcda5fd">TestTime</a> i <a class="el" href="class_test_cards_heuristic.html#ac783c585406bfd1d482d825d74872cb2">TestCardsHeuristic</a>.</p>
+
+</div>
+</div>
 <a id="a5b92217ab5aaf29527f10ba978394f4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b92217ab5aaf29527f10ba978394f4d">&#9670;&nbsp;</a></span>isCommand()</h2>
 
@@ -129,7 +221,17 @@ virtual <a class="el" href="class_command_interpreter.html">CommandInterpreter</
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sprawdzenie czy strign jest komend� </p>
+
+<p>Sprawdzenie czy string jest komendą </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>sprawdzany string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jest komendą </dd>
+<dd>
+false nie jest komendą </dd></dl>
 
 <p>Implementowany w <a class="el" href="class_test_cards_heuristic.html#a6eb87ac22be0a152b012a184bfbc7e1e">TestCardsHeuristic</a>.</p>
 
@@ -158,9 +260,19 @@ virtual <a class="el" href="class_command_interpreter.html">CommandInterpreter</
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sprawdzenie czy strign jest s�owem kluczowym </p>
 
-<p>Implementowany w <a class="el" href="class_test_normal.html#a96d2b0cde740e984456aef2690a28537">TestNormal</a>, <a class="el" href="class_test_auto.html#ac92b20c601806e12d72eabe329b21aeb">TestAuto</a>, <a class="el" href="class_test_time.html#ac95c6ec2a24972f0aa45d53876284e8c">TestTime</a> i <a class="el" href="class_test_cards_heuristic.html#ac087fc4720466f339c3bf26a584a8632">TestCardsHeuristic</a>.</p>
+<p>Sprawdzenie czy string jest słowem kluczowym. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">word</td><td>sprawdzany string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jest słowem kluczowym </dd>
+<dd>
+false nie jest słowem kluczowym </dd></dl>
+
+<p>Implementowany w <a class="el" href="class_test_normal.html#a96d2b0cde740e984456aef2690a28537">TestNormal</a>, <a class="el" href="class_test_time.html#ac95c6ec2a24972f0aa45d53876284e8c">TestTime</a> i <a class="el" href="class_test_cards_heuristic.html#ac087fc4720466f339c3bf26a584a8632">TestCardsHeuristic</a>.</p>
 
 </div>
 </div>
@@ -204,16 +316,18 @@ virtual <a class="el" href="class_command_interpreter.html">CommandInterpreter</
 </table>
 </div><div class="memdoc">
 
-<p>Wykonuje akcje zwi�zane z poleceniem. Can be used in recursion to extract key phrases of commands such as flags. </p>
+<p>Wykonanie akcji związanych z poleceniem. Może być wywoływana rekurencyjnie. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">command</td><td></td></tr>
+    <tr><td class="paramname">keyword</td><td>tryb działania programu </td></tr>
+    <tr><td class="paramname">flags</td><td>kolejne flagi wykonania </td></tr>
+    <tr><td class="paramname">dataToFlags</td><td>argumenty flag wykonania </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>true if command was not found or there is no other operations to perform. This is useful in recursion. </dd>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeżeli nie znaleziono polecenia albo nie ma już więcej operacji do wykonania, przydatne w rekurencji </dd>
 <dd>
-false otherwise. </dd></dl>
+false w innych wypadkach </dd></dl>
 
 <p>Implementowany w <a class="el" href="class_test_cards_heuristic.html#a45eaacfce352a7aa4456bbbcc9d3dd29">TestCardsHeuristic</a>.</p>
 
